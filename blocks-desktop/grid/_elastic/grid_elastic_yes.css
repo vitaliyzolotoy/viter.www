@@ -1,0 +1,14 @@
+/**
+ * @note margin-right — сума довжин всіх еластичних колонок
+ *
+ */
+
+.grid_elastic_yes
+{
+    margin-right: 9em;
+}
+
+.grid__unit_elastic_9
+{
+	width: 9em;
+}

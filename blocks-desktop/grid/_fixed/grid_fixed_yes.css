@@ -1,0 +1,14 @@
+/**
+ * @note padding-right — сума довжин всіх фіксованих колонок
+ *
+ */
+
+.grid_fixed_yes
+{
+    padding-right: 120px;
+}
+
+.grid__unit_fixed_120
+{
+	width: 120px;
+}

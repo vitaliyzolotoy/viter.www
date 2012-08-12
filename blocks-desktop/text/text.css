@@ -1,0 +1,20 @@
+.text p
+{
+    margin: 0;
+}
+
+.text p + p
+{
+    text-indent: 1.5em;
+}
+
+.text p:last-child
+{
+    margin-bottom: 1.5em;
+}
+
+.text blockquote
+{
+    margin: 0;
+    padding: 1.5em;
+}
