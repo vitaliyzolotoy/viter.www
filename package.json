@@ -1,18 +1,19 @@
 {
-  "author": "",
-  "name": "viter",
-  "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/zolotoy/viter.git"
-  },
-  "engines": {
-    "node": "0.6 | 0.7"
-  },
-  "dependencies": {
-    "express": "*"
-  },
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "private": true
+    "author":"",
+    "name":"viter",
+    "version":"0.0.0",
+    "repository":{
+        "type":"git",
+        "url":"git://github.com/zolotoy/viter.git"
+    },
+    "engines":{
+        "node":"0.6 | 0.7"
+    },
+    "dependencies":{
+        "express":"3.0.0rc3",
+        "mongoose":"1.1.48"
+    },
+    "devDependencies":{},
+    "optionalDependencies":{},
+    "private":true
 }
