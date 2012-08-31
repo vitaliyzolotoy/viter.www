@@ -1,16 +1,33 @@
-var http = require('http'),
-    url = require('url'),
-    fs = require('fs');
+/**
+ * Module dependencies.
+ */
+var express = require('express')
+    , routes = require('./routes')
+    , http = require('http')
+    , path = require('path')
+    , fs = require('fs')
+    , mg = require('mongoose')
+    , db = mg.createConnection('localhost' , 'test');
 
-http.createServer(function (req, res) {
-    var urlParsed = url.parse(req.url, true);
+var app = express();
 
-    console.log('Request: ', JSON.stringify(urlParsed));
+app.configure(function(){
+    app.set('port', process.env.PORT || 3000);
+    app.use(express.favicon());
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(app.router);
+});
 
-    res.writeHeader(200, { 'Content-Type': 'text/html;charset=utf-8' });
+app.configure('development', function(){
+  app.use(express.errorHandler());
+});
 
-    res.write('Request: ' + JSON.stringify(urlParsed));
+app.get('/', function (req, res){
+    routes.index(req, res, mg, db);
+});
 
-    res.end();
-
-}).listen(1341, '127.0.0.1');
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
