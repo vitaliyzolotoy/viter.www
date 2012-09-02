@@ -10,7 +10,10 @@ exports.index = function (req, res, mg, db) {
         hidden:Boolean
     });
 
-    var Page = db.model('Page', pageSchema);
+    var Page = db.model('Page', pageSchema),
+        views = require('../pages-desktop/index/_index.priv.js'),
+        bemjson = blocks['b-page'](data),
+        bemhtml = BEMHTML.apply.call(bemjson);
 
     /*
     * Если раскоментировать блок он при каждом обращении будет создавать запись в базе данных 'test'
