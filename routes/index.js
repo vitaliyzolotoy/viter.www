@@ -1,6 +1,6 @@
-/*
- * GET home page.
- */
+var fs = require('fs'),
+    path = require('path'),
+    vm = require('vm');
 
 exports.index = function (req, res, mg, db) {
     var pageSchema = new mg.Schema({
@@ -10,10 +10,20 @@ exports.index = function (req, res, mg, db) {
         hidden:Boolean
     });
 
-    var Page = db.model('Page', pageSchema),
-        views = require('../pages-desktop/index/_index.priv.js'),
-        bemjson = blocks['b-page'](data),
-        bemhtml = BEMHTML.apply.call(bemjson);
+    var Page = db.model('Page', pageSchema);
+
+    // Насичуємо data
+    var data = {
+        page: 'index'
+    }
+
+    var priv = fs.readFileSync(path.join(__dirname, '..', 'pages-desktop', 'index', '_index.priv.js'), 'utf-8');
+    
+    vm.runInThisContext(priv);
+    var bemjson = blocks['b-page'](data),
+        bemhtml = BEMHTML.apply(bemjson);
+
+    console.log(bemhtml);
 
     /*
     * Если раскоментировать блок он при каждом обращении будет создавать запись в базе данных 'test'
@@ -28,6 +38,6 @@ exports.index = function (req, res, mg, db) {
 
     Page.find(function (err, data) {
         if(err);
-        res.json(data);
+        res.json(bemhtml);
     })
 };

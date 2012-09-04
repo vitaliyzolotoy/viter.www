@@ -1,6 +1,6 @@
 var blocks = {};
 
-blocks["b-page"] = function(data) {
+blocks['b-page'] = function(data) {
     return [
         {
             block: 'b-page',
@@ -23,7 +23,7 @@ blocks["b-page"] = function(data) {
                     url: 'index/_index.js'
                 }
             ],
-            content: ''
+            content: 'test' + data.page
         }
     ]
 };
