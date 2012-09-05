@@ -6,24 +6,12 @@ blocks['b-page'] = function(data) {
             block: 'b-page',
             title: 'Вітер',
             head: [
-                {
-                    elem: 'favicon',
-                    url: '/favicon.ico'
-                },
-                {
-                    elem: 'css',
-                    url: 'index/_index.css'
-                },
-                {
-                    block: 'i-jquery',
-                    elem: 'core'
-                },
-                {
-                    elem: 'js',
-                    url: 'index/_index.js'
-                }
+                { elem: 'favicon', url: '/favicon.ico' },
+                { elem: 'css', url: '/pages-desktop/index/_index.css' },
+                { block: 'i-jquery', elem: 'core' },
+                { elem: 'js', url: '/pages-desktop/index/_index.js' }
             ],
-            content: 'test' + data.page
+            content: 'test: ' + data.page
         }
     ]
 };
