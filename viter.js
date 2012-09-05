@@ -1,13 +1,16 @@
 /**
  * Module dependencies.
  */
-var express = require('express')
-    , routes = require('./routes')
-    , http = require('http')
-    , path = require('path')
-    , fs = require('fs')
-    , mg = require('mongoose')
-    , db = mg.createConnection('localhost' , 'test');
+var express = require('express'),
+        routes = require('./routes'),
+        http = require('http'),
+        path = require('path'),
+        vm = require('vm'),
+        fs = require('fs'),
+        mg = require('mongoose'),
+        db = mg.createConnection('localhost' , 'test'),
+        models = require('./models'),
+        Page;
 
 var app = express();
 
@@ -24,8 +27,12 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+models.defineModels(mg, function() {
+    app.Page = Page = db.model('Page');
+})
+
 app.get('/', function (req, res){
-    routes.index(req, res, mg, db);
+    routes.index(req, res, app.Page, fs, path, vm);
 });
 
 http.createServer(app).listen(app.get('port'), function(){
