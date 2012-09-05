@@ -11,12 +11,7 @@
     },
     "dependencies": {
         "express": "*",
-        "mongoose": "*",
-        "bem": ">0.5.13",
-        "bem-bl": {
-            "type": "git",
-            "url": "git://github.com/bem/bem-bl.git"
-        }
+        "mongoose": "*"
     },
     "devDependencies": {},
     "optionalDependencies": {},
