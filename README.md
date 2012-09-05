@@ -25,5 +25,5 @@ git clone git@github.com:zolotoy/viter.git
 cd viter
 npm install
 bem make
-node app.js
+node viter.js
 ```
