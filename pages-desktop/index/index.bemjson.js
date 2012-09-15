@@ -1,7 +1,7 @@
 ([
     {
         block: 'b-page',
-        title: 'Бібліотека блоків · Вогняний лимонад',
+        title: 'Записи · Блоґ Віталія Золотого',
         head: [
             {
                 elem: 'favicon',
@@ -9,7 +9,7 @@
             },
             {
                 elem: 'css',
-                url: 'index/_index.css'
+                url: '/pages-desktop/index/_index.css'
             },
             {
                 block: 'i-jquery',
@@ -17,17 +17,20 @@
             },
             {
                 elem: 'js',
-                url: 'index/_index.js'
+                url: '/pages-desktop/index/_index.js'
             }
         ],
         content: [
             {
-                block: 'b-chan',
-                content: ''
-            },
-            {
-                block: 'i-server',
-                content: ''
+                block: 'b-header',
+                content: [
+                    {
+                        block: 'b-link',
+                        mix: [{ block: 'i-font' }],
+                        url: '/',
+                        content: 'Блоґ Віталія Золотого'
+                    }
+                ]
             },
             {
                 block: 'grid',
@@ -217,7 +220,48 @@
                         content: 'Комірка, резинова, 38.2%'
                     }
                 ]
-            }
+            },
+            {
+                block: 'b-pager',
+                content: [
+                    // {
+                    //     elem: 'prev',
+                    //     content: [
+                    //         {
+                    //             block: 'b-link',
+                    //             url: '#past',
+                    //             content: '← Минуле'
+                    //         }
+                    //     ]
+                    // },
+                    {
+                        elem: 'count',
+                        content: '2 ⁄ 2'
+                    },
+                    {
+                        elem: 'next',
+                        content: [
+                            {
+                                block: 'b-link',
+                                url: '#past',
+                                content: '→  Майбутнє'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                block: 'b-footer',
+                content: [
+                    '~ © ',
+                    {
+                        block: 'b-link',
+                        url: 'mailto:vitaly.zolotoy@mail.com',
+                        content: 'Віталій Золотой',
+                    },
+                    ', 2011…2012 ~'
+                ]
+            },
         ]
     }
 ])

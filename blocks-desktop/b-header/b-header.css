@@ -1,0 +1,18 @@
+.b-header
+{
+	font-size: 24px;
+
+	padding: 80px 0 0 0;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	background: url(b-header.png) 50% 0 no-repeat;
+}
+
+.b-header .b-link
+{
+	text-decoration: none;
+
+	color: #252525;
+}

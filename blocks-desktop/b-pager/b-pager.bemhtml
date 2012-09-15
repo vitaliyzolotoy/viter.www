@@ -1,0 +1,16 @@
+block b-pager {
+	tag: 'ul'
+
+	elem prev {
+		tag: 'li'
+	}
+
+	elem count {
+		tag: 'li'
+	}
+
+	elem next {
+		tag: 'li'
+	}
+
+}

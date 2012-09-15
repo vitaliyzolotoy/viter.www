@@ -1,0 +1,30 @@
+.b-pager
+{
+	font-size: 11px;
+
+	display: block;
+
+	text-align: center;
+
+	color: #777;
+}
+
+.b-pager .b-link
+{
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: #252525;
+}
+
+.b-pager__prev,
+.b-pager__count,
+.b-pager__next
+{
+	display: inline-block;
+}
+
+.b-pager__count
+{
+	margin: 0 10px;
+}
