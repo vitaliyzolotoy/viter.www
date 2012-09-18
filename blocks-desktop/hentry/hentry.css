@@ -1,0 +1,58 @@
+.hentry
+{
+	padding: 60px 0 30px 0;
+	
+	text-align: center;
+}
+
+.hentry__tags
+{
+	font-size: 11px;
+
+	letter-spacing: 2px;
+
+	text-transform: uppercase;
+
+	color: #252525;
+}
+
+.hentry__tags .b-link
+{
+	text-decoration: none;
+	color: #252525;
+}
+
+.hentry__content
+{
+	padding: 25px 35px;
+
+	border-top: 1px solid #252525;
+	border-bottom: 1px solid #252525;
+	background: #fff;
+}
+
+.hentry__title
+{
+	font-size: 18px;
+	font-weight: normal;
+
+	text-transform: uppercase;
+
+	color: #4E729D;
+}
+
+.hentry__title .b-link
+{
+	text-decoration: none;
+
+	border-bottom: 1px solid;
+	color: #4E729D;
+}
+
+.hentry__time
+{
+	font-size: 11px;
+	font-style: italic;
+
+	color: #777;
+}

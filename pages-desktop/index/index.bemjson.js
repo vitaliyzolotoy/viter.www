@@ -34,190 +34,273 @@
             },
             {
                 block: 'grid',
-                mods: { liquid: 'yes' },
+                mods: { liquid: 'yes', responsive: 'yes' },
                 content: [
                     {
                         elem: 'unit',
                         elemMods: { liquid: '2' },
-                        content: ''
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '96' },
-                        content: '<h3>Модульна сітка</h3> <p>Тут буде інформація про блок grid  </p>'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    }
-                ]
-            },
-            {
-                block: 'grid',
-                mods: { elastic: 'yes', fixed: 'yes', liquid: 'yes' },
-                mix: [{ block: 'debug' }],
-                content: [
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { fixed: '120' },
-                        content: 'Комірка, фіксована, 120px'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { elastic: '9' },
-                        content: 'Комірка, еластична, 9em'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '48' },
-                        content: 'Комірка, резинова, 48%'
                     },
                     {
                         elem: 'unit',
                         elemMods: { liquid: '32' },
-                        content: 'Комірка, резинова, 32%'
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=3',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Інтерв’ю'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге; потім, швидко посилена новими поповненнями, брала участь в інших боях на сході Франції та в Німеччині, не проявляючи себе ні з поганою, ні з особливо гарною боку, поки в травні війна не скінчилася»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=3',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Після війни'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '20 липня'
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         elem: 'unit',
-                        elemMods: { liquid: '16' },
-                        content: 'Комірка, резинова, 16%'
+                        elemMods: { liquid: '32' },
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=2',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Огляд'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=2',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Племена та Переваги'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '10 червня'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'unit',
+                        elemMods: { liquid: '32' },
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=1',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Цікаві події'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=1',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Апологет Погоди'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '1 червня'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'unit',
+                        elemMods: { liquid: '32' },
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=3',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Інтерв’ю'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге; потім, швидко посилена новими поповненнями, брала участь в інших боях на сході Франції та в Німеччині, не проявляючи себе ні з поганою, ні з особливо гарною боку, поки в травні війна не скінчилася»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=3',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Після війни'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '20 липня'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'unit',
+                        elemMods: { liquid: '32' },
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=1',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Цікаві події'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=1',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Апологет Погоди'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '1 червня'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'unit',
+                        elemMods: { liquid: '32' },
+                        content: [
+                            {
+                                block: 'hentry',
+                                content: [
+                                    {
+                                        elem: 'tags',
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?tag=2',
+                                                attrs: { rel: 'tag' },
+                                                content: 'Огляд'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'content',
+                                        content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
+                                    },
+                                    {
+                                        elem: 'title',
+                                        mix: [{ block: 'i-font' }],
+                                        content: [
+                                            {
+                                                block: 'b-link',
+                                                url: '?post=2',
+                                                attrs: { rel: 'bookmark' },
+                                                content: 'Племена та Переваги'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'time',
+                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                        content: '10 червня'
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         elem: 'unit',
                         elemMods: { liquid: '2' },
-                        content: ''
-                    }
-                ]
-            },
-            {
-                block: 'grid',
-                mods: { elastic: 'yes', fixed: 'yes', liquid: 'yes' },
-                mix: [{ block: 'debug' }],
-                content: [
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { fixed: '120' },
-                        content: 'Комірка, фіксована, 120px'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { elastic: '9' },
-                        content: 'Комірка, еластична, 9em'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '24' },
-                        content: 'Комірка, резинова, 24%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '24' },
-                        content: 'Комірка, резинова, 24%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '16' },
-                        content: 'Комірка, резинова, 16%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '16' },
-                        content: 'Комірка, резинова, 16%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '8' },
-                        content: 'Комірка, резинова, 8%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '8' },
-                        content: 'Комірка, резинова, 8%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    }
-                ]
-            },
-            {
-                block: 'grid',
-                mods: { elastic: 'yes', fixed: 'yes', liquid: 'yes' },
-                mix: [{ block: 'debug' }],
-                content: [
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { fixed: '120' },
-                        content: 'Комірка, фіксована, 120px'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { elastic: '9' },
-                        content: 'Комірка, еластична, 9em'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '12' },
-                        content: 'Комірка, резинова, 12%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '12' },
-                        content: 'Комірка, резинова, 12%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '12' },
-                        content: 'Комірка, резинова, 12%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '12' },
-                        content: 'Комірка, резинова, 12%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '48' },
-                        content: 'Комірка, резинова, 48%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                        content: ''
-                    }
-                ]
-            },
-            {
-                block: 'grid',
-                mods: { ratio: 'yes' },
-                mix: [{ block: 'debug' }],
-                content: [
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '62' },
-                        content: 'Комірка, резинова, 61.8%'
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '38' },
-                        content: 'Комірка, резинова, 38.2%'
                     }
                 ]
             },
