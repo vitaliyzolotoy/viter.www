@@ -1,0 +1,12 @@
+block foot {
+	tag: 'footer'
+
+	elem year {
+		tag: 'span'
+	}
+
+	elem author {
+		tag: 'span'
+	}
+
+}

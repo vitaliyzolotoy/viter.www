@@ -1,0 +1,11 @@
+.hentry__tag
+{
+	font-size: 11px;
+
+	margin: 0 0 20px 0;
+
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	color: #252525;
+}

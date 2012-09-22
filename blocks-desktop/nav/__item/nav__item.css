@@ -1,0 +1,12 @@
+.nav__item
+{
+	letter-spacing: 1px;
+}
+
+.nav__item .b-link
+{
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: #252525;
+}

@@ -1,0 +1,34 @@
+.blockquote
+{
+	position: relative;
+
+	margin: 0 0 40px 0;
+	padding: 20px 20px 30px 20px;
+
+	background: #fff;
+}
+
+.blockquote:before,
+.blockquote:after
+{
+	position: absolute;
+	left: 0;
+
+	width: 100%;
+	height: 4px;
+
+	content: '';
+
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAAAAACWpiEsAAAAAnRSTlMA/1uRIrUAAAAkSURBVHheY/gPBQzvAwLWgxiMBQIHDigI9Dsw3P///34DUAwAzMsYHCopru4AAAAASUVORK5CYII=) repeat-x;
+	/*background: url(blockquote.png) repeat-x;*/
+}
+
+.blockquote:before
+{
+	top: -4px;
+}
+
+.blockquote:after
+{
+	bottom: -4px;
+}

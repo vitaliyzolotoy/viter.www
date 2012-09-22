@@ -1,0 +1,12 @@
+block nav {
+	tag: 'nav'
+
+	elem item {
+		tag: 'span'
+	}
+
+	elem count {
+		tag: 'span'
+	}
+
+}

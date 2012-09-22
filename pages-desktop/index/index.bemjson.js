@@ -1,7 +1,7 @@
 ([
     {
         block: 'b-page',
-        title: 'Записи · Блоґ Віталія Золотого',
+        title: 'Після війни · Блоґ Віталія Золотого',
         head: [
             {
                 elem: 'favicon',
@@ -22,311 +22,418 @@
         ],
         content: [
             {
-                block: 'b-header',
+                block: 'head',
                 content: [
                     {
-                        block: 'b-link',
-                        mix: [{ block: 'i-font' }],
-                        url: '/',
-                        content: 'Блоґ Віталія Золотого'
+                        elem: 'logo',
+                        content: [
+                            {
+                                block: 'b-icon'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'title',
+                        mix: [{ block: 'font' }],
+                        content: [
+                            {
+                                block: 'b-link',
+                                url: '/',
+                                content: 'Блоґ Віталія Золотого'
+                            }
+                        ]
                     }
                 ]
             },
             {
-                block: 'grid',
-                mods: { liquid: 'yes', responsive: 'yes' },
+                block: 'section',
                 content: [
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
-                    },
-                    {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Інтерв’ю'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=3',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Інтерв’ю'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге; потім, швидко посилена новими поповненнями, брала участь в інших боях на сході Франції та в Німеччині, не проявляючи себе ні з поганою, ні з особливо гарною боку, поки в травні війна не скінчилася»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=3',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Після війни'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '20 липня'
+                                        block: 'b-link',
+                                        url: '?post=3',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Після війни'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '20 липня'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Огляд'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=2',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Огляд'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=2',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Племена та Переваги'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '10 червня'
+                                        block: 'b-link',
+                                        url: '?post=2',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Племена та Переваги'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '10 червня'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Цікаві події'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=1',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Цікаві події'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=1',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Апологет Погоди'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '1 червня'
+                                        block: 'b-link',
+                                        url: '?post=1',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Апологет Погоди'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                content: '1 червня 2011 р.'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Інтерв’ю'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=3',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Інтерв’ю'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге; потім, швидко посилена новими поповненнями, брала участь в інших боях на сході Франції та в Німеччині, не проявляючи себе ні з поганою, ні з особливо гарною боку, поки в травні війна не скінчилася»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=3',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Після війни'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '20 липня'
+                                        block: 'b-link',
+                                        url: '?post=3',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Після війни'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '20 липня'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Цікаві події'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=1',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Цікаві події'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=1',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Апологет Погоди'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '1 червня'
+                                        block: 'b-link',
+                                        url: '?post=1',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Апологет Погоди'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                content: '1 червня 2011 р.'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '32' },
+                        block: 'hentry',
                         content: [
                             {
-                                block: 'hentry',
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Огляд'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
                                 content: [
                                     {
-                                        elem: 'tags',
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?tag=2',
-                                                attrs: { rel: 'tag' },
-                                                content: 'Огляд'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'content',
-                                        content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
-                                    },
-                                    {
-                                        elem: 'title',
-                                        mix: [{ block: 'i-font' }],
-                                        content: [
-                                            {
-                                                block: 'b-link',
-                                                url: '?post=2',
-                                                attrs: { rel: 'bookmark' },
-                                                content: 'Племена та Переваги'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem: 'time',
-                                        attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
-                                        content: '10 червня'
+                                        block: 'b-link',
+                                        url: '?post=2',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Племена та Переваги'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '10 червня'
                             }
                         ]
                     },
                     {
-                        elem: 'unit',
-                        elemMods: { liquid: '2' },
+                        block: 'hentry',
+                        content: [
+                            {
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Огляд'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя» «Якщо ви хочете по-справжньому заподіяти біль своїм батькам і у вас не вистачає духу стати гомосексуалістом, ви можете, зайнятися літературою чи мистецтвом. Я не жартую. Мистецтво — не спосіб заробляти на життя»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
+                                content: [
+                                    {
+                                        block: 'b-link',
+                                        url: '?post=2',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Племена та Переваги'
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '10 червня'
+                            }
+                        ]
+                    },
+                    {
+                        block: 'hentry',
+                        content: [
+                            {
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Інтерв’ю'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«П’ятдесят сьому дивізію переслідували невдачі. Вона прибула з-за океану як раз вчасно для того, щоб понести важкі втрати в битві при Балге»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
+                                content: [
+                                    {
+                                        block: 'b-link',
+                                        url: '?post=3',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Після війни'
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '2012-08-26T02:39:22+00:00' },
+                                content: '20 липня'
+                            }
+                        ]
+                    },
+                    {
+                        block: 'hentry',
+                        content: [
+                            {
+                                elem: 'tag',
+                                attrs: { rel: 'tag' },
+                                content: 'Цікаві події'
+                            },
+                            {
+                                block: 'blockquote',
+                                content: '«Якщо ви заговорите про резервацію Кайова із середнім ньюйоркцем, він швидше за все не зрозуміє, про що ви ведете мову: про черговий політичний трюк в Олбані або про лейтмотиви з «Парсифаля»'
+                            },
+                            {
+                                elem: 'title',
+                                mix: [{ block: 'font' }],
+                                content: [
+                                    {
+                                        block: 'b-link',
+                                        url: '?post=1',
+                                        attrs: { rel: 'bookmark' },
+                                        content: 'Апологет Погоди'
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'bullet',
+                                content: [
+                                    {
+                                        block: 'b-icon'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'time',
+                                attrs: { pubdate: '', datetime: '2012-08-26T02:39:22+00:00' },
+                                content: '1 червня 2011 р.'
+                            }
+                        ]
                     }
                 ]
             },
             {
-                block: 'b-pager',
+                block: 'nav',
                 content: [
-                    // {
-                    //     elem: 'prev',
-                    //     content: [
-                    //         {
-                    //             block: 'b-link',
-                    //             url: '#past',
-                    //             content: '← Минуле'
-                    //         }
-                    //     ]
-                    // },
+                    {
+                        block: 'bullet',
+                        content: [
+                            {
+                                block: 'b-icon'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'item',
+                        attrs: { rel: 'prev' },
+                        content: [
+                            {
+                                block: 'b-link',
+                                url: '#prev',
+                                content: '← Минуле'
+                            }
+                        ]
+                    },
                     {
                         elem: 'count',
                         content: '2 ⁄ 2'
                     },
                     {
-                        elem: 'next',
+                        elem: 'item',
+                        attrs: { rel: 'next' },
                         content: [
                             {
                                 block: 'b-link',
-                                url: '#past',
+                                url: '#next',
                                 content: '→  Майбутнє'
                             }
                         ]
@@ -334,17 +441,26 @@
                 ]
             },
             {
-                block: 'b-footer',
+                block: 'foot',
                 content: [
-                    '~ © ',
                     {
-                        block: 'b-link',
-                        url: 'mailto:vitaly.zolotoy@mail.com',
-                        content: 'Віталій Золотой',
+                        elem: 'author',
+                        content: [
+                            '© ',
+                            {
+                                block: 'b-link',
+                                url: 'mailto:vitaly.zolotoy@mail.com',
+                                attrs: { rel: 'author' },
+                                content: 'Віталій Золотой',
+                            }
+                        ]
                     },
-                    ', 2011…2012 ~'
+                    {
+                        elem: 'year',
+                        content: ', 2011…2012 рр.'
+                    }
                 ]
-            },
+            }
         ]
     }
 ])

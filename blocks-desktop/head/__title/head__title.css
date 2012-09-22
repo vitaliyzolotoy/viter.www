@@ -1,0 +1,18 @@
+.head__title
+{
+	font-size: 24px;
+
+	margin: 35px 0 65px 0;
+
+	line-height: 18px;
+	text-transform: uppercase;
+
+	color: #252525;
+}
+
+.head__title .b-link
+{
+	text-decoration: none;
+
+	color: #252525;
+}

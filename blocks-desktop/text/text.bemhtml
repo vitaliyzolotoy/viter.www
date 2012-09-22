@@ -1,5 +1,0 @@
-block text {
-
-    this.elem, tag: this.ctx.elem
-
-}
