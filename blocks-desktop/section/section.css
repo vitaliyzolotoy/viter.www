@@ -1,4 +1,13 @@
 .section
 {
-	margin: 0 2%;
+	display: inline-block;
+	
+	width: 61.8%;
+
+	vertical-align: top;
+}
+
+.section .text
+{
+	margin: 20px 0;
 }

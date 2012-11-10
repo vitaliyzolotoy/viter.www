@@ -1,3 +1,11 @@
+({
+    shouldDeps: [
+        {
+            block: 'b-link',
+        }
+    ]
+})
+
 // ({
 //     shouldDeps: [
 //         {

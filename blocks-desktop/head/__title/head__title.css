@@ -1,10 +1,9 @@
 .head__title
 {
-	font-size: 24px;
-
-	margin: 35px 0 65px 0;
+	font-size: 22px;
 
 	line-height: 18px;
+
 	text-transform: uppercase;
 
 	color: #252525;
@@ -15,4 +14,11 @@
 	text-decoration: none;
 
 	color: #252525;
+	border-bottom: 1px solid transparent;
+}
+
+.head__title .b-link:hover
+{
+	color: #E53B2C;
+	border-bottom: 1px solid #E53B2C;
 }

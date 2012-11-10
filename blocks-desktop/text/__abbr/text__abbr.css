@@ -1,0 +1,10 @@
+.text__abbr
+{
+	font-style: normal;
+	font-variant: small-caps;
+
+	letter-spacing: 1px;
+	text-transform: lowercase;
+
+	border: 0;
+}

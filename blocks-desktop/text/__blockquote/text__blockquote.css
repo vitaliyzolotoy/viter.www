@@ -1,13 +1,18 @@
-.blockquote
+.text__blockquote
 {
+	font-style: italic;
+
 	position: relative;
 
-	margin: 0 0 20px 0;
-	padding: 20px 40px 30px 40px;
+	width: 320px;
+	margin: 20px auto;
+    padding: 10px;
+
+    text-align: center;
 }
 
-.blockquote:before,
-.blockquote:after
+.text__blockquote:before,
+.text__blockquote:after
 {
 	position: absolute;
 	left: 0;
@@ -18,15 +23,15 @@
 	content: '';
 
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAAAAACWpiEsAAAAAnRSTlMA/1uRIrUAAAAkSURBVHheY/gPBQzvAwLWgxiMBQIHDigI9Dsw3P///34DUAwAzMsYHCopru4AAAAASUVORK5CYII=) repeat-x;
-	/*background: url(blockquote.png) repeat-x;*/
+	/*background: url(text__blockquote.png) repeat-x;*/
 }
 
-.blockquote:before
+.text__blockquote:before
 {
 	top: -4px;
 }
 
-.blockquote:after
+.text__blockquote:after
 {
 	bottom: -4px;
 }

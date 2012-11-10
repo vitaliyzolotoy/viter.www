@@ -3,16 +3,9 @@
 	font-size: 18px;
 	font-weight: normal;
 
+	margin: 10px 0;
+
 	line-height: 18px;
+	text-align: center;
 	text-transform: uppercase;
-
-	color: #4E729D;
-}
-
-.hentry__title .b-link
-{
-	text-decoration: none;
-
-	border-bottom: 1px solid;
-	color: #4E729D;
 }
