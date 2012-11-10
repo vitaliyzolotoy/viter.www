@@ -93,7 +93,7 @@
                                             {
                                                 block: 'b-icon',
                                                 mix: [{ block: 'text', elem: 'img' }],
-                                                url: '../blocks-desktop/text/__img/text__img.jpg',
+                                                url: '../../blocks-desktop/text/__img/text__img.jpg',
                                                 width: '320px',
                                                 height: '320px'
                                             },
