@@ -1,4 +1,4 @@
-exports.index = function (req, res, Page, fs, path, vm) {
+exports.add = function (req, res, Page, fs, path, vm) {
     var priv,
         bemjson,
         bemhtml;
