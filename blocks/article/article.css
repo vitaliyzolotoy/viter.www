@@ -1,0 +1,17 @@
+.article
+{
+    position: relative;
+
+    padding: 0 11.8%;
+
+    vertical-align: top;
+
+    box-sizing: border-box;
+}
+
+.article .text__h2
+{
+    font-size: 22px;
+
+    margin: 60px 0 22px 0;
+}

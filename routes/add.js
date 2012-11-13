@@ -6,12 +6,12 @@ exports.add = function (req, res, Page, fs, path, vm) {
     Page.findOne({}, function (err, data) {
         if(err);
 
-        fs.readFile(path.join(__dirname, '..', 'pages-desktop', 'add', '_add.priv.js'), 'utf-8', function(err, file){
+        fs.readFile(path.join(__dirname, '..', 'pages', 'add', '_add.priv.js'), 'utf-8', function(err, file){
             if(err);
 
             vm.runInThisContext(file);
 
-            bemjson = blocks['b-page']({ page: data});
+            bemjson = blocks['b-page']({ page: data });
             bemhtml = BEMHTML.apply(bemjson);
 
             res.send(bemhtml);

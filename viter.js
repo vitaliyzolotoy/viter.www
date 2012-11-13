@@ -27,9 +27,14 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.use(express.static(__dirname + '/blocks/'));
+app.use(express.static(__dirname + '/pages/'));
+
 models.defineModels(mg, function() {
     app.Page = Page = db.model('Page');
 })
+
+console.log(app.routes);
 
 app.get('/', function (req, res){
     routes.index(req, res, app.Page, fs, path, vm);
@@ -38,6 +43,7 @@ app.get('/', function (req, res){
 app.get('/add/', function (req, res){
     routes.add(req, res, app.Page, fs, path, vm);
 });
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

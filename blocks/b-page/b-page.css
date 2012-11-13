@@ -1,0 +1,11 @@
+html
+{
+	background: #fafafa;
+}
+
+.b-page__body
+{
+    font: 16px/22px Georgia, 'Times New Roman', serif;
+
+    margin: 0;
+}
