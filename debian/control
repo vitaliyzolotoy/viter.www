@@ -1,0 +1,7 @@
+Source: viter
+Version: 0.0.1
+Architecture: all
+Maintainer: Vitaly Zolotoy <vitaly.zolotoy@gmail.com>
+Depends: nodejs, ubic (>= 1.37)
+Section: misc
+Priority: optional
