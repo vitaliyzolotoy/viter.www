@@ -1,20 +1,5 @@
 #!/usr/bin/make -f
- 
-NODE_PREFIX=debian/npm-simplehttpd/usr
-dh --with=nginx --with=nodeubic
- 
+
 %:
     dh $@
- 
-override_dh_auto_build:
-    npm build
-    npm install --dev
- 
-override_dh_auto_test:
-    npm test
- 
-override_dh_auto_install:
-    npm install --global --prefix $(NODE_PREFIX) .
- 
-clean:
-    dh clean
+
