@@ -1,3 +1,19 @@
 block form {
-	tag: 'form'
+    tag: 'form'
+
+    elem button {
+        tag: 'input'
+    }
+
+    elem input {
+        tag: 'input'
+    }
+
+    elem label {
+        tag: 'label'
+    }
+
+    elem textarea {
+        tag: 'textarea'
+    }
 }

@@ -1,4 +1,24 @@
 .form__input
 {
-	display: block;
+    font: 13px/22px Georgia, 'Times New Roman', serif;
+
+    display: block;
+
+    width: 100%;
+    margin: 0 0 22px 0;
+
+    border: 3px double #999;
+    background: transparent;
+    box-sizing: border-box;
+
+    -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+       -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+         -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+            transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.form__input:focus
+{
+    outline: 0;
+    background: ivory;
 }

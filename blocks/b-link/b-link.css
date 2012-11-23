@@ -3,12 +3,11 @@
 	text-decoration: none;
 
 	color: #4E729D;
-	border-bottom: 1px solid #4E729D;
+	border-bottom: 1px solid #ccc;
 }
 
 .b-link:visited
 {
-	color: #777;
 	border-bottom: 1px solid #777;
 }
 

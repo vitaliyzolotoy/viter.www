@@ -2,7 +2,7 @@
     {
         block: 'b-page',
         mods: { priv: 'add' },
-        title: 'Вітер',
+        title: 'Записати нову замітку',
         head: [
             {
                 elem: 'favicon',
@@ -50,51 +50,31 @@
                 block: 'section',
                 content: [
                     {
-                        elem: 'inner',
+                        block: 'form',
                         content: [
                             {
-                                block: 'form',
-                                content: [
-                                    {
-                                        elem: 'input',
-                                        attrs: { type: 'text', name: 'title' }
-                                    },
-                                    {
-                                        elem: 'textarea',
-                                        attrs: { name: 'content' }
-                                    },
-                                    {
-                                        elem: 'button',
-                                        attrs: { type: 'submit', value: 'Опублікувати' }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                block: 'aside',
-                content: ''
-            },
-            {
-                block: 'foot',
-                content: [
-                    {
-                        elem: 'author',
-                        content: [
-                            '© ',
+                                elem: 'label',
+                                attrs: { for: 'title' },
+                                content: 'Тема замітки:'
+                            },
                             {
-                                block: 'b-link',
-                                url: 'mailto:vitaly.zolotoy@mail.com',
-                                attrs: { rel: 'author' },
-                                content: 'Віталій Золотой'
+                                elem: 'input',
+                                attrs: { id: 'title', type: 'text', name: 'title' }
+                            },
+                            {
+                                elem: 'label',
+                                attrs: { for: 'content' },
+                                content: 'Власне, повний текст замітки:'
+                            },
+                            {
+                                elem: 'textarea',
+                                attrs: { id: 'content', name: 'content' }
+                            },
+                            {
+                                elem: 'button',
+                                attrs: { type: 'submit', value: 'Опублікувати' }
                             }
                         ]
-                    },
-                    {
-                        elem: 'year',
-                        content: ' · 2011…2012 рр.'
                     }
                 ]
             }
