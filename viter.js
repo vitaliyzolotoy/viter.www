@@ -40,10 +40,13 @@ app.get('/', function (req, res){
     routes.index(req, res, app.Page, fs, path, vm);
 });
 
+app.get('/post/', function (req, res){
+    routes.post(req, res, app.Page, fs, path, vm);
+});
+
 app.get('/add/', function (req, res){
     routes.add(req, res, app.Page, fs, path, vm);
 });
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
