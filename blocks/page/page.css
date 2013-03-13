@@ -1,11 +1,12 @@
 html
 {
-	background: #fafafa;
+    background: #fafafa;
 }
 
-.b-page__body
+.page__body
 {
     font: 15px/22px Georgia, 'Times New Roman', serif;
 
     margin: 0;
+    padding: 0;
 }

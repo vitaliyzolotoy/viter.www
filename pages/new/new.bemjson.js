@@ -1,16 +1,11 @@
 ([
     {
         block: 'b-page',
-        mods: { priv: 'add' },
         title: 'Записати нову замітку',
         head: [
             {
-                elem: 'favicon',
-                url: '/favicon.ico'
-            },
-            {
                 elem: 'css',
-                url: '/pages/add/_add.css'
+                url: '/pages/new/_new.css'
             },
             {
                 block: 'i-jquery',
@@ -18,7 +13,11 @@
             },
             {
                 elem: 'js',
-                url: '/pages/add/_add.js'
+                url: '/pages/new/_new.js'
+            },
+            {
+                elem: 'favicon',
+                url: '/favicon.ico'
             }
         ],
         content: [

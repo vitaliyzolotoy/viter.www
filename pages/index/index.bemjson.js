@@ -1,7 +1,6 @@
 ([
     {
         block: 'b-page',
-        mods: { priv: 'index' },
         title: 'Опозиційна з народження',
         head: [
             {

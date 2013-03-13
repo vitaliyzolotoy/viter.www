@@ -11,7 +11,10 @@
     },
     "dependencies": {
         "express": "*",
-        "mongoose": "*"
+        "mongoose": "*",
+        "mongodb": ">= 0.9.6-7",
+        "dateformat": "",
+        "async": ""
     },
     "devDependencies": {},
     "optionalDependencies": {},

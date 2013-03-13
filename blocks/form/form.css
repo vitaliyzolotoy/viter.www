@@ -1,4 +1,9 @@
 .form
 {
-    padding: 60px 11.8% 120px 11.8%;
+    display: inline-block;
 }
+
+/*.form
+{
+    padding: 60px 11.8% 120px 11.8%;
+}*/

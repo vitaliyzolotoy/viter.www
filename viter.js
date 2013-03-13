@@ -2,52 +2,97 @@
  * Module dependencies.
  */
 var express = require('express'),
-        routes = require('./routes'),
-        http = require('http'),
-        path = require('path'),
-        vm = require('vm'),
-        fs = require('fs'),
-        mg = require('mongoose'),
-        db = mg.createConnection('localhost' , 'test'),
-        models = require('./models'),
-        Page;
+    http = require('http'),
+    app = express(),
 
-var app = express();
+    controllers = require('./controllers'),
+    models = require('./models');
 
 app.configure(function(){
     app.set('port', process.env.PORT || 8787);
-    app.use(express.favicon());
     app.use(express.logger('dev'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-    app.use(app.router);
+    app.use(app.router),
+    app.use('/pages', express.static(__dirname + '/pages')),
+    app.use('/blocks', express.static(__dirname + '/blocks'));
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.use(express.static(__dirname + '/blocks/'));
-app.use(express.static(__dirname + '/pages/'));
 
-models.defineModels(mg, function() {
-    app.Page = Page = db.model('Page');
-})
 
-console.log(app.routes);
 
-app.get('/', function (req, res){
-    routes.index(req, res, app.Page, fs, path, vm);
+app.get('/blog/', function(request, response) {
+    controllers.index(request, response);
 });
 
-app.get('/post/', function (req, res){
-    routes.post(req, res, app.Page, fs, path, vm);
+
+
+app.get('/blog/new/', function(request, response) {
+    controllers.new(request, response);
 });
 
-app.get('/add/', function (req, res){
-    routes.add(req, res, app.Page, fs, path, vm);
+app.post('/blog/new/', function(request, response) {
+    controllers.new(request, response);
 });
+
+
+
+app.get('/blog/update/', function(request, response) {
+    controllers.update(request, response);
+});
+
+app.post('/blog/update/', function(request, response) {
+    controllers.update(request, response);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/blog/:id/', function(request, response) {
+    controllers.index(request, response);
+});
+
+app.get('/blog/:id/remove/', function(request, response) {
+    controllers.remove(request, response);
+});
+
+app.get('/add/', function(request, response) {
+    controllers.add(request, response);
+});
+
+app.post('/add/', function(request, response) {
+    controllers.add(request, response);
+});
+
+app.get('/settings/', function(request, response) {
+    controllers.settings(request, response);
+});
+
+app.post('/settings/', function(request, response) {
+    controllers.settings(request, response);
+});
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log("viter app listening on port " + app.get('port'));
 });

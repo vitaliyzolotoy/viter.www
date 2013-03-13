@@ -4,7 +4,6 @@ blocks['b-page'] = function(data) {
     return [
         {
             block: 'b-page',
-            mods: { priv: 'add' },
             title: 'Записати нову замітку',
             head: [
                 {
@@ -13,7 +12,7 @@ blocks['b-page'] = function(data) {
                 },
                 {
                     elem: 'css',
-                    url: '/pages/add/_add.css'
+                    url: '/pages/new/_new.css'
                 },
                 {
                     block: 'i-jquery',
@@ -21,7 +20,7 @@ blocks['b-page'] = function(data) {
                 },
                 {
                     elem: 'js',
-                    url: '/pages/add/_add.js'
+                    url: '/pages/new/_new.js'
                 }
             ],
             content: [
@@ -54,6 +53,7 @@ blocks['b-page'] = function(data) {
                     content: [
                         {
                             block: 'form',
+                            attrs: { method: 'post'},
                             content: [
                                 {
                                     elem: 'label',
@@ -62,7 +62,8 @@ blocks['b-page'] = function(data) {
                                 },
                                 {
                                     elem: 'input',
-                                    attrs: { id: 'title', type: 'text', name: 'title' }
+                                    attrs: { id: 'title', type: 'text', name: 'title', value: '' }
+                                    // attrs: { id: 'title', type: 'text', name: 'title', value: data.article[0].title }
                                 },
                                 {
                                     elem: 'label',
@@ -71,7 +72,9 @@ blocks['b-page'] = function(data) {
                                 },
                                 {
                                     elem: 'textarea',
-                                    attrs: { id: 'content', name: 'content' }
+                                    attrs: { id: 'content', name: 'content' },
+                                    content: ''
+                                    // content: data.article[0].content
                                 },
                                 {
                                     elem: 'button',
