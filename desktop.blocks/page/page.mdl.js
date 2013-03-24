@@ -1,2 +1,0 @@
-// page.mdl.js 
-alert();

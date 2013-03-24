@@ -1,20 +1,30 @@
 ({
     block: 'page',
+    title: 'The Feature',
+    head: [
+        {
+            elem: 'css', url: '/desktop.bundles/index/_index.css'
+        },
+        {
+            elem: 'js', url: '/desktop.bundles/index/_index.js'
+        },
+        {
+            elem: 'favicon', url: '/favicon.ico'
+        }
+    ],
     content:[
         {
-            block: 'header',
-            content: 'header'
-        },
-        {
             block: 'section',
-            content: 'section'
+            content: [
+                {
+                    block: 'logo',
+                    mix: { block: 'font' },
+                    content: 'The Feature'
+                }
+            ]
         },
         {
-            block: 'footer',
-            content: 'footer'
-        },
-        {
-            block: 'test'
+            block: 'analytics'
         }
     ]
 })
