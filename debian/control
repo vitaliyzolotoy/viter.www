@@ -1,8 +1,0 @@
-Source: viter
-Priority: optional
-Maintainer: Vitaly Zolotoy <vitaly.zolotoy@gmail.com>
-
-Package: viter
-Priority: optional
-Architecture: all
-Description: simple blog engine

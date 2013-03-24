@@ -1,7 +1,0 @@
-block head {
-    tag: 'header'
-
-    elem title {
-        tag: 'h1'
-    }
-}

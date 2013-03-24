@@ -1,4 +1,14 @@
+/*global MAKE:true */
+
+"use strict";
+
+//process.env.YENV = 'production';
+
 MAKE.decl('Arch', {
+
+    blocksLevelsRegexp: /^.+?\.blocks/,
+
+    bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     getLibraries: function() {
 
@@ -6,7 +16,11 @@ MAKE.decl('Arch', {
             'bem-bl': {
                 type: 'git',
                 url: 'git://github.com/bem/bem-bl.git',
-                treeish: '0.2'
+                treeish: '0.3'
+            },
+            'bemhtml' : {
+                type: 'git',
+                url: 'git://github.com/bem/bemhtml.git'
             }
         };
 
@@ -14,7 +28,24 @@ MAKE.decl('Arch', {
 
 });
 
+
 MAKE.decl('BundleNode', {
+
+    getTechs: function() {
+        return [
+            'bemjson.js',
+            'bemdecl.js',
+            'deps.js',
+            'bemhtml',
+            'js',
+            'css',
+            'html',
+
+            'ctrl.js',
+            'mdl.js',
+            'priv.js'
+        ];
+    },
 
     'create-priv.js-optimizer-node': function(tech, sourceNode, bundleNode) {
         var nodes = this.__base(tech, sourceNode, bundleNode);
@@ -22,17 +53,14 @@ MAKE.decl('BundleNode', {
         return nodes;
     },
 
-    getTechs: function() {
+    getOptimizerTechs: function() {
         return [
-            'bemjson.js',
-            'bemdecl.js',
-            'deps.js',
-            'bemhtml.js',
             'css',
             'js',
-            'html',
+            'ctrl.js',
+            'mdl.js',
             'priv.js'
-        ]; 
+        ];
     }
 
 });

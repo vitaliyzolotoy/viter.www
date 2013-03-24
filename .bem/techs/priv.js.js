@@ -1,8 +1,6 @@
 var BEM = require('bem'),
     PATH = require('path'),
     INHERIT = BEM.require('inherit'),
-
-    /** @class */
     Tech = BEM.require('./techs/css').Tech;
 
 exports.Tech = INHERIT(Tech, /** @lends Tech.prototype */ {

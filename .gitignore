@@ -1,2 +1,8 @@
-bem-bl/
-node_modules/
+bem-bl
+bemhtml
+node_modules
+.DS_Store
+.bem/cache
+desktop.bundles/*/*.*
+!desktop.bundles/*/*.bemjson.js
+!desktop.bundles/.bem/*
