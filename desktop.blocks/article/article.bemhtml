@@ -1,0 +1,11 @@
+block article {
+    tag: 'article'
+
+    elem title {
+        tag: 'h2'
+    }
+
+    elem time {
+        tag: 'time'
+    }
+}

@@ -1,0 +1,10 @@
+.article
+{
+    position: relative;
+
+    padding: 60px 11.8% 120px 11.8%;
+
+    vertical-align: top;
+
+    box-sizing: border-box;
+}

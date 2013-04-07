@@ -1,0 +1,13 @@
+.footer__author
+{
+	letter-spacing: 1px;
+}
+
+.footer__author .b-link
+{
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: #252525;
+	border-bottom: none;
+}

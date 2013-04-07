@@ -6,3 +6,8 @@ html,
     
     background: #fafafa;
 }
+
+.page__body
+{
+    font: 15px/22px Georgia, 'Times New Roman', serif;
+}
