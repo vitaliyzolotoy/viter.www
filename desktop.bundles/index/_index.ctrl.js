@@ -1,27 +1,10 @@
+/* ../../desktop.blocks/page/page.ctrl.js begin */
 var async = require('async'),
     path = require('path'),
     vm = require('vm'),
     fs = require('fs');
 
-var controllers = {
-    index: function(request, response) {
-
-        async.parallel({
-            blog: function(callback){
-                callback();
-            },
-            articles: function(callback){
-                callback();
-            }
-        },
-        function(err, results){
-            var data = {
-                page: 'index'
-            };
-            controllers.render(data, response);
-        });
-
-    },
+var page = {
 
     render: function(data, response) {
         fs.readFile(path.join(__dirname, '_' + data.page + '.priv.js'), 'utf-8', function(error, file){
@@ -35,4 +18,33 @@ var controllers = {
 
 }
 
-module.exports = controllers;
+module.exports = page;
+
+/* ../../desktop.blocks/page/page.ctrl.js end */
+;
+/* ../../desktop.blocks/page/_type/page_type_index.ctrl.js begin */
+var index = {
+
+    index: function(request, response) {
+        async.parallel({
+            test1: function(callback){
+                callback();
+            },
+            test2: function(callback){
+                callback();
+            }
+        },
+        function(err, results){
+            var data = {
+                page: 'index'
+            };
+            page.render(data, response);
+        });
+    }
+
+}
+
+module.exports = index;
+
+/* ../../desktop.blocks/page/_type/page_type_index.ctrl.js end */
+;

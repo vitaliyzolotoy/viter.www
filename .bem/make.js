@@ -53,6 +53,14 @@ MAKE.decl('BundleNode', {
         return nodes;
     },
 
+    'create-ctrl.js-optimizer-node': function(tech, sourceNode, bundleNode) {
+        return this['create-js-optimizer-node'].apply(this, arguments);
+    },
+
+    'create-mdl.js-optimizer-node': function(tech, sourceNode, bundleNode) {
+        return this['create-js-optimizer-node'].apply(this, arguments);
+    },
+
     getOptimizerTechs: function() {
         return [
             'css',

@@ -3,25 +3,7 @@ var async = require('async'),
     vm = require('vm'),
     fs = require('fs');
 
-var controllers = {
-    index: function(request, response) {
-
-        async.parallel({
-            blog: function(callback){
-                callback();
-            },
-            articles: function(callback){
-                callback();
-            }
-        },
-        function(err, results){
-            var data = {
-                page: 'index'
-            };
-            controllers.render(data, response);
-        });
-
-    },
+var page = {
 
     render: function(data, response) {
         fs.readFile(path.join(__dirname, '_' + data.page + '.priv.js'), 'utf-8', function(error, file){
@@ -35,4 +17,4 @@ var controllers = {
 
 }
 
-module.exports = controllers;
+module.exports = page;

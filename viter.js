@@ -1,8 +1,9 @@
 var express = require('express'),
     http = require('http'),
-    viter = express(),
+    viter = express();
 
-    controllers = require('./desktop.bundles/index/_index.ctrl.js');
+    ctrl1 = require('./desktop.bundles/index/_index.ctrl.js');
+    ctrl2 = require('./desktop.bundles/meanwhile/_meanwhile.ctrl.js');
 
 viter.configure(function(){
     viter.set('port', process.env.PORT || 8787);
@@ -19,7 +20,11 @@ viter.configure('development', function(){
 });
 
 viter.get('/', function(request, response) {
-    controllers.index(request, response);
+    ctrl1.index(request, response);
+});
+
+viter.get('/meanwhile/', function(request, response) {
+    ctrl2.meanwhile(request, response);
 });
 
 http.createServer(viter).listen(viter.get('port'), function(){

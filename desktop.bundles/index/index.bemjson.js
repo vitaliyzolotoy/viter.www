@@ -1,6 +1,7 @@
 ({
     block: 'page',
     title: 'The Feature',
+    mods: { type: 'index' },
     head: [
         {
             elem: 'css', url: '/desktop.bundles/index/_index.css'
@@ -14,7 +15,7 @@
     ],
     content:[
         {
-            block: 'section',
+            block: 'landing',
             content: [
                 {
                     block: 'logo',
@@ -22,9 +23,6 @@
                     content: 'The Feature'
                 }
             ]
-        },
-        {
-            block: 'analytics'
         }
     ]
 })

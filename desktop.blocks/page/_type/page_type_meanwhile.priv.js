@@ -7,10 +7,10 @@ blocks['page'] = function(data) {
             title: 'The Feature',
             head: [
                 {
-                    elem: 'css', url: '/desktop.bundles/index/_index.css'
+                    elem: 'css', url: '/desktop.bundles/meanwhile/_meanwhile.css'
                 },
                 {
-                    elem: 'js', url: '/desktop.bundles/index/_index.js'
+                    elem: 'js', url: '/desktop.bundles/meanwhile/_meanwhile.js'
                 },
                 {
                     elem: 'favicon', url: '/favicon.ico'
