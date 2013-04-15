@@ -4,6 +4,7 @@ blocks['page'] = function(data) {
     return [
         {
             block: 'page',
+            mods: { type: 'index' },
             title: 'The Feature',
             head: [
                 {

@@ -6,13 +6,17 @@ var meanwhile = {
             test1: function(callback){
                 callback();
             },
-            test2: function(callback){
-                callback();
+            articles: function(callback){
+                db.model('article', models.article())
+                .find()
+                .sort({date: -1})
+                .execFind(callback);
             }
         },
         function(err, results){
             var data = {
-                page: 'meanwhile'
+                page: 'meanwhile',
+                articles: results.articles,
             };
             page.render(data, response);
         });

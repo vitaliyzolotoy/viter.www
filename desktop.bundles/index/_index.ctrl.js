@@ -2,7 +2,22 @@
 var async = require('async'),
     path = require('path'),
     vm = require('vm'),
-    fs = require('fs');
+    fs = require('fs'),
+
+    mongoose = require('mongoose'),
+    db = mongoose.createConnection('localhost', 'viter');
+
+var models = {
+
+    article: function() {
+        return mongoose.Schema({
+            title: String,
+            content: String,
+            date: { type: Date, default: Date.now }
+        });
+    }
+
+};
 
 var page = {
 

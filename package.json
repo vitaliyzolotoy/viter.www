@@ -13,6 +13,7 @@
         "bem": "*",
         "inherit": "*",
         "express": "*",
-        "async": "*"
+        "async": "*",
+        "mongoose": "*"
     }
 }
