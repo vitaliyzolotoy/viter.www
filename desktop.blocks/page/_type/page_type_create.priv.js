@@ -23,7 +23,7 @@ blocks['page'] = function(data) {
                     content: [
                         {
                             block: 'form',
-                            attrs: { method: 'post'},
+                            attrs: { method: 'post', enctype: 'multipart/form-data' },
                             content: [
                                 {
                                     block: 'label',
@@ -42,6 +42,15 @@ blocks['page'] = function(data) {
                                 {
                                     block: 'textarea',
                                     attrs: { id: 'content', name: 'content' }
+                                },
+                                {
+                                    block: 'label',
+                                    attrs: { for: 'file' },
+                                    content: 'Прикріпити файл'
+                                },
+                                {
+                                    block: 'input',
+                                    attrs: { id: 'file', type: 'file', name: 'file' }
                                 },
                                 {
                                     block: 'button',
