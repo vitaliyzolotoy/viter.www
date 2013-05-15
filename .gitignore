@@ -1,8 +1,9 @@
 bem-bl
 bemhtml
 node_modules
-.DS_Store
 .bem/cache
+.DS_Store
+sftp-config.json
 desktop.bundles/*/*.*
 !desktop.bundles/*/*.bemjson.js
 !desktop.bundles/.bem/*

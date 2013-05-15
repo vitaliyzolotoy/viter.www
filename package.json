@@ -14,7 +14,6 @@
         "inherit": "*",
         "express": "*",
         "async": "*",
-        "mongoose": "*",
-        "s3": "*"
+        "mongoose": "*"
     }
 }

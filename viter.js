@@ -1,3 +1,5 @@
+// http://pixelhandler.com/blog/2012/02/09/develop-a-restful-api-using-node-js-with-express-and-mongoose/
+
 var express = require('express'),
     http = require('http'),
     viter = express();
