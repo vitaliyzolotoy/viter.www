@@ -1,0 +1,19 @@
+{
+    "name": "viter",
+    "version": "0.0.1",
+    "description": "blog engine based on bem methodology",
+    "author": {
+        "name": "Vitaly Zolotoy",
+        "email": "vitaly.zolotoy@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/zolotoy/viter.git"
+    },
+    "dependencies": {
+        "bem-node": "*"
+    },
+    "engines": {
+        "node": ">= 0.8.0"
+    }
+}
