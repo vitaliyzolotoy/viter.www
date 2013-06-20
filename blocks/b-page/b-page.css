@@ -1,0 +1,31 @@
+.b-page
+{
+    margin: 0;
+    font-family: Georgia,FreeSerif,Times,serif;
+}
+
+.b-head
+{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+    color: #D2D8BA;
+    text-align: center;
+    background: #46483E;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.b-foot
+{
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+    background: #46483E;
+}
+.b-foot img
+{
+    height: 100px;
+}
+.b-foot img + img
+{
+    margin-left: 3em;
+}

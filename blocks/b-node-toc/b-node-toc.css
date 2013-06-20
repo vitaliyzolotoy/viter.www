@@ -1,0 +1,9 @@
+.b-node-toc
+{
+    width: 750px;
+    margin: auto;
+}
+.b-node-toc .b-link
+{
+    display: block;
+}

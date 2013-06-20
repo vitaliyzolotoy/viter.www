@@ -1,0 +1,40 @@
+.b-node-module-doc
+{
+    width: 750px;
+    margin: auto;
+}
+
+.b-node-module-doc__method-name
+{
+    font-family: Helvetica,Arial,sans-serif;
+}
+.b-node-module-doc pre
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-color: #E8E8E8;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 6px;
+    margin: -0.5em 0 1.1em;
+    overflow-x: auto;
+    padding: 1em 1.6em 1em 1.2em;
+    vertical-align: top;
+}
+.b-node-module-doc code
+{
+    font-family: Monaco,Consolas,"Lucida Console",monospace;
+    font-size: 14px;
+    line-height: 1.5438em;
+    margin: 0;
+    padding: 0;
+}
+.b-node-module-doc p code
+{
+    background: none repeat scroll 0 0 #F8F8FF;
+    border: 1px solid #DEDEDE;
+    padding: 0 0.2em;
+}
