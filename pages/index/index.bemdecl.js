@@ -6,6 +6,6 @@ exports.blocks = [
     {block: 'i-ycssjs'},
 
     // user part
-    {block: 'i-page-home'},
-    {block: 'i-page-module-doc'}
+    {block: 'i-page-landing'},
+    {block: 'i-page-articles'}
 ]

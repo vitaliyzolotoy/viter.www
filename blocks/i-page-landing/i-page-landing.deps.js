@@ -3,6 +3,6 @@
         {block: 'i-page'}
     ],
     shouldDeps: [
-        {block: 'b-node-toc'}
+        {block: 'b-landing'}
     ]
 })

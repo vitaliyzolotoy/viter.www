@@ -9,13 +9,9 @@ BEM.decl('i-page', null, {
     getJson: function (json) {
         return {
             block: 'b-page',
+            title: 'The Feature',
             content: [
-                {block: 'b-head', content: 'BEM-node test project'},
-                {block: 'b-content', content: json},
-                {block: 'b-foot', content: [
-                    {tag: 'img', attrs: {src: 'http://nodejs.org/images/logo.png'}},
-                    {tag: 'img', attrs: {src: 'http://bem.info/bundles-desktop/index/blocks/logo/_type/logo_type_main.png'}}
-                ]}
+                {block: 'b-content', content: json}
             ]
         }
     }
