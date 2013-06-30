@@ -1,0 +1,56 @@
+.b-landing__logo
+{
+    font-size: 90px;
+    font-family: 'oranienbaum';
+
+    display: table-cell;
+
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: -5px;
+    vertical-align: middle;
+
+    color: #141414;
+
+    -webkit-animation: 'show' 2s;
+       -moz-animation: 'show' 2s;
+         -o-animation: 'show' 2s;
+            animation: 'show' 2s;
+}
+
+@-webkit-keyframes 'show' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes 'show' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes 'show' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes 'show' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

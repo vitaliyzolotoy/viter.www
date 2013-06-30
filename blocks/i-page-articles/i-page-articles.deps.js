@@ -1,8 +1,8 @@
 ({
     mustDeps: [
-        {block: 'i-page'}
+        { block: 'i-page' }
     ],
     shouldDeps: [
-        {block: 'b-articles'}
+        { block: 'b-articles' }
     ]
 })

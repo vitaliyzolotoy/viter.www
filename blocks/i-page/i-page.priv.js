@@ -7,12 +7,22 @@ BEM.decl('i-page', null, {
      * @return {Object} bemjson
      */
     getJson: function (json) {
-        return {
-            block: 'b-page',
-            title: 'The Feature',
-            content: [
-                {block: 'b-content', content: json}
-            ]
-        }
+        return [
+            {
+                block: 'b-page',
+                title: 'The Feature',
+                head: [
+                    { elem: 'favicon', url: '/favicon.ico' }
+                ],
+                content: [
+                    {
+                        block: 'b-content', content: json
+                    },
+                    {
+                        block: 'b-analytics'
+                    }
+                ]
+            }
+        ]
     }
 });
