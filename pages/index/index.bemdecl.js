@@ -7,5 +7,6 @@ exports.blocks = [
 
     // user part
     {block: 'i-page-landing'},
-    {block: 'i-page-articles'}
+    {block: 'i-page-articles'},
+    {block: 'i-page-article'}
 ]
