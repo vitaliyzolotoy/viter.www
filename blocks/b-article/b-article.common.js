@@ -1,12 +1,12 @@
 BEM.JSON.decl({name: 'b-article'}, {
 
     onBlock: function(ctx) {
-        var params = ctx.params();
+        var name = ctx.param('module');
 
         ctx.defer(
             
             BEM.blocks['i-api']
-                .module(params.module)
+                .module(name)
                 .then(function(result) {
 
                     ctx.content([
