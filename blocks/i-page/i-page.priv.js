@@ -17,7 +17,7 @@ BEM.decl('i-page', null, {
                 content: [
                     {
                         block: 'header',
-                        content: 'header'
+                        content: 'head'
                     },
                     {
                         block: 'b-content',
