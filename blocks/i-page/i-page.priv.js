@@ -16,10 +16,19 @@ BEM.decl('i-page', null, {
                 ],
                 content: [
                     {
-                        block: 'b-content', content: json
+                        block: 'header',
+                        content: 'header'
                     },
                     {
-                        block: 'b-analytics'
+                        block: 'b-content',
+                        content: json
+                    },
+                    {
+                        block: 'footer',
+                        content: 'footer'
+                    },
+                    {
+                        block: 'analytics'
                     }
                 ]
             }

@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'oranienbaum';
     src: local('oranienbaum');
-    src: url('b-font.woff'),
-         url('b-font.ttf');
+    src: url('font.woff'),
+         url('font.ttf');
 }
 
-.b-font
+.font
 {
     font-family: 'oranienbaum';
     font-weight: normal;

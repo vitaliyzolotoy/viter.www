@@ -2,7 +2,9 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'b-font' },
-        { block: 'b-analytics' }
+        { block: 'font' },
+        { block: 'analytics' },
+        { block: 'header' },
+        { block: 'footer' }
     ]
 })

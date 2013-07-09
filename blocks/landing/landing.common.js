@@ -1,4 +1,4 @@
-BEM.JSON.decl({name: 'b-landing'}, {
+BEM.JSON.decl({name: 'landing'}, {
 
     onBlock: function (ctx) {
         ctx.content([

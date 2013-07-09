@@ -1,8 +1,8 @@
 BEM.decl({block: 'i-api'}, null, {
 
-    module: function(name) {
+    module: function(data) {
         return BEM.blocks['i-api-request']
-            .get(name)
+            .get(data.module, {params: data.params})
             .then(function(result) {
                 return result;
             });
