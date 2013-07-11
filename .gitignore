@@ -1,5 +1,5 @@
 node_modules
-.bem/cache
+.bem/tmp
 .DS_Store
 sftp-config.json
 pages/*/*.*
