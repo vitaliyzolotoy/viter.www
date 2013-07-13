@@ -1,10 +1,10 @@
 {
     "paths" : {
         "./": "/",
-        "_/": "/_/"
+        "freeze/": "/freeze/"
     },
 
     "freeze_paths" : {
-        "./": "_/"
+        "./": "freeze/"
     }
 }
