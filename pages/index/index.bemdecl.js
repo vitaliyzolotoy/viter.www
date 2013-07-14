@@ -4,7 +4,7 @@ exports.blocks = [
 
     {block: 'i-router', mods: {init: 'auto'}},
     {block: 'i-content', mods: {type: 'bemhtml'}},
-    // {block: 'i-ycssjs'},
+    {block: 'i-ycssjs'},
 
     // user part
     {block: 'i-page-landing'},
