@@ -1,3 +1,6 @@
 .header
 {
+    display: none;
+    
+    background: url(header.jpg);
 }
