@@ -1,0 +1,15 @@
+.textarea
+{
+    font: 13px/24px georgia, serif;
+
+    box-sizing: border-box;
+    margin: 0;
+
+    outline: none;
+    border: 3px double #999;
+}
+
+.textarea:focus
+{
+    background: #fffff0;
+}

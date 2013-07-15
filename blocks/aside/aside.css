@@ -1,0 +1,13 @@
+.aside
+{
+    display: inline-block;
+
+    width: 38.2%;
+
+    vertical-align: top;
+}
+
+.aside__inner
+{
+    padding: 0 11.8%;
+}

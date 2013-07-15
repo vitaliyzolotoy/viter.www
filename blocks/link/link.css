@@ -1,0 +1,20 @@
+a:link
+{
+    text-decoration: none;
+
+    color: #0060c0;
+    border-bottom: 1px solid rgba(0, 96, 192, 0.25);
+}
+
+a:visited
+{
+    color: #6040a0;
+    border-bottom: 1px solid rgba(96, 64, 160, 0.25);
+}
+
+a:active,
+a:hover
+{
+    color: #d04000;
+    border-bottom: 1px solid rgba(208, 64, 0, 0.25);
+}

@@ -1,0 +1,7 @@
+block aside {
+    tag: 'aside',
+    content: {
+        elem: 'inner',
+        content: this.ctx.content
+    }
+}

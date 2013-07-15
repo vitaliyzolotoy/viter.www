@@ -1,11 +1,4 @@
 BEM.decl('i-page', null, {
-    /**
-     * Default bemjson for all pages
-     *
-     * @param {Mixed} json
-     * 
-     * @return {Object} bemjson
-     */
     getJson: function(json) {
         return [
             {
@@ -17,7 +10,18 @@ BEM.decl('i-page', null, {
                 content: [
                     {
                         block: 'header',
-                        content: 'header'
+                        content: [
+                            {
+                                block: 'logo',
+                                content: [
+                                    {
+                                        block: 'link',
+                                        url: '/',
+                                        content: 'The Feature'
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         block: 'b-content',
@@ -25,7 +29,20 @@ BEM.decl('i-page', null, {
                     },
                     {
                         block: 'footer',
-                        content: 'footer'
+                        content: [
+                            {
+                                block: 'copyright',
+                                content: [
+                                    '© Журнал «',
+                                    {
+                                        block: 'link',
+                                        url: '/',
+                                        content: 'The Feature'
+                                    },
+                                    '», 2013 рік'
+                                ]
+                            }
+                        ]
                     },
                     {
                         block: 'analytics'

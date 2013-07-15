@@ -10,30 +10,35 @@ BEM.JSON.decl({name: 'articles'}, {
             .then(function(result) {
                 ctx.content([
                     {
-                        block: 'b-link',
-                        url: '/create/',
-                        content: '[+]'
-                    },
-                    {
-                        elem: 'title',
-                        tag: 'h4',
-                        content: 'Table of Content'
-                    },
-                    {
-                        elem: 'toc',
-                        tag: 'ul',
-                        content: result.articles.map(function(item) {
-                            return [
-                                {
-                                    tag: 'li',
-                                    content: {
-                                        block: 'b-link',
-                                        content: item.title,
-                                        url: '/articles/' + item._id
-                                    }
-                                }
-                            ]
-                        })
+                        block: 'section',
+                        content: [
+                            {
+                                block: 'link',
+                                url: '/create/',
+                                content: '[+]'
+                            },
+                            {
+                                elem: 'title',
+                                tag: 'h4',
+                                content: 'Список статтей'
+                            },
+                            {
+                                elem: 'toc',
+                                tag: 'ul',
+                                content: result.articles.map(function(item) {
+                                    return [
+                                        {
+                                            tag: 'li',
+                                            content: {
+                                                block: 'link',
+                                                content: item.title,
+                                                url: '/articles/' + item._id
+                                            }
+                                        }
+                                    ]
+                                })
+                            }
+                        ]
                     }
                 ]);
             })

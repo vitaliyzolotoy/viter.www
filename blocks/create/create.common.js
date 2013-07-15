@@ -11,40 +11,54 @@ BEM.JSON.decl({name: 'create'}, {
             .then(function(result) {
                 ctx.content([
                     {
-                        block: 'b-link',
-                        url: '/articles/',
-                        content: '<--'
-                    },
-                    {
-                        elem: 'title',
-                        tag: 'h4',
-                        content: 'Написати'
-                    },
-                    {
-                        block: 'form',
-                        attrs: { method: 'post', action: '/create/'},
+                        block: 'section',
                         content: [
                             {
-                                block: 'label',
-                                attrs: { for: 'title' },
-                                content: 'Тема статті:'
+                                block: 'link',
+                                url: '/articles/',
+                                content: '<--'
                             },
                             {
-                                block: 'input',
-                                attrs: { id: 'title', type: 'text', name: 'title' }
+                                elem: 'title',
+                                tag: 'h4',
+                                content: 'Написати'
                             },
                             {
-                                block: 'label',
-                                attrs: { for: 'content' },
-                                content: 'Повний текст статті:'
-                            },
-                            {
-                                block: 'textarea',
-                                attrs: { id: 'content', name: 'content' }
-                            },
-                            {
-                                block: 'button',
-                                attrs: { type: 'submit', value: 'Опублікувати' }
+                                block: 'form',
+                                attrs: { method: 'post', action: '/create/'},
+                                content: [
+                                    {
+                                        block: 'label',
+                                        attrs: { for: 'title' },
+                                        content: 'Тема'
+                                    },
+                                    {
+                                        block: 'input',
+                                        attrs: { id: 'title', type: 'text', name: 'title' }
+                                    },
+                                    {
+                                        block: 'label',
+                                        attrs: { for: 'content' },
+                                        content: 'Повний текст'
+                                    },
+                                    {
+                                        block: 'textarea',
+                                        attrs: { id: 'content', name: 'content' }
+                                    },
+                                    {
+                                        block: 'label',
+                                        attrs: { for: 'tags' },
+                                        content: 'Мітки'
+                                    },
+                                    {
+                                        block: 'input',
+                                        attrs: { id: 'tags', type: 'text', name: 'tags' }
+                                    },
+                                    {
+                                        block: 'button',
+                                        attrs: { type: 'submit', value: 'Опублікувати' }
+                                    }
+                                ]
                             }
                         ]
                     }

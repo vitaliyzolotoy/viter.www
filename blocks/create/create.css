@@ -1,0 +1,19 @@
+.create .label,
+.create .input,
+.create .textarea
+{
+    display: inline-block;
+    
+    width: 100%;
+}
+
+.create .label,
+.create .button
+{
+    margin: 22px 0 0 0;
+}
+
+.create .textarea
+{
+    height: 120px;
+}

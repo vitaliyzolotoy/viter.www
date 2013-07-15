@@ -3,8 +3,13 @@
     ],
     shouldDeps: [
         { block: 'font' },
-        { block: 'analytics' },
+        { block: 'link' },
         { block: 'header' },
-        { block: 'footer' }
+        { block: 'logo' },
+        { block: 'section' },
+        { block: 'aside' },
+        { block: 'footer' },
+        { block: 'copyright' },
+        { block: 'analytics' }
     ]
 })

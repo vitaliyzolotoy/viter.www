@@ -1,0 +1,14 @@
+.section
+{
+    display: inline-block;
+    
+    width: 61.8%;
+    padding-top: 50px;
+
+    vertical-align: top;
+}
+
+.section__inner
+{
+    padding: 0 11.8%;
+}
