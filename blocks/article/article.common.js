@@ -23,6 +23,10 @@ BEM.JSON.decl({name: 'article'}, {
                                 content: result.article.title
                             },
                             {
+                                elem: 'date',
+                                content: BEM.blocks['i-date'].beautify(result.article.modified)
+                            },
+                            {
                                 elem: 'content',
                                 tag: 'p',
                                 content: result.article.content

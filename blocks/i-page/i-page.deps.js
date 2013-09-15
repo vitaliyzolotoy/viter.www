@@ -2,6 +2,7 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'i-cookie' }
+        { block: 'i-date' }
+        // { block: 'i-cookie' }
     ]
 })

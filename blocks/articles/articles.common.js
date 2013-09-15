@@ -13,11 +13,6 @@ BEM.JSON.decl({name: 'articles'}, {
                         block: 'section',
                         content: [
                             {
-                                block: 'link',
-                                url: '/create/',
-                                content: '[+]'
-                            },
-                            {
                                 elem: 'title',
                                 tag: 'h4',
                                 content: 'Список статтей'
@@ -29,14 +24,30 @@ BEM.JSON.decl({name: 'articles'}, {
                                     return [
                                         {
                                             tag: 'li',
-                                            content: {
-                                                block: 'link',
-                                                content: item.title,
-                                                url: '/articles/' + item._id
-                                            }
+                                            content: [
+                                                {
+                                                    elem: 'date',
+                                                    content: BEM.blocks['i-date'].beautify(item.modified)
+                                                },
+                                                {
+                                                    block: 'link',
+                                                    content: item.title,
+                                                    url: '/articles/' + item._id
+                                                }
+                                            ]
                                         }
                                     ]
                                 })
+                            }
+                        ]
+                    },
+                    {
+                        block: 'aside',
+                        content: [
+                            {
+                                block: 'link',
+                                url: '/create/',
+                                content: '[+] Нова стаття'
                             }
                         ]
                     }

@@ -13,7 +13,8 @@
     "dependencies": {
         "enb": "*",
         "enb-bemhtml": "*",
-        "bem-node": "*"
+        "bem-node": "0.4.4",
+        "moment": "2.1.0"
     },
     "engines": {
         "node": ">= 0.8.0"

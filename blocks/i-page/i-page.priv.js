@@ -1,5 +1,6 @@
 BEM.decl('i-page', null, {
-    getJson: function(json) {
+    getPageJson: function(json) {
+console.log('qqweqe');
         return [
             {
                 block: 'b-page',
@@ -24,8 +25,8 @@ BEM.decl('i-page', null, {
                         ]
                     },
                     {
-                        block: 'b-content',
-                        content: json
+                        block: 'content',
+                        // content: json
                     },
                     {
                         block: 'footer',
