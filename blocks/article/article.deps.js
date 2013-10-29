@@ -2,6 +2,7 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'i-api' }
+        { block: 'i-api' },
+        { block: 'time' }
     ]
 })

@@ -13,22 +13,17 @@ BEM.JSON.decl({name: 'article'}, {
                         block: 'section',
                         content: [
                             {
-                                block: 'link',
-                                url: '/articles/',
-                                content: '<--'
-                            },
-                            {
                                 elem: 'title',
                                 tag: 'h4',
                                 content: result.article.title
                             },
                             {
-                                elem: 'date',
+                                block: 'time',
+                                attrs: { pubdate: '', datetime: result.article.modified },
                                 content: BEM.blocks['i-date'].beautify(result.article.modified)
                             },
                             {
                                 elem: 'content',
-                                tag: 'p',
                                 content: result.article.content
                             }
                         ]

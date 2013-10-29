@@ -26,13 +26,15 @@ BEM.JSON.decl({name: 'articles'}, {
                                             tag: 'li',
                                             content: [
                                                 {
-                                                    elem: 'date',
-                                                    content: BEM.blocks['i-date'].beautify(item.modified)
-                                                },
-                                                {
                                                     block: 'link',
                                                     content: item.title,
                                                     url: '/articles/' + item._id
+                                                },
+                                                ' ',
+                                                {
+                                                    block: 'time',
+                                                    attrs: { pubdate: '', datetime: item.modified },
+                                                    content: BEM.blocks['i-date'].beautify(item.modified)
                                                 }
                                             ]
                                         }
@@ -47,7 +49,7 @@ BEM.JSON.decl({name: 'articles'}, {
                             {
                                 block: 'link',
                                 url: '/create/',
-                                content: '[+] Нова стаття'
+                                content: 'Нова стаття'
                             }
                         ]
                     }

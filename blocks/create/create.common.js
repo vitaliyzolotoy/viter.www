@@ -14,11 +14,6 @@ BEM.JSON.decl({name: 'create'}, {
                         block: 'section',
                         content: [
                             {
-                                block: 'link',
-                                url: '/articles/',
-                                content: '<--'
-                            },
-                            {
                                 elem: 'title',
                                 tag: 'h4',
                                 content: 'Написати'
