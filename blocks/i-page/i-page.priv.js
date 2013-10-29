@@ -24,7 +24,12 @@ BEM.decl('i-page', null, {
                 },
                 {
                     block: 'content',
-                    content: json
+                    content: [
+                        {
+                            block: 'test'
+                        },
+                        json
+                    ]
                 },
                 {
                     block: 'footer',
