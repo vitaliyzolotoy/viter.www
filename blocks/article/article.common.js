@@ -24,6 +24,7 @@ BEM.JSON.decl({name: 'article'}, {
                             },
                             {
                                 elem: 'content',
+                                mix: { block: 'text' },
                                 content: result.article.content
                             }
                         ]
