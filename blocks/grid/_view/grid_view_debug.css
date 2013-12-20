@@ -1,0 +1,44 @@
+body
+{
+    padding-bottom: 2em;
+}
+
+body:before
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    content: "";
+
+    background: rgba(255, 195, 0, 0.3);
+}
+
+.grid_view_debug
+{
+    margin-top: 2em;
+
+    color: #fff;
+}
+
+.grid_view_debug .grid__unit
+{
+    height: 15em;
+
+    /*border-left: 1px solid #000;*/
+
+    background: rgb(0, 0, 0 );
+
+    -webkit-background-clip: content-box;
+       -moz-background-clip: content-box;
+            background-clip: content-box;
+}
+
+.grid__unit:first-child
+{
+    border-left: 1px solid #000;
+    background: #ccc;
+}

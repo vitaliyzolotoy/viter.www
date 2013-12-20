@@ -10,12 +10,24 @@ BEM.JSON.decl({name: 'article'}, {
             .then(function(result) {
                 ctx.content([
                     {
+                        block: 'header'
+                    },
+                    {
                         block: 'section',
                         content: [
                             {
                                 elem: 'title',
                                 tag: 'h4',
-                                content: result.article.title
+                                content: [
+                                    result.article.title,
+                                    ' ',
+                                    {
+                                        block: 'link',
+                                        url: '/articles/' + result.article._id + '/update/',
+                                        content: 'редагувати'
+                                    }
+                                ]
+
                             },
                             {
                                 block: 'time',
@@ -28,6 +40,9 @@ BEM.JSON.decl({name: 'article'}, {
                                 content: result.article.content
                             }
                         ]
+                    },
+                    {
+                        block: 'footer'
                     }
                 ]);
             })

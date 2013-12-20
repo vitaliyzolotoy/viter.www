@@ -1,0 +1,32 @@
+.entrance
+{
+    position: absolute;
+    right: 4.5076%;
+    bottom: 11.8%;
+}
+
+.entrance__title
+{
+    font-size: 24px;
+    font-family: 'oranienbaum';
+    font-weight: normal;
+    line-height: 24px;
+
+    margin: 0;
+
+    letter-spacing: -1px;
+}
+
+.entrance__links
+{
+    margin: 22px 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.entrance__latest
+{
+    position: absolute;
+    left: -50px;
+}

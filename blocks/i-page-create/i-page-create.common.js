@@ -4,7 +4,7 @@ BEM.decl({block: 'i-page-create', baseBlock: 'i-page'}, null, {
     init: function (matchers) {
         var ololo = BEM.blocks['i-router'].get('params');
         return this
-            .setTitle('Написати | The Feature')
+            .setTitle('Написати | Блоґ Віталія Золотого')
             .out({
                 block: 'create',
                 module: 'articles/new',

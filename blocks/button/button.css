@@ -3,25 +3,25 @@
     font: 13px/24px georgia, serif;
 
     margin: 0;
-    padding: 0 7px;
+    padding: 0 13px;
 
     cursor: pointer;
     letter-spacing: 2px;
     text-transform: uppercase;
 
-    color: #ffe;
+    color: #fcfcf9;
     border: 3px double #fcfcf9;
-    background: #c60;
+    background: #b3b3b1;
 
     -webkit-transition: all 0.15s ease;
-    -moz-transition: all 0.15s ease;
-    transition: all 0.15s ease;
+       -moz-transition: all 0.15s ease;
+            transition: all 0.15s ease;
 }
 
 .button:hover,
 .button:focus
 {
-    color: #930;
-    border: 3px double #c60;
-    background: #fed;
+    color: #b3b3b1;
+    border: 3px double #b3b3b1;
+    background: #fcfcf9;
 }

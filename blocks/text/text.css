@@ -1,0 +1,16 @@
+.text
+{
+    margin: 0;
+}
+
+.text:first-letter
+{
+    font-size: 66px;
+    font-weight: normal;
+
+    float: left;
+
+    margin: 0 15px 5px 0;
+
+    line-height: 66px;
+}

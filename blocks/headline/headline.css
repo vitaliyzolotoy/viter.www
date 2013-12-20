@@ -1,0 +1,15 @@
+.headline
+{
+    font-size: 55px;
+    font-family: 'oranienbaum';
+    font-weight: normal;
+    line-height: 55px;
+
+    width: 250px;
+    margin: 0;
+
+    letter-spacing: -1px;
+    vertical-align: middle;
+
+    color: #141414;
+}

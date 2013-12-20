@@ -3,7 +3,7 @@ BEM.decl({block: 'i-page-articles', baseBlock: 'i-page'}, null, {
 
     init: function (matchers) {
         return this
-            .setTitle('Головна | The Feature')
+            .setTitle('Зміст | Блоґ Віталія Золотого')
             .out({
                 block: 'articles',
                 module: 'articles'

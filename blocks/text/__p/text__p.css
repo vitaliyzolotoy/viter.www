@@ -1,0 +1,10 @@
+/*.text p
+{
+    margin: 0;
+    padding: 0;
+}*/
+
+.text p + p
+{
+    text-indent: 30px;
+}

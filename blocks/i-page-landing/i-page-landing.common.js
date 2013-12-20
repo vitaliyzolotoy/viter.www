@@ -2,10 +2,12 @@ BEM.blocks['i-router'].define('/', 'i-page-landing');
 BEM.decl({block: 'i-page-landing', baseBlock: 'i-page'}, null, {
 
     init: function (matchers) {
-        return this.out({
-            block: 'landing',
-            module: 'landing'
-        });
+        return this
+            .setTitle('Блоґ Віталія Золотого – нотатки на теми цікаві для мене')
+            .out({
+                block: 'landing',
+                module: 'landing'
+            });
     }
 
 });

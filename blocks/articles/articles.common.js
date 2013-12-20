@@ -10,17 +10,20 @@ BEM.JSON.decl({name: 'articles'}, {
             .then(function(result) {
                 ctx.content([
                     {
+                        block: 'header'
+                    },
+                    {
                         block: 'section',
                         content: [
                             {
                                 elem: 'title',
                                 tag: 'h4',
-                                content: 'Список статтей'
+                                content: result.articles ? 'Список записів' : 'Немає записів'
                             },
                             {
                                 elem: 'toc',
                                 tag: 'ul',
-                                content: result.articles.map(function(item) {
+                                content: result.articles && result.articles.map(function(item) {
                                     return [
                                         {
                                             tag: 'li',
@@ -52,6 +55,9 @@ BEM.JSON.decl({name: 'articles'}, {
                                 content: 'Нова стаття'
                             }
                         ]
+                    },
+                    {
+                        block: 'footer'
                     }
                 ]);
             })

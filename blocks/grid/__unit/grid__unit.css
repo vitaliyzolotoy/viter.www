@@ -1,0 +1,11 @@
+.grid__unit
+{
+    display: inline-block;
+
+    padding: 0 10px;
+
+    vertical-align: top;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}

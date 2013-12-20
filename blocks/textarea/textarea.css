@@ -7,6 +7,7 @@
 
     outline: none;
     border: 3px double #999;
+    background: #fcfcf9;
 }
 
 .textarea:focus

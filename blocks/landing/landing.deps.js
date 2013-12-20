@@ -1,8 +1,6 @@
 ({
-    mustDeps: [
-        { block: 'test' }
-    ],
     shouldDeps: [
-        { block: 'landing', elem: 'logo' }
+        { block: 'headline' },
+        { block: 'entrance' }
     ]
 })

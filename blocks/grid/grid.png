@@ -1,0 +1,4 @@
+.grid
+{
+    text-align: justify; text-align-last: right
+}
