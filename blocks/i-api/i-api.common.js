@@ -6,6 +6,14 @@ BEM.decl({block: 'i-api'}, null, {
             .then(function(result) {
                 return result;
             });
+    },
+
+    post: function(data) {
+        return BEM.blocks['i-api-request']
+            .post(data.module, {params: data.params})
+            .then(function(result) {
+                return result;
+            });
     }
 
 });

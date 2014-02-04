@@ -1,9 +1,8 @@
-BEM.JSON.decl({name: 'create'}, {
+BEM.JSON.decl({name: 'update'}, {
 
     onBlock: function(ctx) {
         var data = {
-            module: ctx.param('module'),
-            params: ctx.param('ololo')
+            module: ctx.param('module')
         };
 
         ctx.defer(
@@ -24,22 +23,22 @@ BEM.JSON.decl({name: 'create'}, {
                             },
                             {
                                 block: 'form',
-                                attrs: { method: 'post', action: 'http://localhost:4000/notes'},
+                                attrs: { method: 'post', action: 'http://localhost:4000/notes/' + result.note._id},
                                 content: [
                                     {
                                         block: 'label',
                                         attrs: { for: 'title' },
-                                        content: 'Я хотів би написати замітку на тему'
+                                        content: 'Я хотів би відредагувати тему замітки на'
                                     },
                                     {
                                         block: 'input',
-                                        attrs: { id: 'title', name: 'title', type: 'text' }
+                                        attrs: { id: 'title', name: 'title', type: 'text', value: result.note.title }
                                     },
                                     ',',
                                     {
                                         block: 'label',
                                         attrs: { for: 'tags' },
-                                        content: 'та позначити її мітками'
+                                        content: 'та позначити або доповнити її мітками'
                                     },
                                     {
                                         block: 'input',
@@ -49,25 +48,16 @@ BEM.JSON.decl({name: 'create'}, {
                                     {
                                         block: 'label',
                                         attrs: { for: 'content' },
-                                        content: 'Ось, власне, повний текст замітки:'
+                                        content: 'Ось, власне, повний текст замітки, який також можна відредагувати:'
                                     },
                                     {
                                         block: 'textarea',
-                                        attrs: { id: 'content', name: 'content', type: 'textarea' }
+                                        attrs: { id: 'content', name: 'content', type: 'textarea' },
+                                        content: result.note.content
                                     },
                                     {
                                         block: 'button',
-                                        attrs: { id: 'delete', name: 'delete', type: 'submit', value: 'Видалити' },
-                                        mods: { color: 'red' }
-                                    },
-                                    {
-                                        block: 'button',
-                                        attrs: { id: 'share', name: 'share', type: 'submit', value: 'Поділитися' },
-                                        mods: { color: 'yellow' }
-                                    },
-                                    {
-                                        block: 'button',
-                                        attrs: { id: 'publish', name: 'submit', type: 'submit', value: 'Опублікувати' },
+                                        attrs: { id: 'publish', name: 'submit', type: 'submit', value: 'Зберегти' },
                                         mods: { color: 'green' }
                                     }
                                 ]

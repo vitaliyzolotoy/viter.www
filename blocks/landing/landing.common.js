@@ -20,7 +20,7 @@ BEM.JSON.decl({name: 'landing'}, {
                                 content: [
                                     {
                                         block: 'link',
-                                        url: '/articles/52b2e705c52f678811000001',
+                                        url: '/notes/52b417f05917ccdb01000001',
                                         content: 'Прочитати вступ'
                                     }
                                 ]
@@ -30,7 +30,7 @@ BEM.JSON.decl({name: 'landing'}, {
                                 content: [
                                     {
                                         block: 'link',
-                                        url: '/articles/',
+                                        url: '/notes/',
                                         content: 'Зміст'
                                     }
                                 ]
@@ -44,7 +44,7 @@ BEM.JSON.decl({name: 'landing'}, {
                                     },
                                     {
                                         block: 'link',
-                                        url: '/articles/52b2e705c52f678811000001',
+                                        url: '/notes/52b445a15917ccdb01000002',
                                         content: 'Про поїздку до млина'
                                     }
                                 ]

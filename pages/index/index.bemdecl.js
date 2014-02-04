@@ -7,8 +7,9 @@ exports.blocks = [
     {block: 'i-ycssjs'},
 
     // user part
+    {block: 'i-page-note'},
+    {block: 'i-page-notes'},
+    {block: 'i-page-create'},
     {block: 'i-page-landing'},
-    {block: 'i-page-articles'},
-    {block: 'i-page-article'},
-    {block: 'i-page-create'}
+    {block: 'i-page-update'}
 ]

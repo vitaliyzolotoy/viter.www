@@ -1,4 +1,4 @@
-BEM.JSON.decl({name: 'articles'}, {
+BEM.JSON.decl({name: 'notes'}, {
 
     onBlock: function(ctx) {
         var data = {
@@ -18,12 +18,12 @@ BEM.JSON.decl({name: 'articles'}, {
                             {
                                 elem: 'title',
                                 tag: 'h4',
-                                content: result.articles ? 'Список записів' : 'Немає записів'
+                                content: result.notes ? 'Список записів' : 'Немає записів'
                             },
-                            {
+                            result.notes && {
                                 elem: 'toc',
                                 tag: 'ul',
-                                content: result.articles && result.articles.map(function(item) {
+                                content: result.notes.map(function(item) {
                                     return [
                                         {
                                             tag: 'li',
@@ -31,7 +31,7 @@ BEM.JSON.decl({name: 'articles'}, {
                                                 {
                                                     block: 'link',
                                                     content: item.title,
-                                                    url: '/articles/' + item._id
+                                                    url: '/notes/' + item._id
                                                 },
                                                 ' ',
                                                 {

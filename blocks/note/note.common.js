@@ -1,4 +1,4 @@
-BEM.JSON.decl({name: 'article'}, {
+BEM.JSON.decl({name: 'note'}, {
 
     onBlock: function(ctx) {
         var data = {
@@ -19,25 +19,25 @@ BEM.JSON.decl({name: 'article'}, {
                                 elem: 'title',
                                 tag: 'h4',
                                 content: [
-                                    result.article.title,
+                                    result.note.title,
                                     ' ',
                                     {
                                         block: 'link',
-                                        url: '/articles/' + result.article._id + '/update/',
-                                        content: 'редагувати'
+                                        url: '/update/' + result.note._id,
+                                        content: '✎'
                                     }
                                 ]
 
                             },
                             {
                                 block: 'time',
-                                attrs: { pubdate: '', datetime: result.article.modified },
-                                content: BEM.blocks['i-date'].beautify(result.article.modified)
+                                attrs: { pubdate: '', datetime: result.note.modified },
+                                content: BEM.blocks['i-date'].beautify(result.note.modified)
                             },
                             {
                                 elem: 'content',
                                 mix: { block: 'text' },
-                                content: result.article.content
+                                content: result.note.content
                             }
                         ]
                     },

@@ -3,6 +3,6 @@
         { block: 'i-page' }
     ],
     shouldDeps: [
-        { block: 'article' }
+        { block: 'note' }
     ]
 })
