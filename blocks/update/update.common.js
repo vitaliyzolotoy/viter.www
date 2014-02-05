@@ -5,6 +5,8 @@ BEM.JSON.decl({name: 'update'}, {
             module: ctx.param('module')
         };
 
+        console.log(data);
+
         ctx.defer(
             BEM.blocks['i-api']
             .module(data)
@@ -26,13 +28,17 @@ BEM.JSON.decl({name: 'update'}, {
                                 attrs: { method: 'post', action: 'http://localhost:4000/notes/' + result.note._id},
                                 content: [
                                     {
+                                        block: 'input',
+                                        attrs: { name: 'id', type: 'hidden', value: result.note._id}
+                                    },
+                                    {
                                         block: 'label',
                                         attrs: { for: 'title' },
                                         content: 'Я хотів би відредагувати тему замітки на'
                                     },
                                     {
                                         block: 'input',
-                                        attrs: { id: 'title', name: 'title', type: 'text', value: result.note.title }
+                                        attrs: { name: 'title', type: 'text', value: result.note.title }
                                     },
                                     ',',
                                     {
@@ -42,7 +48,7 @@ BEM.JSON.decl({name: 'update'}, {
                                     },
                                     {
                                         block: 'input',
-                                        attrs: { id: 'tags', name: 'tags', type: 'text' }
+                                        attrs: { name: 'tags', type: 'text' }
                                     },
                                     '.',
                                     {
@@ -52,12 +58,17 @@ BEM.JSON.decl({name: 'update'}, {
                                     },
                                     {
                                         block: 'textarea',
-                                        attrs: { id: 'content', name: 'content', type: 'textarea' },
+                                        attrs: { name: 'content', type: 'textarea' },
                                         content: result.note.content
                                     },
                                     {
                                         block: 'button',
-                                        attrs: { id: 'publish', name: 'submit', type: 'submit', value: 'Зберегти' },
+                                        attrs: { name: 'delete', type: 'submit', value: 'Видалити' },
+                                        mods: { color: 'red' }
+                                    },
+                                    {
+                                        block: 'button',
+                                        attrs: { name: 'submit', type: 'submit', value: 'Зберегти' },
                                         mods: { color: 'green' }
                                     }
                                 ]

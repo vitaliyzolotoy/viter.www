@@ -32,12 +32,21 @@ BEM.JSON.decl({name: 'note'}, {
                             {
                                 block: 'time',
                                 attrs: { pubdate: '', datetime: result.note.modified },
-                                content: BEM.blocks['i-date'].beautify(result.note.modified)
+                                content: [
+                                    ' ',
+                                    (result.note.created < result.note.modified) ? 'оновлено' : 'написано',
+                                    ' ',
+                                    BEM.blocks['i-date'].beautify(result.note.modified)
+                                ]
                             },
                             {
                                 elem: 'content',
                                 mix: { block: 'text' },
                                 content: result.note.content
+                            },
+                            {
+                                block: 'tags',
+                                id: result.note._id
                             }
                         ]
                     },

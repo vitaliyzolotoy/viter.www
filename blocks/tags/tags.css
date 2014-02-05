@@ -1,0 +1,23 @@
+.tags
+{
+    font-size: 12px;
+
+    padding: 0;
+}
+
+.tags__item
+{
+    display: inline-block;
+
+    margin: 0 5px 0 0;
+}
+
+.tags__item::after
+{
+    content: ',';
+}
+
+.tags__item:last-child::after
+{
+    content: none;
+}
