@@ -2,9 +2,13 @@ exports.blocks = [
 
     // bem-node part
 
-    {block: 'i-router', mods: {init: 'auto'}},
-    {block: 'i-content', mods: {type: 'bemhtml'}},
-    {block: 'i-ycssjs'},
+    {block: 'i-console'}, //colorful console log
+    {block: 'i-ycssjs'}, //output static files
+    {block: 'i-bem-node'}, //bem-node api
+
+    // {block: 'i-router', mods: {init: 'auto'}},
+    // {block: 'i-content', mods: {type: 'bemhtml'}},
+    // {block: 'i-ycssjs'},
 
     // user part
     {block: 'i-page-note'},
