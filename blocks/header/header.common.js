@@ -5,7 +5,7 @@ BEM.JSON.decl({name: 'header'}, {
                 block: 'logo',
                 content: {
                     block: 'link',
-                    url: '/',
+                    url: '/notes/',
                     content: 'The Feature'
                 }
             }
