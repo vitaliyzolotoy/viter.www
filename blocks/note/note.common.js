@@ -12,7 +12,15 @@ BEM.JSON.decl({name: 'note'}, {
                 ctx.content([
                     BEM.blocks['i-page'].setTitle(result.note.title),
                     {
-                        block: 'header'
+                        block: 'header',
+                        content: {
+                            block: 'logo',
+                            content: {
+                                block: 'link',
+                                url: '/notes/',
+                                content: 'The Feature'
+                            }
+                        }
                     },
                     {
                         block: 'section',

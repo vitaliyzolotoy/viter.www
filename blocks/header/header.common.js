@@ -3,13 +3,11 @@ BEM.JSON.decl({name: 'header'}, {
         ctx.content([
             {
                 block: 'logo',
-                content: [
-                    {
-                        block: 'link',
-                        url: '/notes/',
-                        content: 'The Feature'
-                    }
-                ]
+                content: {
+                    block: 'link',
+                    url: '/',
+                    content: 'The Feature'
+                }
             }
         ]);
     }
