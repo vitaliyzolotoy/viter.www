@@ -2,9 +2,9 @@
 {
     margin: 0;
     padding: 0;
-}*/
-
+}
+*/
 .text p + p
 {
-    text-indent: 30px;
+    text-indent: 20px;
 }

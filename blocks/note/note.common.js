@@ -4,11 +4,13 @@ BEM.JSON.decl({name: 'note'}, {
         var data = {
             module: ctx.param('module')
         };
+
         ctx.defer(
             BEM.blocks['i-api']
             .module(data)
             .then(function(result) {
                 ctx.content([
+                    BEM.blocks['i-page'].setTitle(result.note.title),
                     {
                         block: 'header'
                     },

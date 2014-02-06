@@ -33,7 +33,7 @@ BEM.JSON.decl({name: 'create'}, {
                                     },
                                     {
                                         block: 'input',
-                                        attrs: { name: 'title', type: 'text' }
+                                        attrs: { id: 'title' , name: 'title', type: 'text' }
                                     },
                                     ',',
                                     {
@@ -43,7 +43,7 @@ BEM.JSON.decl({name: 'create'}, {
                                     },
                                     {
                                         block: 'input',
-                                        attrs: { name: 'tags', type: 'text' }
+                                        attrs: { id: 'tags', name: 'tags', type: 'text' }
                                     },
                                     '.',
                                     {
@@ -53,7 +53,7 @@ BEM.JSON.decl({name: 'create'}, {
                                     },
                                     {
                                         block: 'textarea',
-                                        attrs: { name: 'content', type: 'textarea' }
+                                        attrs: { id: 'content', name: 'content', type: 'textarea' }
                                     },
                                     {
                                         block: 'button',

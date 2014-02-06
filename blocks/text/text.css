@@ -5,12 +5,10 @@
 
 .text:first-letter
 {
-    font-size: 66px;
+    font: 66px/66px 'oranienbaum';
     font-weight: normal;
 
     float: left;
 
-    margin: 0 15px 5px 0;
-
-    line-height: 66px;
+    margin: 0 10px 10px 0;
 }
