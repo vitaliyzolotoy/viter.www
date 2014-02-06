@@ -9,5 +9,17 @@ BEM.decl('i-api-request', null, {
             'Connection': 'keep-alive'
         };
     },
-    _apiHost: 'http://localhost:4000/'
+    _dnsResolve: function (parsedUrl) {
+        var promise = Vow.promise(),
+            dns = require('dns');
+        dns.lookup(parsedUrl.hostname, function (error, ip, type) {
+          if (error) {
+            promise.reject(new Error('can not resolve' + parsedUrl.hostname));
+          } else {
+            promise.fulfill(ip);
+          }
+        });
+        return promise;
+     },
+     _apiHost: 'http://localhost:4000/'
 });
