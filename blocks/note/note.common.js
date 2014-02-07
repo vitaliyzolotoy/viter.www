@@ -21,13 +21,13 @@ BEM.JSON.decl({name: 'note'}, {
                                 elem: 'title',
                                 tag: 'h4',
                                 content: [
-                                    result.note.title,
-                                    ' ',
                                     {
                                         block: 'link',
-                                        url: '/update/' + result.note._id,
+                                        url: '/postify/' + result.note._id,
                                         content: '✎'
-                                    }
+                                    },
+                                    ' ',
+                                    result.note.title
                                 ]
 
                             },

@@ -1,21 +1,21 @@
-.update .label,
-.update .input
+.postify .label,
+.postify .input
 {
     display: inline-block;
 }
 
-.update .label
+.postify .label
 {
     margin: 11px 0 11px 0;
 }
 
-.update .button
+.postify .button
 {
     margin: 22px 0 0 0;
 }
 
-.update .input[name=title],
-.update .input[name=tags]
+.postify .input[name=title],
+.postify .input[name=tags]
 {
     margin: 0 7px;
 
@@ -24,29 +24,29 @@
     background: transparent;
 }
 
-.update .input[name=title]:focus,
-.update .input[name=tags]:focus
+.postify .input[name=title]:focus,
+.postify .input[name=tags]:focus
 {
     border-bottom: 1px solid #ccc;
     background: #fffff0;
 }
 
-.update .input[name=title]
+.postify .input[name=title]
 {
     width: 540px;
 }
 
-.update .input[name=tags]
+.postify .input[name=tags]
 {
     width: 340px;
 }
 
-.update .label[for=content]
+.postify .label[for=content]
 {
     display: block;
 }
 
-.update .textarea
+.postify .textarea
 {
     display: inline-block;
 

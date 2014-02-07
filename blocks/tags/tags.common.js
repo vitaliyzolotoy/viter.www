@@ -5,7 +5,7 @@ BEM.JSON.decl({name: 'tags'}, {
             .get('tags/' + ctx.param('id'))
             .then(function(result) {
                 ctx.content([
-                    result.tags.map(function(item) {
+                    result.tags && result.tags.map(function(item) {
                         return [
                             {
                                 elem: 'item',

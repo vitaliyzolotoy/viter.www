@@ -1,5 +1,4 @@
 BEM.JSON.decl({name: 'notes'}, {
-
     onBlock: function(ctx) {
         var data = {
             module: ctx.param('module')
@@ -55,7 +54,7 @@ BEM.JSON.decl({name: 'notes'}, {
                         content: [
                             {
                                 block: 'link',
-                                url: '/create/',
+                                url: '/postify/',
                                 content: 'Нова стаття'
                             }
                         ]
@@ -65,8 +64,6 @@ BEM.JSON.decl({name: 'notes'}, {
                     }
                 ]);
             })
-        // ctx.defer
         );
     }
-
 });

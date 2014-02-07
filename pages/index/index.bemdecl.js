@@ -1,19 +1,13 @@
 exports.blocks = [
 
     // bem-node part
-
-    {block: 'i-console'}, //colorful console log
-    {block: 'i-ycssjs'}, //output static files
-    {block: 'i-bem-node'}, //bem-node api
-
-    // {block: 'i-router', mods: {init: 'auto'}},
-    // {block: 'i-content', mods: {type: 'bemhtml'}},
-    // {block: 'i-ycssjs'},
+    {block: 'i-console'},
+    {block: 'i-ycssjs'},
+    {block: 'i-bem-node'},
 
     // user part
+    {block: 'i-page-landing'},
     {block: 'i-page-note'},
     {block: 'i-page-notes'},
-    {block: 'i-page-create'},
-    {block: 'i-page-landing'},
-    {block: 'i-page-update'}
+    {block: 'i-page-postify'}
 ]
