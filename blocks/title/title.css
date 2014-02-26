@@ -1,0 +1,29 @@
+.title
+{
+    margin: 0;
+    padding: 0;
+}
+
+h2.title
+{
+    font: 24px/26px 'oranienbaum';
+    font-weight: normal;
+
+    margin: 0 0 36px 0;
+}
+
+h3.title
+{
+    font: 1.1875em 'oranienbaum';
+    font-weight: normal;
+
+    margin: 1.157894736842105em 0;
+    text-indent: -0.052631578947368em;
+}
+
+h4.title
+{
+    font-weight: normal;
+
+    margin: 1.157894736842105em 0 0.6875em 0;
+}

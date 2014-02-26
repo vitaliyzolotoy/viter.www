@@ -1,0 +1,22 @@
+.toc
+{
+    margin: 1.375em 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.toc__item .time
+{
+    margin-left: 7px;
+}
+
+.toc__section
+{
+    position: absolute;
+    left: -0.75em;
+
+    width: 7.29%;
+
+    text-align: right;
+}
