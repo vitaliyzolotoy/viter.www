@@ -5,6 +5,7 @@
         { block: 'i-api' },
         { block: 'time' },
         { block: 'tags' },
-        { block: 'text' }
+        { block: 'text' },
+        { block: 'modify' }
     ]
 })

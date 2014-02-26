@@ -10,7 +10,7 @@ BEM.JSON.decl({name: 'footer'}, {
                         url: '/',
                         content: 'The Feature'
                     },
-                    '», 2013 рік'
+                    '», 2013–14 рр.'
                 ]
             }
         ]);

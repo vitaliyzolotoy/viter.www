@@ -11,20 +11,3 @@
 {
     padding: 0 11.8%;
 }
-
-.section__title
-{
-    position: relative;
-}
-
-.section__title .link
-{
-    position: absolute;
-    top: 90%;
-
-    display: inline-block;
-
-    margin: -20px;
-
-    border-bottom: none;
-}

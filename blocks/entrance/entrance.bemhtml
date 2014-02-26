@@ -1,14 +1,5 @@
-block entrance {
-    elem title {
-        tag: 'h2'
-    }
-    elem links {
-        tag: 'ul'
-    }
-    elem item {
-        tag: 'li'
-    }
-    elem latest {
-        tag: 'span'
-    }
-}
+block entrance,
+elem title, tag: 'h2'
+elem links, tag: 'ul'
+elem item, tag: 'li'
+elem latest, tag: 'span'

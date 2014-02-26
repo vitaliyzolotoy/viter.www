@@ -1,23 +1,20 @@
 .logo
 {
-    font: 22px/45px 'oranienbaum';
+    font: 20px/24px 'oranienbaum';
     font-weight: normal;
 
     margin: 0;
     padding: 0;
-
-    line-height: 45px;
-    letter-spacing: -1px;
 }
 
 .logo .link
 {
-    color: #313233;
-    border-color: rgba(0, 0, 0, 0.25);
+    color: #e7e7e7;
+    border-color: transparent;
 }
 
 .logo .link:hover
 {
-    color: #d04000;
-    border-color: rgba(208, 64, 0, 0.25);
+    color: #fff;
+    border-color: transparent;
 }

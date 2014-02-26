@@ -6,11 +6,11 @@ BEM.JSON.decl({name: 'note'}, {
         };
 
         ctx.defer(
-            BEM.blocks['i-api']
+            BEM.blocks['i-api-request']
             .module(data)
             .then(function(result) {
                 ctx.content([
-                    BEM.blocks['i-page'].setTitle(result.note.title),
+                    BEM.blocks['i-page'].setTitle(result.note.title + ' | Блоґ Віталія Золотого'),
                     {
                         block: 'header'
                     },
@@ -18,18 +18,9 @@ BEM.JSON.decl({name: 'note'}, {
                         block: 'section',
                         content: [
                             {
-                                elem: 'title',
-                                tag: 'h4',
-                                content: [
-                                    {
-                                        block: 'link',
-                                        url: '/postify/' + result.note._id,
-                                        content: '✎'
-                                    },
-                                    ' ',
-                                    result.note.title
-                                ]
-
+                                block: 'title',
+                                tag: 'h2',
+                                content: result.note.title
                             },
                             {
                                 block: 'time',
@@ -42,6 +33,14 @@ BEM.JSON.decl({name: 'note'}, {
                                 ]
                             },
                             {
+                                block: 'modify',
+                                content: {
+                                    block: 'link',
+                                    url: '/postify/' + result.note._id,
+                                    content: 'редагувати'
+                                }
+                            },
+                            {
                                 elem: 'content',
                                 mix: { block: 'text' },
                                 content: result.note.content
@@ -51,9 +50,6 @@ BEM.JSON.decl({name: 'note'}, {
                                 id: result.note._id
                             }
                         ]
-                    },
-                    {
-                        block: 'footer'
                     }
                 ]);
             })

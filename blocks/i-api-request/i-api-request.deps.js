@@ -1,7 +1,7 @@
 ({
     mustDeps: [
-        {block: 'i-ajax-proxy'}
     ],
     shouldDeps: [
+        {block: 'i-ajax-proxy'}
     ]
 })

@@ -1,12 +1,12 @@
 .b-page
 {
-    font: 15px/22px georgia, serif;
+    font: 16px/22px georgia, serif;
 
     margin: 0;
     padding: 0;
 
     color: #313233;
-    background: #fcfcf9;
+    background: #fff8e5;
 
     -webkit-animation: 'show' 0.7s;
        -moz-animation: 'show' 0.7s;
@@ -48,4 +48,12 @@
     to {
         opacity: 1;
     }
+}
+
+.b-page_landing_yes
+{
+    background: -webkit-linear-gradient(top, #000 0%, #193a41 100%);
+    background:    -moz-linear-gradient(top, #000 0%, #193a41 100%);
+    background:      -o-linear-gradient(top, #000 0%, #193a41 100%);
+    background:         linear-gradient(top, #000 0%, #193a41 100%);
 }

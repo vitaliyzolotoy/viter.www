@@ -3,7 +3,6 @@ BEM.decl({block: 'i-page-postify', baseBlock: 'i-page'}, null, {
 
     init: function (matchers) {
         return this
-            .setTitle('Відредагувати | Блоґ Віталія Золотого')
             .out({
                 block: 'postify',
                 module: matchers

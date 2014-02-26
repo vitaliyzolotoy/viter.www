@@ -1,6 +1,11 @@
 .time
 {
     font-size: 11px;
+    line-height: 22px;
+
+    display: inline-block;
+
+    margin-right: 7px;
 
     white-space: nowrap;
 }

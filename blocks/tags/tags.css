@@ -2,7 +2,10 @@
 {
     font-size: 12px;
 
+    margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
 .tags__item
