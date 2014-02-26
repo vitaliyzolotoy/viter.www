@@ -61,7 +61,7 @@ BEM.DOM.decl('postify', {
     },
 
     _deleteNote: function () {
-        BEM.blocks['i-api-request'].delete(data.module).then(function (result) {
+        BEM.blocks['i-api-request'].delete(data.module + '/' + data.id).then(function (result) {
             console.log('success');
         }.bind(this)).fail(function () {
             console.log('fail');

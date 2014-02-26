@@ -50,6 +50,9 @@ BEM.JSON.decl({name: 'note'}, {
                                 id: result.note._id
                             }
                         ]
+                    },
+                    {
+                        block: 'footer'
                     }
                 ]);
             })

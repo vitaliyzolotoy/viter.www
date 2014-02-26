@@ -1,5 +1,6 @@
 BEM.JSON.decl({name: 'postify'}, {
     onBlock: function(ctx) {
+        ctx.param('js', true);
         var creating = true,
             module = ctx.param('module') || false;
             id = module && module[0].substring(9),
@@ -27,7 +28,6 @@ BEM.JSON.decl({name: 'postify'}, {
                             {
                                 block: 'form',
                                 // attrs: { method: 'post', action: 'http://localhost:4000/notes/' + item._id},
-                                js: true,
                                 content: [
                                     {
                                         block: 'input',
@@ -95,21 +95,6 @@ BEM.JSON.decl({name: 'postify'}, {
                                     //     attrs: { id: 'content', name: 'content', type: 'textarea' },
                                     //     content: item.content
                                     // },
-                                    // !creating && {
-                                    //     block: 'button',
-                                    //     attrs: { name: 'delete', type: 'submit', value: 'Видалити' },
-                                    //     mods: { color: 'red', delete: 'yes' }
-                                    // },
-                                    // !creating && {
-                                    //     block: 'button',
-                                    //     attrs: { name: 'submit', type: 'submit', value: 'Відредагувати' },
-                                    //     mods: { color: 'yellow', update: 'yes' }
-                                    // },
-                                    // creating && {
-                                    //     block: 'button',
-                                    //     attrs: { name: 'submit', type: 'submit', value: 'Опублікувати' },
-                                    //     mods: { color: 'green', create: 'yes' }
-                                    // }
                                 ]
                             }
                         ]
@@ -119,12 +104,12 @@ BEM.JSON.decl({name: 'postify'}, {
                         content: [
                             {
                                 block: 'button',
-                                attrs: { name: 'delete', type: 'submit', value: 'Видалити', disabled: 'disabled' },
+                                attrs: { name: 'delete', type: 'submit', value: 'Видалити' },
                                 mods: { color: 'red', delete: 'yes' }
                             },
                             {
                                 block: 'button',
-                                attrs: { name: 'submit', type: 'submit', value: 'Редагувати', disabled: 'disabled' },
+                                attrs: { name: 'submit', type: 'submit', value: 'Відредагувати' },
                                 mods: { color: 'yellow', update: 'yes' }
                             },
                             {
