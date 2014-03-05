@@ -4,13 +4,13 @@ BEM.JSON.decl({name: 'footer'}, {
             {
                 block: 'copyright',
                 content: [
-                    '© Журнал «',
+                    '© ',
                     {
                         block: 'link',
                         url: '/',
-                        content: 'The Feature'
+                        content: 'Віталій Золотой'
                     },
-                    '», 2013–14 рр.'
+                    ', 2013–14 рр.'
                 ]
             }
         ]);

@@ -1,13 +1,5 @@
 BEM.decl('i-api-request', null, {
 
-    module: function(data) {
-        return BEM.blocks['i-api-request']
-            .get(data.module, {params: data.params})
-            .then(function(result) {
-                return result;
-            });
-    },
-
     request: function (type, resource, data) {
         return this._request(type, resource, data);
     },

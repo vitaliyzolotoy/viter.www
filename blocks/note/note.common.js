@@ -1,13 +1,9 @@
 BEM.JSON.decl({name: 'note'}, {
-
     onBlock: function(ctx) {
-        var data = {
-            module: ctx.param('module')
-        };
-
+        var data = ctx.param('module');
         ctx.defer(
             BEM.blocks['i-api-request']
-            .module(data)
+            .get(data)
             .then(function(result) {
                 ctx.content([
                     BEM.blocks['i-page'].setTitle(result.note.title + ' | Блоґ Віталія Золотого'),
@@ -56,8 +52,6 @@ BEM.JSON.decl({name: 'note'}, {
                     }
                 ]);
             })
-        // ctx.defer
         );
     }
-
 });

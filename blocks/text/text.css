@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-/*.text:first-letter
+.text:first-letter
 {
     font: 66px/66px 'oranienbaum';
     font-weight: normal;
@@ -11,4 +11,4 @@
     float: left;
 
     margin: 0 10px 10px 0;
-}*/
+}

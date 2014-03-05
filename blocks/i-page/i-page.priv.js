@@ -3,9 +3,6 @@ BEM.decl('i-page', null, {
         return {
             block: 'b-page',
             title: 'Блоґ Віталія Золотого – нотатки на теми цікаві для мене',
-            head: [
-                { elem: 'favicon', url: '/favicon.ico' }
-            ],
             content: [
                 {
                     block: 'content',

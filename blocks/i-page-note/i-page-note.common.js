@@ -1,6 +1,6 @@
 BEM.blocks['i-router'].define(/^\/notes\/[a-z0-9]+$/, 'i-page-note');
-BEM.decl({block: 'i-page-note', baseBlock: 'i-page'}, null, {
 
+BEM.decl({block: 'i-page-note', baseBlock: 'i-page'}, null, {
     init: function (matchers) {
         return this
             .out({
@@ -8,5 +8,4 @@ BEM.decl({block: 'i-page-note', baseBlock: 'i-page'}, null, {
                 module: matchers[0].substring(1)
             });
     }
-
 });

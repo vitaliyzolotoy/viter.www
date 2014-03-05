@@ -5,7 +5,7 @@ BEM.decl({block: 'i-page-notes', baseBlock: 'i-page'}, null, {
         return this
             .out({
                 block: 'notes',
-                module: 'notes'
+                module: matchers[0].substring(1)
             });
     }
 });

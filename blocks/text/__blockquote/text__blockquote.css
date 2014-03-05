@@ -1,37 +1,37 @@
-.text__blockquote
+.text blockquote
 {
-	font-style: italic;
+    font-style: italic;
 
-	position: relative;
+    position: relative;
 
-	width: 320px;
-	margin: 22px auto;
-	padding: 10px;
+    width: 320px;
+    margin: 22px auto;
+    padding: 10px;
 
-	text-align: center;
+    text-align: center;
 }
 
-.text__blockquote:before,
-.text__blockquote:after
+.text blockquote:before,
+.text blockquote:after
 {
-	position: absolute;
-	left: 0;
+    position: absolute;
+    left: 0;
 
-	width: 100%;
-	height: 4px;
+    width: 100%;
+    height: 4px;
 
-	content: '';
+    content: '';
 
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAAAAACWpiEsAAAAAnRSTlMA/1uRIrUAAAAkSURBVHheY/gPBQzvAwLWgxiMBQIHDigI9Dsw3P///34DUAwAzMsYHCopru4AAAAASUVORK5CYII=) repeat-x;
-	/*background: url(text__blockquote.png) repeat-x;*/
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAAAAACWpiEsAAAAAnRSTlMA/1uRIrUAAAAkSURBVHheY/gPBQzvAwLWgxiMBQIHDigI9Dsw3P///34DUAwAzMsYHCopru4AAAAASUVORK5CYII=) repeat-x;
+    /*background: url(text__blockquote.png) repeat-x;*/
 }
 
-.text__blockquote:before
+.text blockquote:before
 {
-	top: -4px;
+    top: -4px;
 }
 
-.text__blockquote:after
+.text blockquote:after
 {
-	bottom: -4px;
+    bottom: -4px;
 }
