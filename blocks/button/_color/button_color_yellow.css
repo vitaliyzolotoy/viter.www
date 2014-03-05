@@ -1,6 +1,5 @@
 .button_color_yellow
 {
-    color: #fcfcf9;
     border: 3px double #fcfcf9;
     background: #EFAB00;
 }
@@ -10,5 +9,4 @@
 {
     color: #EFAB00;
     border: 3px double #EFAB00;
-    background: #fcfcf9;
 }

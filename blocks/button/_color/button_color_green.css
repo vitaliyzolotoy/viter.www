@@ -1,6 +1,5 @@
 .button_color_green
 {
-    color: #fcfcf9;
     border: 3px double #fcfcf9;
     background: #57ad68;
 }
@@ -10,5 +9,4 @@
 {
     color: #57ad68;
     border: 3px double #57ad68;
-    background: #fcfcf9;
 }

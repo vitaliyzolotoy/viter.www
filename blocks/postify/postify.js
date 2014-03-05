@@ -2,30 +2,30 @@ BEM.DOM.decl('postify', {
 
     onSetMod: {
         js: function () {
-            this._handlers();
+            var create = this.findBlockInside({ blockName : 'button', modName : 'create', modVal : 'yes' }),
+                update = this.findBlockInside({ blockName : 'button', modName : 'update', modVal : 'yes' }),
+                del = this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes' });
+
+            create && this.bindTo(create.domElem, 'click', function(e){
+                e.preventDefault();
+                data = this._getData();
+                this._createNote(data);
+            });
+
+            update && this.bindTo(update.domElem, 'click', function(e){
+                e.preventDefault();
+                data = this._getData();
+                this._updateNote(data);
+            });
+
+            del && this.bindTo(del.domElem, 'click', function(e){
+                e.preventDefault();
+                this.findBlockInside('dialog').setMod('visible', 'yes');
+                // data = this._getData();
+                // this._deleteNote(data);
+            });
+
         }
-    },
-
-    _handlers: function () {
-
-        this.findBlockInside({ blockName : 'button', modName : 'create', modVal : 'yes'}).bindTo('click', function(e) {
-            e.preventDefault();
-            data = this._getData();
-            this._createNote(data);
-        }.bind(this));
-
-        this.findBlockInside({ blockName : 'button', modName : 'update', modVal : 'yes'}).bindTo('click', function(e) {
-            e.preventDefault();
-            data = this._getData();
-            this._updateNote(data);
-        }.bind(this));
-
-        this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes'}).bindTo('click', function(e) {
-            e.preventDefault();
-            data = this._getData();
-            this._deleteNote(data);
-        }.bind(this));
-
     },
 
     _getData: function () {
@@ -47,6 +47,7 @@ BEM.DOM.decl('postify', {
     _createNote: function () {
         BEM.blocks['i-api-request'].post(data.module, {params: data.params}).then(function (result) {
             console.log('success');
+            BEM.blocks['i-router'].setPath('/notes/');
         }.bind(this)).fail(function () {
             console.log('fail');
         }.bind(this));
@@ -55,6 +56,7 @@ BEM.DOM.decl('postify', {
     _updateNote: function (data) {
         BEM.blocks['i-api-request'].post(data.module + '/' + data.id, {params: data.params}).then(function (result) {
             console.log('success');
+            BEM.blocks['i-router'].setPath('/notes/' + data.id);
         }.bind(this)).fail(function () {
             console.log('fail');
         }.bind(this));
@@ -62,6 +64,7 @@ BEM.DOM.decl('postify', {
 
     _deleteNote: function () {
         BEM.blocks['i-api-request'].delete(data.module + '/' + data.id).then(function (result) {
+            BEM.blocks['i-router'].setPath('/notes/');
             console.log('success');
         }.bind(this)).fail(function () {
             console.log('fail');

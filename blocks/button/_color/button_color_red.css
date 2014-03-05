@@ -1,6 +1,5 @@
 .button_color_red
 {
-    color: #fcfcf9;
     border: 3px double #fcfcf9;
     background: #cc5454;
 }
@@ -10,5 +9,4 @@
 {
     color: #cc5454;
     border: 3px double #cc5454;
-    background: #fcfcf9;
 }

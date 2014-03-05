@@ -2,12 +2,17 @@
 {
     font: 13px/24px georgia, serif;
 
+    display: inline-block;
+
+    width:auto !important;
+    height: 24px;
     margin: 0;
     padding: 0 13px;
 
     cursor: pointer;
     letter-spacing: 2px;
     text-transform: uppercase;
+    outline: none;
 
     color: #fcfcf9;
     border: 3px double #fcfcf9;
@@ -16,6 +21,10 @@
     -webkit-transition: all 0.15s ease;
        -moz-transition: all 0.15s ease;
             transition: all 0.15s ease;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 .button:hover,
@@ -23,5 +32,5 @@
 {
     color: #b3b3b1;
     border: 3px double #b3b3b1;
-    background: #fcfcf9;
+    background: transparent;
 }

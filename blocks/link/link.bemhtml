@@ -1,5 +1,5 @@
 block link {
-    tag: 'a'
+    tag: this.ctx.url ? 'a' : 'span'
     attrs: {
         href: this.ctx.url
     }

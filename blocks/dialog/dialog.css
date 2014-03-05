@@ -1,0 +1,76 @@
+.dialog
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.dialog_visible_yes
+{
+    display: block;
+}
+
+.dialog::before
+{
+
+    display: inline-block;
+    height: 100%;
+
+    content: '';
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.dialog__close
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+
+    color: #b3b3b1;
+}
+
+.dialog__close:hover
+{
+    color: #000;
+}
+
+.dialog__window
+{
+    display: inline-block;
+
+    max-width: 580px;
+    padding: 40px;
+
+    vertical-align: middle;
+
+    -webkit-animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
+       -moz-animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
+            animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
+}
+
+.dialog__title
+{
+    font: 24px/26px 'oranienbaum';
+    font-weight: normal;
+
+    margin: 0 0 12px 0;
+}
+
+.dialog__content
+{
+    margin: 0 0 39px 0;
+}

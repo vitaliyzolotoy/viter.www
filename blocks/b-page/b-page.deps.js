@@ -9,6 +9,7 @@
         { block: 'section' },
         { block: 'aside' },
         { block: 'analytics' },
+        { block: 'animation' },
 
         { block: 'header' },
         { block: 'footer' }
