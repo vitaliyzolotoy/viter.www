@@ -4,6 +4,7 @@ BEM.DOM.decl('postify', {
         js: function () {
             var create = this.findBlockInside({ blockName : 'button', modName : 'create', modVal : 'yes' }),
                 update = this.findBlockInside({ blockName : 'button', modName : 'update', modVal : 'yes' }),
+                confirm = this.findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
                 del = this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes' });
 
             create && this.bindTo(create.domElem, 'click', function(e){
@@ -18,11 +19,15 @@ BEM.DOM.decl('postify', {
                 this._updateNote(data);
             });
 
-            del && this.bindTo(del.domElem, 'click', function(e){
+            confirm && this.bindTo(confirm.domElem, 'click', function(e){
                 e.preventDefault();
                 this.findBlockInside('dialog').setMod('visible', 'yes');
-                // data = this._getData();
-                // this._deleteNote(data);
+            });
+
+            del && this.bindTo(del.domElem, 'click', function(e){
+                e.preventDefault();
+                data = this._getData();
+                this._deleteNote(data);
             });
 
         }
@@ -54,7 +59,7 @@ BEM.DOM.decl('postify', {
     },
 
     _updateNote: function (data) {
-        BEM.blocks['i-api-request'].post(data.module + '/' + data.id, {params: data.params}).then(function (result) {
+        BEM.blocks['i-api-request'].put(data.module + '/' + data.id, {params: data.params}).then(function (result) {
             console.log('success');
             BEM.blocks['i-router'].setPath('/notes/' + data.id);
         }.bind(this)).fail(function () {

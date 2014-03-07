@@ -1,11 +1,11 @@
-.button_color_green
+.button_state_success
 {
     border: 3px double #fcfcf9;
     background: #57ad68;
 }
 
-.button_color_green:hover,
-.button_color_green:focus
+.button_state_success:hover,
+.button_state_success:focus
 {
     color: #57ad68;
     border: 3px double #57ad68;

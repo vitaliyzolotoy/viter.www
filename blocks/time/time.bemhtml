@@ -1,1 +1,3 @@
-block time, tag: 'time'
+block time {
+    tag: 'time'
+}

@@ -5,7 +5,6 @@
         { block: 'form' },
         { block: 'input' },
         { block: 'textarea' },
-        { block: 'button' },
-        { block: 'dialog' }
+        { block: 'button' }
     ]
 })

@@ -2,6 +2,6 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'button', mods: {color:['blue', 'green', 'red', 'yellow']} }
+        { block: 'button', mods: {state:['danger', 'primary', 'success', 'warning']} }
     ]
 })

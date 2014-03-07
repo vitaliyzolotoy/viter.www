@@ -1,11 +1,11 @@
-.button_color_blue
+.button_state_primary
 {
     border: 3px double #fcfcf9;
     background: #369;
 }
 
-.button_color_blue:hover,
-.button_color_blue:focus
+.button_state_primary:hover,
+.button_state_primary:focus
 {
     color: #369;
     border: 3px double #369;

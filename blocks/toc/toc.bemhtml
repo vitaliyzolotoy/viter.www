@@ -1,3 +1,9 @@
-block toc, tag: 'ol'
-elem item, tag: 'li'
-elem section, tag: 'span'
+block toc {
+    tag: 'ol'
+    elem item {
+        tag: 'li'
+    }
+    elem section {
+        tag: 'span'
+    }
+}

@@ -23,7 +23,6 @@ BEM.JSON.decl({name: 'postify'}, {
                     },
                     {
                         block: 'section',
-                        mods: { type: 'postify' },
                         content: {
                             block: 'form',
                             content: [
@@ -62,18 +61,18 @@ BEM.JSON.decl({name: 'postify'}, {
                         content: [
                             !creating && {
                                 block: 'button',
-                                attrs: { name: 'delete', value: 'Видалити' },
-                                mods: { color: 'red', delete: 'yes' }
+                                attrs: { name: 'confirm', value: 'Видалити' },
+                                mods: { state: 'danger', confirm: 'yes' }
                             },
                             !creating && {
                                 block: 'button',
                                 attrs: { name: 'submit', value: 'Відредагувати' },
-                                mods: { color: 'yellow', update: 'yes' }
+                                mods: { state: 'warning', update: 'yes' }
                             },
                             creating && {
                                 block: 'button',
                                 attrs: { name: 'submit', value: 'Опублікувати' },
-                                mods: { color: 'green', create: 'yes' }
+                                mods: { state: 'success', create: 'yes' }
                             }
                         ]
                     },
@@ -87,6 +86,7 @@ BEM.JSON.decl({name: 'postify'}, {
                             },
                             {
                                 elem: 'window',
+                                mix: [{ block: 'animation', mods: { state: 'scale' } }],
                                 content: [
                                     {
                                         elem: 'title',
@@ -101,8 +101,8 @@ BEM.JSON.decl({name: 'postify'}, {
                                         content: [
                                             {
                                                 block: 'button',
-                                                attrs: { name: 'confirm', value: 'Видалити' },
-                                                mods: { color: 'green', confirm: 'yes' }
+                                                attrs: { name: 'delete', value: 'Видалити' },
+                                                mods: { state: 'success', delete: 'yes' }
                                             },
                                             {
                                                 block: 'button',

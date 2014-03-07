@@ -10,6 +10,8 @@
         { block: 'aside' },
         { block: 'analytics' },
         { block: 'animation' },
+        { block: 'alert' },
+        { block: 'dialog' },
 
         { block: 'header' },
         { block: 'footer' }

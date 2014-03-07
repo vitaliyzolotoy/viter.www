@@ -5,6 +5,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 100;
 
     display: none;
 
@@ -56,10 +57,6 @@
     padding: 40px;
 
     vertical-align: middle;
-
-    -webkit-animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
-       -moz-animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
-            animation: scale-fade 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
 }
 
 .dialog__title

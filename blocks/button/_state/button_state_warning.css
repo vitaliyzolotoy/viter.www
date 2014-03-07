@@ -1,11 +1,11 @@
-.button_color_yellow
+.button_state_warning
 {
     border: 3px double #fcfcf9;
     background: #EFAB00;
 }
 
-.button_color_yellow:hover,
-.button_color_yellow:focus
+.button_state_warning:hover,
+.button_state_warning:focus
 {
     color: #EFAB00;
     border: 3px double #EFAB00;

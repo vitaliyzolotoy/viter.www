@@ -1,0 +1,28 @@
+.alert
+{
+    position: absolute;
+    top: -22px;
+    right: 0;
+    z-index: 99;
+
+    display: none;
+
+    max-width: 290px;
+    margin: 0 22px 0 0;
+    padding: 46px 10px 4px 10px;
+
+    text-align: center;
+
+    color: #fcfcf9;
+    border: 3px double #fcfcf9;
+    border-top: none;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background: #b3b3b1;
+}
+
+.alert_visible_yes
+{
+    display: block;
+}

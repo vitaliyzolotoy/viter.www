@@ -1,4 +1,4 @@
-@-webkit-keyframes scale-fade {
+@-webkit-keyframes scale {
     0% {
         opacity: 0;
 
@@ -19,7 +19,7 @@
 
 }
 
-@-moz-keyframes scale-fade {
+@-moz-keyframes scale {
     0% {
         opacity: 0;
 
@@ -40,7 +40,7 @@
 
 }
 
-@keyframes scale-fade {
+@keyframes scale {
     0% {
         opacity: 0;
 
@@ -59,4 +59,11 @@
         transform: scale(1) rotateX(0);
     }
 
+}
+
+.animation_state_scale
+{
+    -webkit-animation: scale 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
+       -moz-animation: scale 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
+            animation: scale 300ms forwards cubic-bezier(0.8, 0.02, 0.45, 0.91);
 }

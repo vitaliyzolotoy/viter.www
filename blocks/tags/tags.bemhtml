@@ -1,2 +1,6 @@
-block tags, tag: 'ul'
-elem item, tag: 'li'
+block tags {
+    tag: 'ul'
+    elem item {
+        tag: 'li'
+    }
+}
