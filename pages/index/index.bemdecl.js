@@ -9,5 +9,6 @@ exports.blocks = [
     {block: 'i-page-landing'},
     {block: 'i-page-note'},
     {block: 'i-page-notes'},
-    {block: 'i-page-postify'}
+    {block: 'i-page-postify'},
+    {block: 'i-page-rss'}
 ]

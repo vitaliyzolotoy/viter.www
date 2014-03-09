@@ -1,0 +1,32 @@
+block rss {
+    tag: 'rss'
+    bem: false
+    elem channel {
+        tag: 'channel',
+        bem: false
+    }
+    elem title {
+        tag: 'title',
+        bem: false
+    }
+    elem guid {
+        tag: 'guid',
+        bem: false
+    }
+    elem description {
+        tag: 'description',
+        bem: false
+    }
+    elem pubDate {
+        tag: 'pubDate',
+        bem: false
+    }
+    elem lastBuildDate {
+        tag: 'lastBuildDate',
+        bem: false
+    }
+    elem item {
+        tag: 'item',
+        bem: false
+    }
+}
