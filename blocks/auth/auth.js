@@ -2,15 +2,15 @@ BEM.DOM.decl('auth', {
 
     onSetMod: {
         js: function () {
-            var handle = this.findBlockInside('link'),
-                login = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'auth', modVal : 'yes' }),
-                logout = this.findBlockInside({ blockName : 'link', modName : 'logout', modVal : 'yes' });
+            var login = this.findBlockInside({ blockName : 'link', modName : 'login', modVal : 'yes' }),
+                logout = this.findBlockInside({ blockName : 'link', modName : 'logout', modVal : 'yes' }),
+                confirm = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' });
 
-            handle && this.bindTo(handle.domElem, 'click', function(e){
+            login && this.bindTo(login.domElem, 'click', function(e){
                 this._showAuthDialog();
             });
 
-            login && this.bindTo(login.domElem, 'click', function(e){
+            confirm && this.bindTo(confirm.domElem, 'click', function(e){
                 this._login();
             });
 

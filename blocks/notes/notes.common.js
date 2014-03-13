@@ -504,28 +504,6 @@ BEM.JSON.decl({name: 'notes'}, {
                             }
                         ]
                     },
-                    BEM.blocks['i-auth'].check() && {
-                        block: 'aside',
-                        content: [
-                            {
-                                block: 'title',
-                                tag: 'h3',
-                                content: 'Увага'
-                            },
-                            {
-                                block: 'invitation',
-                                content: [
-                                    'Всі ',
-                                    {
-                                        block: 'link',
-                                        url: '/postify/',
-                                        content: 'чекають'
-                                    },
-                                    ' на нову нотатку, яку тут можна написати.',
-                                ]
-                            }
-                        ]
-                    },
                     {
                         block: 'footer'
                     }

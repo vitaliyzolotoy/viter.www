@@ -18,7 +18,7 @@ BEM.JSON.decl({name: 'footer'}, {
                 js: true,
                 content: {
                     block: 'link',
-                    mods: { pseudo: 'yes' },
+                    mods: { pseudo: 'yes', login: 'yes'  },
                     content: 'Авторизуватися'
                 }
             },
@@ -26,18 +26,19 @@ BEM.JSON.decl({name: 'footer'}, {
                 block: 'auth',
                 js: true,
                 content: [
-                    'Ви авторизовані, як ',
+                    'Ви авторизовані. Написати ',
                     {
                         block: 'link',
-                        url: '/zolotoy/',
-                        content: 'Віталій Золотой'
+                        url: '/postify/',
+                        content: 'нотатку'
                     },
-                    ' ',
+                    ' чи ',
                     {
                         block: 'link',
                         mods: { pseudo: 'yes', logout: 'yes' },
-                        content: 'Вийти?'
-                    }
+                        content: 'вийти'
+                    },
+                    '?'
                 ]
             }
         ]);

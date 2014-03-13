@@ -4,15 +4,3 @@
 
     display: inline-block;
 }
-
-.copyright .link
-{
-    color: #999;
-    border-color: rgba(153, 153, 153, 0.25);
-}
-
-.copyright .link:hover
-{
-    color: #d04000;
-    border-color: rgba(208, 64, 0, 0.25);
-}

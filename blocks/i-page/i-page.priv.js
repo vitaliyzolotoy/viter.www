@@ -59,7 +59,7 @@ BEM.decl('i-page', null, {
                                         {
                                             block: 'button',
                                             attrs: { name: 'auth', value: 'Авторизуватися' },
-                                            mods: { state: 'success', auth: 'yes' }
+                                            mods: { state: 'success', confirm: 'yes' }
                                         },
                                         {
                                             block: 'button',
