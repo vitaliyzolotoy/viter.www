@@ -504,7 +504,7 @@ BEM.JSON.decl({name: 'notes'}, {
                             }
                         ]
                     },
-                    {
+                    BEM.blocks['i-auth'].check() && {
                         block: 'aside',
                         content: [
                             {

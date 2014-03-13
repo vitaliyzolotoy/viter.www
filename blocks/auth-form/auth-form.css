@@ -1,0 +1,12 @@
+.auth-form
+{
+    margin-top: 20px;
+}
+
+.auth-form .input
+{
+    display: block;
+
+    width: 100%;
+    margin-top: 5px;
+}

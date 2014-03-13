@@ -12,6 +12,7 @@
         { block: 'animation' },
         { block: 'alert' },
         { block: 'dialog' },
+        { block: 'auth-form' },
 
         { block: 'header' },
         { block: 'footer' }

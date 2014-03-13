@@ -2,6 +2,7 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'copyright' }
+        { block: 'copyright' },
+        { block: 'auth' }
     ]
 })

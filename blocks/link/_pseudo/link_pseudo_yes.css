@@ -1,0 +1,10 @@
+.link_pseudo_yes
+{
+    cursor: pointer;
+}
+
+.link_pseudo_yes:active,
+.link_pseudo_yes:hover
+{
+    border-bottom: none;
+}

@@ -1,0 +1,18 @@
+.auth
+{
+    font-size: 11px;
+
+    display: inline-block;
+
+    margin-left: 15px;
+}
+
+.auth .link
+{
+    color: #999;
+}
+
+.auth .link:hover
+{
+    color: #d04000;
+}
