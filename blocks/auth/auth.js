@@ -4,14 +4,16 @@ BEM.DOM.decl('auth', {
         js: function () {
             var login = this.findBlockInside({ blockName : 'link', modName : 'login', modVal : 'yes' }),
                 logout = this.findBlockInside({ blockName : 'link', modName : 'logout', modVal : 'yes' }),
-                confirm = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' });
+                confirm = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
+                dialog = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' });
 
             login && this.bindTo(login.domElem, 'click', function(e){
-                this._showAuthDialog();
+                dialog.setMod('visible', 'yes');
             });
 
             confirm && this.bindTo(confirm.domElem, 'click', function(e){
                 this._login();
+                dialog.delMod('visible');
             });
 
             logout && this.bindTo(logout.domElem, 'click', function(e){
@@ -19,11 +21,6 @@ BEM.DOM.decl('auth', {
             });
 
         }
-    },
-
-    _showAuthDialog: function () {
-        var dialog = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' });
-        dialog.setMod('visible', 'yes');
     },
 
     _login: function () {

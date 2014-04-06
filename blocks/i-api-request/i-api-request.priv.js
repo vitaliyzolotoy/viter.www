@@ -5,6 +5,8 @@ BEM.decl('i-api-request', null, {
         return {
             'Accept': 'application/json',
             'Accept-Encoding': 'gzip, deflate',
+            'Content-type': 'application/json',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
             'host': hostname, //bug with Host when capitalized in https://github.com/mikeal/request/
             'Connection': 'keep-alive'
         };

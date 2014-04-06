@@ -5,29 +5,35 @@ BEM.DOM.decl('postify', {
             var create = this.findBlockInside({ blockName : 'button', modName : 'create', modVal : 'yes' }),
                 update = this.findBlockInside({ blockName : 'button', modName : 'update', modVal : 'yes' }),
                 confirm = this.findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
-                del = this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes' });
+                del = this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes' }),
+                media = this.findBlockInside({ blockName : 'input', modName : 'media', modVal : 'yes' });
 
-            create && this.bindTo(create.domElem, 'click', function(e){
+            create && this.bindTo(create.domElem, 'click', function(e) {
                 e.preventDefault();
                 data = this._getData();
                 this._createNote(data);
             });
 
-            update && this.bindTo(update.domElem, 'click', function(e){
+            update && this.bindTo(update.domElem, 'click', function(e) {
                 e.preventDefault();
                 data = this._getData();
                 this._updateNote(data);
             });
 
-            confirm && this.bindTo(confirm.domElem, 'click', function(e){
+            confirm && this.bindTo(confirm.domElem, 'click', function(e) {
                 e.preventDefault();
                 this.findBlockInside('dialog').setMod('visible', 'yes');
             });
 
-            del && this.bindTo(del.domElem, 'click', function(e){
+            del && this.bindTo(del.domElem, 'click', function(e) {
                 e.preventDefault();
                 data = this._getData();
                 this._deleteNote(data);
+            });
+
+            media && this.bindTo(media.domElem, 'change', function(e) {
+                var files = e.target.files;
+                this._uploadMedia(files);
             });
 
         }
@@ -74,6 +80,35 @@ BEM.DOM.decl('postify', {
         }.bind(this)).fail(function () {
             console.log('fail');
         }.bind(this));
+    },
+
+    _uploadMedia: function (files) {
+        var data = new FormData();
+        $.each(files, function(key, value)
+        {
+            // console.log(key, value);
+            data.append(key, value);
+        });
+
+        var formData = $('.form').serialize();
+
+        $.each(files, function(key, value)
+        {
+            console.log(value);
+            formData = value;
+        });
+
+        // console.log(formData);
+
+        var file = $('.form input[name=media]').val() || '';
+        BEM.blocks['i-upload'].file('yo')
+
+        // BEM.blocks['i-api-request'].post('storage', { params:{p1:'formData'}, body:'formData', files:{f1:formData} }).then(function (result) {
+        //     console.log('success');
+        // }.bind(this)).fail(function () {
+        //     console.log('fail');
+        // }.bind(this));
+
     }
 
 });

@@ -28,7 +28,7 @@ BEM.JSON.decl({name: 'note'}, {
                                     BEM.blocks['i-date'].beautify(result.note.modified)
                                 ]
                             },
-                            {
+                            BEM.blocks['i-auth'].check() && {
                                 block: 'modify',
                                 content: {
                                     block: 'link',

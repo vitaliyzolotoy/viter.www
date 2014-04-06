@@ -1,6 +1,12 @@
 BEM.decl('i-auth', null, {
     login: function () {
-        BEM.blocks['i-cookie'].set('auth', 1);
+        BEM.blocks['i-cookie'].set('auth', 1, { path: '/', expires: 20 * 365 });
+        this.reload();
+    },
+
+    logout: function () {
+        BEM.blocks['i-cookie'].set('auth', 0, { path: '/', expires: 20 * 365 });
+        this.reload();
     },
 
     check: function () {
@@ -8,8 +14,9 @@ BEM.decl('i-auth', null, {
         return checkCookie;
     },
 
-    logout: function () {
-        BEM.blocks['i-cookie'].set('auth', 0);
+    reload: function () {
+        var uri = BEM.blocks['i-router'].getMatchers();
+        BEM.blocks['i-router'].replacePath(uri);
     }
 
 });

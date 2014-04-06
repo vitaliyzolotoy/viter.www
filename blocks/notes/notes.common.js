@@ -494,13 +494,6 @@ BEM.JSON.decl({name: 'notes'}, {
                                     //     ]
                                     // }
                                 ]
-                            },
-                            {
-                                block: 'alert',
-                                mods: { state: 'success', message: 'note-deleted' },
-                                mix: [{ block: 'animation', mods: { state: 'bounce' } }],
-                                js: true,
-                                content: 'Нотатка видалена'
                             }
                         ]
                     },
