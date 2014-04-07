@@ -1,3 +1,4 @@
 block button {
     tag: 'input'
+    attrs: { type: 'submit' }
 }
