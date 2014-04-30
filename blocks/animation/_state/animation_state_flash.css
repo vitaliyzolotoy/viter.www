@@ -1,0 +1,33 @@
+@-webkit-keyframes 'flash' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes 'flash' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes 'flash' {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animation_state_flash
+{
+    -webkit-animation: flash 0.7s;
+       -moz-animation: flash 0.7s;
+            animation: flash 0.7s;
+}

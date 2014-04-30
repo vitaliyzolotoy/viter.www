@@ -2,6 +2,6 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'animation', mods: {state:['bounce', 'scale']} }
+        { block: 'animation', mods: {state:['bounce', 'flash', 'scale', 'shake']} }
     ]
 })

@@ -6,7 +6,12 @@
     margin: 0;
 
     outline: none;
+    border: 3px double #999;
     background: transparent;
+
+    -webkit-transition: all 0.15s ease;
+       -moz-transition: all 0.15s ease;
+            transition: all 0.15s ease;
 }
 
 .input:focus

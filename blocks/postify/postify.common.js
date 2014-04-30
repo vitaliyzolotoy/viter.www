@@ -76,7 +76,8 @@ BEM.JSON.decl({name: 'postify'}, {
                                                 name: 'media',
                                                 type: 'file'
                                             }
-                                        }
+                                        },
+                                        // BEM.blocks['i-upload'].file('yo')
                                     ]
                                 }
                             ]

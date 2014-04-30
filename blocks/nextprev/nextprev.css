@@ -1,0 +1,27 @@
+.nextprev__item
+{
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nextprev__item::before
+{
+    font-family: 'oranienbaum';
+
+    position: absolute;
+    left: -22px;
+}
+
+.nextprev__item_next_yes::before
+{
+    content: '→'
+}
+
+.nextprev__item_prev_yes::before
+{
+    content: '←'
+}

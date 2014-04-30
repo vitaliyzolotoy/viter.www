@@ -14,7 +14,8 @@
         "bem-node": "0.8.12",
         "enb": "0.8.43",
         "enb-bemhtml": "0.2.1",
-        "aws-sdk": "2.0.0-rc12"
+        "aws-sdk": "2.0.0-rc12",
+        "moment": "2.6.0"
     },
     "engines": {
         "node": ">= 0.8.0"

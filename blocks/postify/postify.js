@@ -101,7 +101,7 @@ BEM.DOM.decl('postify', {
         // console.log(formData);
 
         var file = $('.form input[name=media]').val() || '';
-        BEM.blocks['i-upload'].file('yo')
+        // BEM.blocks['i-upload'].file('yo')
 
         // BEM.blocks['i-api-request'].post('storage', { params:{p1:'formData'}, body:'formData', files:{f1:formData} }).then(function (result) {
         //     console.log('success');

@@ -48,6 +48,13 @@ BEM.JSON.decl({name: 'note'}, {
                         ]
                     },
                     {
+                        block: 'aside',
+                        content: {
+                            block: 'nextprev',
+                            id: result.note._id
+                        }
+                    },
+                    {
                         block: 'footer'
                     }
                 ]);

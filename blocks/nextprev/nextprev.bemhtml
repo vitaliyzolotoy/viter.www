@@ -1,0 +1,2 @@
+block nextprev, tag: 'ul'
+elem item, tag: 'li'

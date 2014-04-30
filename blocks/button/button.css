@@ -21,10 +21,6 @@
     -webkit-transition: all 0.15s ease;
        -moz-transition: all 0.15s ease;
             transition: all 0.15s ease;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
 }
 
 .button:hover,

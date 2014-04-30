@@ -6,6 +6,7 @@
         { block: 'time' },
         { block: 'tags' },
         { block: 'text' },
-        { block: 'modify' }
+        { block: 'modify' },
+        { block: 'nextprev' }
     ]
 })

@@ -3,6 +3,7 @@ BEM.decl('i-page', null, {
         return {
             block: 'b-page',
             title: 'Блоґ Віталія Золотого – нотатки на теми цікаві для мене',
+            mix: [{ block: 'animation', mods: { state: 'flash' } }],
             content: [
                 {
                     block: 'content',
@@ -19,7 +20,7 @@ BEM.decl('i-page', null, {
                         },
                         {
                             elem: 'window',
-                            mix: [{ block: 'animation', mods: { state: 'scale' } }],
+                            mix: [{ block: 'animation' }],
                             content: [
                                 {
                                     elem: 'title',
@@ -34,19 +35,23 @@ BEM.decl('i-page', null, {
                                             content: [
                                                 {
                                                     block: 'input',
+                                                    mods: { email: 'yes' },
                                                     attrs: {
                                                         name: 'email',
                                                         type: 'text',
                                                         placeholder: 'Емейл',
-                                                        autofocus: 'autofocus'
+                                                        autofocus: 'autofocus',
+                                                        required: 'required'
                                                     }
                                                 },
                                                 {
                                                     block: 'input',
+                                                    mods: { password: 'yes' },
                                                     attrs: {
                                                         name: 'password',
                                                         type: 'password',
-                                                        placeholder: 'Пароль'
+                                                        placeholder: 'Пароль',
+                                                        required: 'required'
                                                     }
                                                 }
                                             ]
