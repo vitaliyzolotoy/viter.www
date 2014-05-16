@@ -1,27 +1,26 @@
 BEM.JSON.decl({name: 'nextprev'}, {
     onBlock: function(ctx) {
-        var current = ctx.param('id');
         ctx.defer(
             BEM.blocks['i-api-request']
-            .get('notes')
+            .get('nextprev/' + ctx.param('id'))
             .then(function(result) {
                 ctx.content([
-                    {
+                    result.nextprev[0] && {
                         elem: 'item',
                         elemMods: { next: 'yes' },
                         content: {
                             block: 'link',
-                            url: '#',
-                            content: 'Наступна'
+                            url: '/notes/' + result.nextprev[0]._id,
+                            content: result.nextprev[0].title
                         }
                     },
-                    {
+                    result.nextprev[1] && {
                         elem: 'item',
                         elemMods: { prev: 'yes' },
                         content: {
                             block: 'link',
-                            url: '#',
-                            content: 'Попередня'
+                            url: '/notes/' + result.nextprev[1]._id,
+                            content: result.nextprev[1].title
                         }
                     }
                 ]);

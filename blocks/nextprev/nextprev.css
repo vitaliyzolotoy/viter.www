@@ -11,6 +11,7 @@
 .nextprev__item::before
 {
     font-family: 'oranienbaum';
+    font-weight: normal;
 
     position: absolute;
     left: -22px;
