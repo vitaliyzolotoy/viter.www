@@ -43,20 +43,22 @@ BEM.DOM.decl('postify', {
         var data = {},
             id = $('.form input[name=id]').val() || '',
             title = $('.form input[name=title]').val() || '',
-            content = $('.form textarea[name=content]').val() || '';
+            content = $('.form textarea[name=content]').val() || '',
+            tags = $('.form input[name=tags]').val() || '';
 
         data.module = 'notes';
         data.id = id;
-        data.params = {
+        data.body = {
             title: title,
-            content: content
+            content: content,
+            tags: tags
         };
 
         return data;
     },
 
     _createNote: function () {
-        BEM.blocks['i-api-request'].post(data.module, {params: data.params}).then(function (result) {
+        BEM.blocks['i-api-request'].post(data.module, { body: data.body }).then(function (result) {
             console.log('success');
             BEM.blocks['i-router'].setPath('/notes/');
         }.bind(this)).fail(function () {
@@ -65,7 +67,7 @@ BEM.DOM.decl('postify', {
     },
 
     _updateNote: function (data) {
-        BEM.blocks['i-api-request'].put(data.module + '/' + data.id, {params: data.params}).then(function (result) {
+        BEM.blocks['i-api-request'].put(data.module + '/' + data.id, { body: data.body }).then(function (result) {
             console.log('success');
             BEM.blocks['i-router'].setPath('/notes/' + data.id);
         }.bind(this)).fail(function () {

@@ -9,11 +9,7 @@ BEM.JSON.decl({name: 'tags'}, {
                         return [
                             {
                                 elem: 'item',
-                                content: {
-                                    block: 'link',
-                                    url: '#',
-                                    content: item.content
-                                }
+                                content: item.content
                             }
                         ]
                     })

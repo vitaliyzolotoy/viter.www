@@ -5,8 +5,8 @@ BEM.JSON.decl({name: 'entrance'}, {
             .get('notes')
             .then(function(result) {
                 var notes = result.notes,
-                    introduction = notes[0],
-                    latest = notes[notes.length - 1];
+                    introduction = notes[notes.length - 1],
+                    latest = notes[0];
                 ctx.content([
                     {
                         elem: 'title',

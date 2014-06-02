@@ -71,6 +71,15 @@ BEM.JSON.decl({name: 'postify'}, {
                                         },
                                         {
                                             block: 'input',
+                                            attrs: {
+                                                name: 'tags',
+                                                type: 'text'
+                                            }
+                                        },
+                                        '<br>',
+                                        '<br>',
+                                        {
+                                            block: 'input',
                                             mods: { media: 'yes' },
                                             attrs: {
                                                 name: 'media',

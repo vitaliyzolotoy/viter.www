@@ -21,14 +21,6 @@ BEM.JSON.decl({name: 'notes'}, {
                             {
                                 block: 'toc',
                                 content: result.notes && [
-                                    {
-                                        elem: 'item',
-                                        content: {
-                                            block: 'link',
-                                            url: '/',
-                                            content: 'Чільна'
-                                        }
-                                    },
                                     result.notes.map(function(item) {
                                         return {
                                             elem: 'item',
@@ -51,6 +43,14 @@ BEM.JSON.decl({name: 'notes'}, {
                                             ]
                                         };
                                     }),
+                                    {
+                                        elem: 'item',
+                                        content: {
+                                            block: 'link',
+                                            url: '/',
+                                            content: 'Чільна'
+                                        }
+                                    },
                                     // {
                                     //     elem: 'item',
                                     //     content: {
