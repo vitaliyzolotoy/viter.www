@@ -1,11 +1,11 @@
 html,
-.b-page
+.page
 {
     color: #313233;
     background: #fff8e5;
 }
 
-.b-page
+.page
 {
     font: 15px/22px georgia, serif;
 
@@ -13,9 +13,10 @@ html,
     padding: 0;
 }
 
-
-.b-page_landing_yes
+.page_landing_yes
 {
+    height: 100%;
+
     background: -webkit-linear-gradient(top, #000 0%, #193a41 100%);
     background:    -moz-linear-gradient(top, #000 0%, #193a41 100%);
     background:      -o-linear-gradient(top, #000 0%, #193a41 100%);

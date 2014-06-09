@@ -1,7 +1,7 @@
 BEM.decl('i-page', null, {
     getPageJson: function (json) {
         return {
-            block: 'b-page',
+            block: 'page',
             title: 'Руїна – записки українського самашедшого',
             mix: [{ block: 'animation', mods: { state: 'flash' } }],
             content: [
@@ -89,5 +89,24 @@ BEM.decl('i-page', null, {
                 }
             ]
         }
+    },
+
+    _getPageParams: function () {
+        var params = this._state.get('page');
+        if (!params) {
+            params = {};
+            this._state.set('page', params);
+        }
+        return params;
+    },
+
+    _setPageParams: function (name, value) {
+
+        if (value === undefined) {
+            this._state.set('page', name);
+        } else {
+            this._state.set('page.' + name, value);
+        }
     }
+
 });

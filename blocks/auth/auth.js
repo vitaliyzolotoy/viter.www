@@ -4,8 +4,8 @@ BEM.DOM.decl('auth', {
         js: function () {
             var login = this.findBlockInside({ blockName : 'link', modName : 'login', modVal : 'yes' }),
                 logout = this.findBlockInside({ blockName : 'link', modName : 'logout', modVal : 'yes' }),
-                confirm = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
-                dialog = this.findBlockOutside('b-page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }),
+                confirm = this.findBlockOutside('page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }).findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
+                dialog = this.findBlockOutside('page').findBlockInside({ blockName : 'dialog', modName : 'auth', modVal : 'yes' }),
                 email = dialog.findBlockInside({ blockName : 'input', modName : 'email', modVal : 'yes' }),
                 password = dialog.findBlockInside({ blockName : 'input', modName : 'password', modVal : 'yes' }),
                 animate = dialog.findBlockInside({ blockName: 'animation' });

@@ -1,0 +1,12 @@
+block page, elem css {
+
+    bem: false
+
+    tag: 'style'
+
+    this.ctx.url {
+        tag: 'link',
+        attrs: { rel: 'stylesheet', href: this.ctx.url }
+    }
+
+}

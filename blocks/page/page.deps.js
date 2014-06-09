@@ -1,7 +1,10 @@
 ({
     mustDeps: [
+        { block: 'i-bem', elems: ['dom', 'json'], mods: {'init': 'auto'} }
     ],
     shouldDeps: [
+        { elems: ['css', 'js'] },
+
         { block: 'font' },
         { block: 'link' },
         { block: 'title' },
