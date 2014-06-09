@@ -1,14 +1,4 @@
 .text img
 {
-    position: relative;
-
     display: block;
-
-    max-width: 100%;
-    margin: 11px auto;
-    padding: 2px;
-
-    border: 1px solid #252525 !important;
-
-    box-sizing: border-box;
 }

@@ -11,8 +11,8 @@ BEM.JSON.decl({name: 'postify'}, {
         }
 
         creating
-        ? BEM.blocks['i-page'].setTitle('Написати | Блоґ Віталія Золотого')
-        : BEM.blocks['i-page'].setTitle('Редагувати | Блоґ Віталія Золотого'),
+        ? BEM.blocks['i-page'].setTitle('Написати | Руїна')
+        : BEM.blocks['i-page'].setTitle('Редагувати | Руїна'),
 
         ctx.defer(
             BEM.blocks['i-api-request']
@@ -73,7 +73,8 @@ BEM.JSON.decl({name: 'postify'}, {
                                             block: 'input',
                                             attrs: {
                                                 name: 'tags',
-                                                type: 'text'
+                                                type: 'text',
+                                                placeholder: 'Додати мітку',
                                             }
                                         },
                                         '<br>',
@@ -84,6 +85,13 @@ BEM.JSON.decl({name: 'postify'}, {
                                             attrs: {
                                                 name: 'media',
                                                 type: 'file'
+                                            }
+                                        },
+                                        {
+                                            block: 'button',
+                                            attrs: {
+                                                name: 'submit',
+                                                type: 'submit'
                                             }
                                         },
                                         // BEM.blocks['i-upload'].file('yo')

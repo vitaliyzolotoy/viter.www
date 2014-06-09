@@ -1,8 +1,8 @@
 .text code
 {
-    font: 12px/18px mono-space, monospace;
+    font: 12px/18px monospace;
 
     display: block;
 
-    margin: 11px 22px;
+    margin: 0 0 15px 0;
 }

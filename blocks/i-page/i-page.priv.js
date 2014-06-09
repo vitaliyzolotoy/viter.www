@@ -2,7 +2,7 @@ BEM.decl('i-page', null, {
     getPageJson: function (json) {
         return {
             block: 'b-page',
-            title: 'Блоґ Віталія Золотого – нотатки на теми цікаві для мене',
+            title: 'Руїна – записки українського самашедшого',
             mix: [{ block: 'animation', mods: { state: 'flash' } }],
             content: [
                 {

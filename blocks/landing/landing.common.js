@@ -3,7 +3,7 @@ BEM.JSON.decl({name: 'landing'}, {
         ctx.content([
             {
                 block: 'headline',
-                content: 'Блоґ Віталія Золотого'
+                content: 'Руїна'
             },
             {
                 block: 'entrance'

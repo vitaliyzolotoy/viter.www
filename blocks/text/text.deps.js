@@ -2,7 +2,27 @@
     shouldDeps: [
         {
             block: 'text',
-            elems: { elem: 'p' }
+            elems: { elem: 'abbr' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'blockquote' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'code' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'em' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'figcaption' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'figure' }
         },
         {
             block: 'text',
@@ -22,11 +42,7 @@
         },
         {
             block: 'text',
-            elems: { elem: 'ul' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'ol' }
+            elems: { elem: 'img' }
         },
         {
             block: 'text',
@@ -34,19 +50,11 @@
         },
         {
             block: 'text',
-            elems: { elem: 'img' }
+            elems: { elem: 'ol' }
         },
         {
             block: 'text',
-            elems: { elem: 'blockquote' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'code' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'abbr' }
+            elems: { elem: 'p' }
         },
         {
             block: 'text',
@@ -54,11 +62,15 @@
         },
         {
             block: 'text',
-            elems: { elem: 'em' }
+            elems: { elem: 'small' }
         },
         {
             block: 'text',
             elems: { elem: 'strong' }
+        },
+        {
+            block: 'text',
+            elems: { elem: 'ul' }
         }
     ]
 })

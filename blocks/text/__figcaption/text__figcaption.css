@@ -1,0 +1,20 @@
+.text figcaption
+{
+    text-align: right;
+
+    color: #666;
+}
+
+.text figcaption::before
+{
+    position: absolute;
+
+    margin-left: -16px;
+
+    content: '—';
+}
+
+.text figcaption small
+{
+    color: #999;
+}

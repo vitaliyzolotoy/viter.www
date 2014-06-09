@@ -8,7 +8,7 @@ BEM.JSON.decl({name: 'footer'}, {
                     {
                         block: 'link',
                         url: '/',
-                        content: 'Віталій Золотой'
+                        content: 'Руїна'
                     },
                     ', 2013–14 рр.'
                 ]

@@ -10,7 +10,7 @@ BEM.JSON.decl({name: 'entrance'}, {
                 ctx.content([
                     {
                         elem: 'title',
-                        content: 'Нотатки на теми цікаві для мене'
+                        content: 'Записки українського самашедшого'
                     },
                     {
                         elem: 'links',

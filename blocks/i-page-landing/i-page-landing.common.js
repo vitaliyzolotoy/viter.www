@@ -3,7 +3,7 @@ BEM.blocks['i-router'].define('/', 'i-page-landing');
 BEM.decl({block: 'i-page-landing', baseBlock: 'i-page'}, null, {
     init: function (matchers) {
         return this
-            .setTitle('Блоґ Віталія Золотого – нотатки на теми цікаві для мене')
+            .setTitle('Руїна – записки українського самашедшого')
             .out({
                 block: 'landing',
                 module: 'landing'

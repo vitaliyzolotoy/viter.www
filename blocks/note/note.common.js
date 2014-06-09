@@ -6,7 +6,7 @@ BEM.JSON.decl({name: 'note'}, {
             .get(data)
             .then(function(result) {
                 ctx.content([
-                    BEM.blocks['i-page'].setTitle(result.note.title + ' | Блоґ Віталія Золотого'),
+                    BEM.blocks['i-page'].setTitle(result.note.title + ' | Руїна'),
                     {
                         block: 'header'
                     },
@@ -41,10 +41,10 @@ BEM.JSON.decl({name: 'note'}, {
                                 mix: { block: 'text' },
                                 content: result.note.content
                             },
-                            {
-                                block: 'tags',
-                                id: result.note._id
-                            }
+                            // {
+                            //     block: 'tags',
+                            //     id: result.note._id
+                            // }
                         ]
                     },
                     {

@@ -2,36 +2,19 @@
 {
     font-style: italic;
 
-    position: relative;
-
-    width: 320px;
-    margin: 22px auto;
-    padding: 10px;
-
-    text-align: center;
+    margin: 0;
 }
 
-.text blockquote:before,
-.text blockquote:after
+.text blockquote::before
 {
     position: absolute;
-    left: 0;
 
-    width: 100%;
-    height: 4px;
+    margin-left: -7px;
 
-    content: '';
-
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAAAAACWpiEsAAAAAnRSTlMA/1uRIrUAAAAkSURBVHheY/gPBQzvAwLWgxiMBQIHDigI9Dsw3P///34DUAwAzMsYHCopru4AAAAASUVORK5CYII=) repeat-x;
-    /*background: url(text__blockquote.png) repeat-x;*/
+    content: '„';
 }
 
-.text blockquote:before
+.text blockquote::after
 {
-    top: -4px;
-}
-
-.text blockquote:after
-{
-    bottom: -4px;
+    content: '“';
 }

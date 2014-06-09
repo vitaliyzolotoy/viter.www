@@ -13,7 +13,7 @@ BEM.JSON.decl({name: 'rss'}, {
                         content: [
                             {
                                 elem: 'title',
-                                content: 'Блоґ Віталія Золотого',
+                                content: 'Руїна',
                             },
                             '<link>http://thefeature.com.ua</link>',
                             {

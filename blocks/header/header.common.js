@@ -6,7 +6,7 @@ BEM.JSON.decl({name: 'header'}, {
                 content: {
                     block: 'link',
                     url: '/notes/',
-                    content: 'Блоґ Віталія Золотого'
+                    content: 'Руїна'
                 }
             }
         ]);

@@ -1,0 +1,8 @@
+.text figure
+{
+    display: inline-block;
+
+    margin: 0 0 15px 0;
+
+    vertical-align: top;
+}

@@ -11,10 +11,10 @@
         "url": "git://github.com/zolotoy/viter.git"
     },
     "dependencies": {
-        "bem-node": "0.8.16",
-        "enb": "0.8.43",
-        "enb-bemhtml": "0.2.1",
-        "aws-sdk": "2.0.0-rc12",
+        "bem-node": "0.8.17",
+        "enb": "0.13.4",
+        "enb-bemhtml": "0.2.2",
+        "enb-bem-i18n": "0.1.0",
         "moment": "2.6.0"
     },
     "engines": {
