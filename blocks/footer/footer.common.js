@@ -40,6 +40,14 @@ BEM.JSON.decl({name: 'footer'}, {
                     },
                     '?'
                 ]
+            },
+            {
+                block: 'rss-link',
+                content: {
+                    block: 'link',
+                    url: 'http://thefeature.com.ua/rss',
+                    content: 'РСС'
+                }
             }
         ]);
     }

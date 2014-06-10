@@ -3,6 +3,7 @@
     ],
     shouldDeps: [
         { block: 'copyright' },
-        { block: 'auth' }
+        { block: 'auth' },
+        { block: 'rss-link' }
     ]
 })

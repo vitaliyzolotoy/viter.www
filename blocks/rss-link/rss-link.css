@@ -1,0 +1,27 @@
+.rss-link
+{
+    font-size: 9px;
+    line-height: 12px;
+
+    display: inline-block;
+
+    margin: 0 0 0 15px;
+    padding: 0 1px 0 3px;
+
+    letter-spacing: 2px;
+
+    border-radius: 3px;
+    background: #999;
+}
+
+.rss-link .link
+{
+    color: #fff;
+    border-bottom: none;
+}
+
+.rss-link .link:hover
+{
+    color: #d04000;
+    border-bottom: none;
+}

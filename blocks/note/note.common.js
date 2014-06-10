@@ -6,7 +6,7 @@ BEM.JSON.decl({name: 'note'}, {
             .get(data)
             .then(function(result) {
                 ctx.content([
-                    BEM.blocks['i-page'].setTitle(result.note.title + ' | Руїна'),
+                    result.note && BEM.blocks['i-page'].setTitle(result.note.title + ' | Руїна'),
                     {
                         block: 'header'
                     },
@@ -16,9 +16,9 @@ BEM.JSON.decl({name: 'note'}, {
                             {
                                 block: 'title',
                                 tag: 'h2',
-                                content: result.note.title
+                                content: result.note ? result.note.title : 'Тут порожньо'
                             },
-                            {
+                            result.note && {
                                 block: 'time',
                                 attrs: { pubdate: '', datetime: result.note.modified },
                                 content: [
@@ -28,7 +28,7 @@ BEM.JSON.decl({name: 'note'}, {
                                     BEM.blocks['i-date'].beautify(result.note.modified)
                                 ]
                             },
-                            BEM.blocks['i-auth'].check() && {
+                            BEM.blocks['i-auth'].check() && result.note && {
                                 block: 'modify',
                                 content: {
                                     block: 'link',
@@ -36,7 +36,7 @@ BEM.JSON.decl({name: 'note'}, {
                                     content: 'редагувати'
                                 }
                             },
-                            {
+                            result.note && {
                                 elem: 'content',
                                 mix: { block: 'text' },
                                 content: result.note.content
@@ -47,7 +47,7 @@ BEM.JSON.decl({name: 'note'}, {
                             // }
                         ]
                     },
-                    {
+                    result.note && {
                         block: 'aside',
                         content: {
                             block: 'nextprev',
