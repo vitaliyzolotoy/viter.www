@@ -1,7 +1,8 @@
 .text ul
 {
-    margin: 0;
+    margin: 0 0 15px 15px;
     padding: 0;
 
     list-style: circle;
+    list-style-position: inside;
 }

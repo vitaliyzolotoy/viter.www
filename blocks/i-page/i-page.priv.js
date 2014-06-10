@@ -89,24 +89,6 @@ BEM.decl('i-page', null, {
                 }
             ]
         }
-    },
-
-    _getPageParams: function () {
-        var params = this._state.get('page');
-        if (!params) {
-            params = {};
-            this._state.set('page', params);
-        }
-        return params;
-    },
-
-    _setPageParams: function (name, value) {
-
-        if (value === undefined) {
-            this._state.set('page', name);
-        } else {
-            this._state.set('page.' + name, value);
-        }
     }
 
 });
