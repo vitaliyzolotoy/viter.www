@@ -1,3 +1,9 @@
+.nextprev
+{
+    margin: 0;
+    padding: 0;
+}
+
 .nextprev__item
 {
     position: relative;
