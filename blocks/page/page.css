@@ -22,29 +22,7 @@ html
     background:         linear-gradient(top, #000 0%, #193a41 100%);
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
-{
-    .page .section,
-    .page .aside
-    {
-        display: block;
-
-        width: 100%;
-    }
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
-{
-    .page .section,
-    .page .aside
-    {
-        display: block;
-
-        width: 100%;
-    }
-}
-
-
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .page .section,
     .page .aside
     {
@@ -58,3 +36,20 @@ html
     {
         padding: 0 7.29%;
     }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .page .section,
+    .page .aside
+    {
+        display: block;
+
+        width: 100%;
+    }
+
+    .page .section__inner,
+    .page .aside__inner
+    {
+        padding: 0 7.29%;
+    }
+}
