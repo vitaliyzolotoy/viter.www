@@ -1,0 +1,175 @@
+.map
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-height: 650px;
+
+    text-align: center;
+}
+
+.map::before
+{
+    height: 100%;
+
+    content: '';
+}
+
+.map::before,
+.map svg
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.map .country
+{
+    fill: rgba(0,0,0,0);
+}
+
+.map .country.ukr
+{
+    fill: #fff;
+}
+
+.map .region-boundary
+{
+    fill: none;
+    stroke: #777;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+}
+
+.map .region
+{
+    fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+.map .region.crimea
+{
+    fill: #dacbe1;
+}
+
+.map .region.mk
+{
+    fill: #f7cde0;
+}
+
+.map .region.cn
+{
+    fill: #f6eff6;
+}
+
+.map .region.rv
+{
+    fill: #d5d0ed;
+}
+
+.map .region.cv
+{
+    fill: #d9d0ec;
+}
+
+.map .region.if
+{
+    fill: #ddd2eb;
+}
+
+.map .region.km
+{
+    fill: #e7d1e8;
+}
+
+.map .region.lviv
+{
+    fill: #e8d0dd;
+}
+
+.map .region.te
+{
+    fill: #edd0db;
+}
+
+.map .region.uz
+{
+    fill: #fbd2ce;
+}
+
+.map .region.volyn
+{
+    fill: #ffe5d5;
+}
+
+.map .region.ck
+{
+    fill: #fff3dc;
+}
+
+.map .region.kr
+{
+    fill: #f0c6cf;
+}
+
+.map .region.kiev
+{
+    fill: #dacbe1;
+}
+
+.map .region.od
+{
+    fill: #f7cde0;
+}
+
+.map .region.vn
+{
+    fill: #f6eff6;
+}
+
+.map .region.zt
+{
+    fill: #d5d0ed;
+}
+
+.map .region.sm
+{
+    fill: #d9d0ec;
+}
+
+.map .region.dp
+{
+    fill: #ddd2eb;
+}
+
+.map .region.dn
+{
+    fill: #e7d1e8;
+}
+
+.map .region.kh
+{
+    fill: #e8d0dd;
+}
+
+.map .region.lg
+{
+    fill: #edd0db;
+}
+
+.map .region.pl
+{
+    fill: #edd0db;
+}
+
+.map .region.zp
+{
+    fill: #ffe5d5;
+}
+
+.map .region.ks
+{
+    fill: #ffe5d5;
+}

@@ -7,6 +7,7 @@ exports.blocks = [
 
     // user part
     {block: 'i-page-landing'},
+    {block: 'i-page-map'},
     {block: 'i-page-note'},
     {block: 'i-page-notes'},
     {block: 'i-page-postify'},
