@@ -69,36 +69,36 @@ BEM.JSON.decl({name: 'postify'}, {
                                             },
                                             content: item.content
                                         },
-                                        {
-                                            block: 'chapter-create',
-                                            content: [
-                                                'Виберіть розділ ',
-                                                {
-                                                    block: 'chapters',
-                                                    mods: { view: 'select', data: 'chapter-select' },
-                                                    attrs: {
-                                                        name: 'chapter-select'
-                                                    }
-                                                },
-                                                ' або створіть ',
-                                                {
-                                                    block: 'input',
-                                                    mods: { data: 'chapter-new' },
-                                                    attrs: {
-                                                        name: 'chapter-new',
-                                                        type: 'text',
-                                                        placeholder: 'новий',
-                                                    }
-                                                },
-                                                {
-                                                    block: 'input',
-                                                    attrs: {
-                                                        name: 'chapter',
-                                                        type: 'hidden'
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        // {
+                                        //     block: 'chapter-create',
+                                        //     content: [
+                                        //         'Виберіть розділ ',
+                                        //         {
+                                        //             block: 'chapters',
+                                        //             mods: { view: 'select', data: 'chapter-select' },
+                                        //             attrs: {
+                                        //                 name: 'chapter-select'
+                                        //             }
+                                        //         },
+                                        //         ' або створіть ',
+                                        //         {
+                                        //             block: 'input',
+                                        //             mods: { data: 'chapter-new' },
+                                        //             attrs: {
+                                        //                 name: 'chapter-new',
+                                        //                 type: 'text',
+                                        //                 placeholder: 'новий',
+                                        //             }
+                                        //         },
+                                        //         {
+                                        //             block: 'input',
+                                        //             attrs: {
+                                        //                 name: 'chapter',
+                                        //                 type: 'hidden'
+                                        //             }
+                                        //         }
+                                        //     ]
+                                        // }
                                     ]
                                 }
                             ]

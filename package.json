@@ -15,6 +15,7 @@
         "enb": "0.13.4",
         "enb-bemhtml": "0.2.2",
         "enb-bem-i18n": "0.1.0",
+        "enb-borschik": "1.0.4",
         "moment": "2.6.0"
     },
     "engines": {

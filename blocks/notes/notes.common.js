@@ -18,9 +18,9 @@ BEM.JSON.decl({name: 'notes'}, {
                                 tag: 'h2',
                                 content: result.notes ? 'Зміст' : 'Тут порожньо'
                             },
-                            {
-                                block: 'chapters'
-                            },
+                            // {
+                            //     block: 'chapters'
+                            // },
                             {
                                 block: 'toc',
                                 content: result.notes && [
