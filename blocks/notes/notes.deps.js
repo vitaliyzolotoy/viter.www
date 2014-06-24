@@ -3,6 +3,7 @@
     ],
     shouldDeps: [
         { block: 'toc' },
-        { block: 'time' }
+        { block: 'time' },
+        { block: 'chapters' }
     ]
 })

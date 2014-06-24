@@ -1,0 +1,12 @@
+block chapters {
+    tag: 'ul'
+    elem item {
+        tag: 'li'
+    }
+    mod view select {
+        tag: 'select'
+        elem item {
+            tag: 'option'
+        }
+    }
+}

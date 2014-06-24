@@ -70,31 +70,35 @@ BEM.JSON.decl({name: 'postify'}, {
                                             content: item.content
                                         },
                                         {
-                                            block: 'input',
-                                            attrs: {
-                                                name: 'tags',
-                                                type: 'text',
-                                                placeholder: 'Додати мітку',
-                                            }
-                                        },
-                                        '<br>',
-                                        '<br>',
-                                        {
-                                            block: 'input',
-                                            mods: { media: 'yes' },
-                                            attrs: {
-                                                name: 'media',
-                                                type: 'file'
-                                            }
-                                        },
-                                        {
-                                            block: 'button',
-                                            attrs: {
-                                                name: 'submit',
-                                                type: 'submit'
-                                            }
-                                        },
-                                        // BEM.blocks['i-upload'].file('yo')
+                                            block: 'chapter-create',
+                                            content: [
+                                                'Виберіть розділ ',
+                                                {
+                                                    block: 'chapters',
+                                                    mods: { view: 'select', data: 'chapter-select' },
+                                                    attrs: {
+                                                        name: 'chapter-select'
+                                                    }
+                                                },
+                                                ' або створіть ',
+                                                {
+                                                    block: 'input',
+                                                    mods: { data: 'chapter-new' },
+                                                    attrs: {
+                                                        name: 'chapter-new',
+                                                        type: 'text',
+                                                        placeholder: 'новий',
+                                                    }
+                                                },
+                                                {
+                                                    block: 'input',
+                                                    attrs: {
+                                                        name: 'chapter',
+                                                        type: 'hidden'
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     ]
                                 }
                             ]

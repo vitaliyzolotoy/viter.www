@@ -1,0 +1,15 @@
+.chapter
+{
+    position: relative;
+}
+
+.chapter::before
+{
+    font-family: 'oranienbaum';
+    font-weight: normal;
+
+    position: absolute;
+    left: -13px;
+
+    content: '§';
+}

@@ -14,16 +14,18 @@ h2.title
 
 h3.title
 {
-    font: 1.1875em 'oranienbaum';
+    font: 22px/26px 'oranienbaum';
     font-weight: normal;
 
-    margin: 1.157894736842105em 0;
-    text-indent: -0.052631578947368em;
+    margin: 0 0 22px 0;
 }
 
-h4.title
+.title span
 {
-    font-weight: normal;
+    position: absolute;
+    left: -0.75em;
 
-    margin: 1.157894736842105em 0 0.6875em 0;
+    width: 7.29%;
+
+    text-align: right;
 }

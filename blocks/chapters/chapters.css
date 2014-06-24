@@ -1,4 +1,4 @@
-.tags
+.chapters
 {
     font-size: 12px;
 
@@ -8,19 +8,19 @@
     list-style: none;
 }
 
-.tags__item
+.chapters__item
 {
     display: inline-block;
 
     margin: 0 5px 0 0;
 }
 
-.tags__item::after
+.chapters__item::after
 {
     content: ',';
 }
 
-.tags__item:last-child::after
+.chapters__item:last-child::after
 {
     content: none;
 }

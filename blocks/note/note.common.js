@@ -13,10 +13,23 @@ BEM.JSON.decl({name: 'note'}, {
                     {
                         block: 'section',
                         content: [
-                            {
+                            result.note
+                            ? {
                                 block: 'title',
                                 tag: 'h2',
-                                content: result.note ? result.note.title : 'Тут порожньо'
+                                content: [
+                                    {
+                                        tag: 'span',
+                                        content: result.note.section
+                                    },
+                                    ' ',
+                                    result.note.title
+                                ]
+                            }
+                            : {
+                                block: 'title',
+                                tag: 'h2',
+                                content: 'Тут порожньо'
                             },
                             result.note && {
                                 block: 'time',
@@ -41,18 +54,20 @@ BEM.JSON.decl({name: 'note'}, {
                                 mix: { block: 'text' },
                                 content: result.note.content
                             },
-                            // {
-                            //     block: 'tags',
-                            //     id: result.note._id
-                            // }
                         ]
                     },
                     result.note && {
                         block: 'aside',
-                        content: {
-                            block: 'nextprev',
-                            id: result.note._id
-                        }
+                        content: [
+                            {
+                                block: 'chapter',
+                                id: result.note.chapter
+                            },
+                            {
+                                block: 'nextprev',
+                                id: result.note._id
+                            }
+                        ]
                     },
                     {
                         block: 'footer'

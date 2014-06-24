@@ -5,7 +5,8 @@
         { block: 'form' },
         { block: 'input' },
         { block: 'textarea' },
+        { block: 'select' },
         { block: 'button' },
-        { block: 'i-upload' }
+        { block: 'chapter-create' }
     ]
 })

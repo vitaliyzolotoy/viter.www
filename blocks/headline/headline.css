@@ -1,11 +1,12 @@
 .headline
 {
-    font: 55px/55px 'oranienbaum';
+    font: 75px/75px 'oranienbaum';
     font-weight: normal;
+    font-variant: small-caps;
 
     width: 250px;
     margin: 0;
     padding: 0;
 
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }

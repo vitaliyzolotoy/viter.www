@@ -1,0 +1,6 @@
+block select {
+    tag: 'select'
+    elem option {
+        tag: 'option'
+    }
+}
