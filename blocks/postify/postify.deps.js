@@ -7,6 +7,7 @@
         { block: 'textarea' },
         { block: 'select' },
         { block: 'button' },
-        { block: 'chapter-create' }
+        { block: 'chapter-create' },
+        { block: 'chapters' }
     ]
 })

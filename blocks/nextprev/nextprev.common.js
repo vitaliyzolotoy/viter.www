@@ -5,7 +5,7 @@ BEM.JSON.decl({name: 'nextprev'}, {
             .get('nextprev/' + ctx.param('id'))
             .then(function(result) {
                 ctx.content([
-                    result.nextprev[0] && {
+                    result.nextprev && result.nextprev[0] && {
                         elem: 'item',
                         elemMods: { next: 'yes' },
                         content: {
@@ -14,7 +14,7 @@ BEM.JSON.decl({name: 'nextprev'}, {
                             content: result.nextprev[0].title
                         }
                     },
-                    result.nextprev[1] && {
+                    result.nextprev && result.nextprev[1] && {
                         elem: 'item',
                         elemMods: { prev: 'yes' },
                         content: {
