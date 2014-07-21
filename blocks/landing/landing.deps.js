@@ -1,6 +1,7 @@
 ({
     shouldDeps: [
         { block: 'headline' },
-        { block: 'entrance' }
+        { block: 'entrance' },
+        { block: 'overlay' }
     ]
 })

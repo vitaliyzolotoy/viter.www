@@ -1,3 +1,4 @@
+a,
 .link
 {
     text-decoration: none;
@@ -10,12 +11,15 @@
             transition: color 0.25s cubic-bezier(0, 0, 0.58, 1);
 }
 
+a:visited,
 .link:visited
 {
     color: #6040a0;
     border-bottom: 1px solid rgba(96, 64, 160, 0.25);
 }
 
+a:active,
+a:hover,
 .link:active,
 .link:hover
 {

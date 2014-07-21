@@ -7,6 +7,9 @@ BEM.JSON.decl({name: 'landing'}, {
             },
             {
                 block: 'entrance'
+            },
+            {
+                block: 'overlay'
             }
         ]);
     }

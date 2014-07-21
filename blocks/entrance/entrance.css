@@ -3,6 +3,8 @@
     position: absolute;
     right: 4.5076%;
     bottom: 11.8%;
+
+    color: #fff;
 }
 
 .entrance__title
@@ -31,7 +33,7 @@
     left: -110px;
 }
 
-/*.entrance .link
+.entrance .link
 {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.25);
@@ -41,4 +43,4 @@
 {
     color: #d04000;
     border-color: rgba(208, 64, 0, 0.25);
-}*/
+}
