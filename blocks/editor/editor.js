@@ -1,4 +1,4 @@
-BEM.DOM.decl('postify', {
+BEM.DOM.decl('editor', {
 
     onSetMod: {
         js: function () {
@@ -36,14 +36,35 @@ BEM.DOM.decl('postify', {
                 this._uploadMedia(files);
             });
 
+            var e_title = new Medium({
+                element: document.getElementById('title'),
+                mode: Medium.inlineMode,
+                placeholder: 'Тема'
+            });
+
+            var e_text = new Medium({
+                element: document.getElementById('text'),
+                mode: Medium.richMode,
+                placeholder: 'А тут, власне, повний текст замітки…',
+                tags: {
+                    'break': 'br',
+                    'horizontalRule': 'hr',
+                    'paragraph': 'p',
+                    'outerLevel': ['pre', 'blockquote', 'figure', 'ol', 'ul'],
+                    'innerLevel': ['a', 'b', 'u', 'i', 'img', 'strong', 'li', 'figcaption']
+                }
+            });
+
+            e_text.focus();
+
         }
     },
 
     _getData: function () {
         var data = {},
             id = $('.form input[name=id]').val() || '',
-            title = $('.form input[name=title]').val() || '',
-            content = $('.form textarea[name=content]').val() || '',
+            title = $('.form .title').html() || '',
+            content = $('.form .text').html() || '',
             chapter = $('.form input[name=chapter]').val() || '',
             chapterSelect = $('.form select[name=chapter-select]').val() || '',
             chapterCreate = $('.form input[name=chapter-new]').val() || '';
@@ -57,6 +78,7 @@ BEM.DOM.decl('postify', {
                 create: chapterCreate
             }
         };
+        console.log(data);
         return data;
     },
 
@@ -65,6 +87,7 @@ BEM.DOM.decl('postify', {
             console.log('success');
             BEM.blocks['i-router'].setPath('/notes/' + result.note._id);
         }.bind(this)).fail(function () {
+            console.log(result);
             console.log('fail');
         }.bind(this));
     },
@@ -74,15 +97,17 @@ BEM.DOM.decl('postify', {
             console.log('success');
             BEM.blocks['i-router'].setPath('/notes/' + data.id);
         }.bind(this)).fail(function () {
+            console.log(result);
             console.log('fail');
         }.bind(this));
     },
 
     _deleteNote: function () {
         BEM.blocks['i-api-request'].delete(data.module + '/' + data.id).then(function (result) {
-            BEM.blocks['i-router'].setPath('/notes/');
+            BEM.blocks['i-router'].setPath('/toc/');
             console.log('success');
         }.bind(this)).fail(function () {
+            console.log(result);
             console.log('fail');
         }.bind(this));
     },

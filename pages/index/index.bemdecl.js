@@ -6,10 +6,10 @@ exports.blocks = [
     {block: 'i-bem-node'},
 
     // user part
+    {block: 'i-page-editor'},
     {block: 'i-page-landing'},
     {block: 'i-page-map'},
     {block: 'i-page-note'},
-    {block: 'i-page-notes'},
-    {block: 'i-page-postify'},
-    {block: 'i-page-rss'}
+    {block: 'i-page-rss'},
+    {block: 'i-page-toc'}
 ]

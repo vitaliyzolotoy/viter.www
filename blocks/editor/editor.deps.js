@@ -1,5 +1,6 @@
 ({
     mustDeps: [
+        { block: 'i-medium' }
     ],
     shouldDeps: [
         { block: 'form' },

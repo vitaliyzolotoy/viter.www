@@ -27,7 +27,7 @@ BEM.JSON.decl({name: 'entrance'}, {
                                 elem: 'item',
                                 content: {
                                     block: 'link',
-                                    url: '/notes/',
+                                    url: '/toc/',
                                     content: 'Оглянути зміст'
                                 }
                             },

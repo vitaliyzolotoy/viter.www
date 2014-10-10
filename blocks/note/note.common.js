@@ -45,7 +45,7 @@ BEM.JSON.decl({name: 'note'}, {
                                 block: 'modify',
                                 content: {
                                     block: 'link',
-                                    url: '/postify/' + result.note._id,
+                                    url: '/editor/' + result.note._id,
                                     content: 'редагувати'
                                 }
                             },

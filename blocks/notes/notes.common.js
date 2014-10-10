@@ -3,7 +3,7 @@ BEM.JSON.decl({name: 'notes'}, {
         var data = ctx.param('module');
         ctx.defer(
             BEM.blocks['i-api-request']
-            .get(data)
+            .get('notes')
             .then(function(result) {
                 ctx.content([
                     BEM.blocks['i-page'].setTitle('Зміст | Руїна'),
@@ -18,9 +18,9 @@ BEM.JSON.decl({name: 'notes'}, {
                                 tag: 'h2',
                                 content: result.notes ? 'Зміст' : 'Тут порожньо'
                             },
-                            // {
-                            //     block: 'chapters'
-                            // },
+                            {
+                                block: 'chapters'
+                            },
                             {
                                 block: 'toc',
                                 content: result.notes && [

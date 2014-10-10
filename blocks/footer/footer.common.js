@@ -29,7 +29,7 @@ BEM.JSON.decl({name: 'footer'}, {
                     'Ви авторизовані. Написати ',
                     {
                         block: 'link',
-                        url: '/postify/',
+                        url: '/editor/',
                         content: 'нотатку'
                     },
                     ' чи ',

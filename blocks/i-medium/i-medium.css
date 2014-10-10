@@ -1,0 +1,54 @@
+.i-medium
+{
+    position: relative;
+}
+
+.i-medium-placeholder
+{
+    position: absolute;
+}
+
+.i-medium-placeholder div
+{
+    position: absolute;
+
+    opacity: 0.5;
+}
+
+.i-medium-placeholder-rich div
+{
+}
+
+.i-medium,
+.i-medium *
+{
+    min-height: 1px;
+    outline: none;
+    resize: none;
+    zoom: 1;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.i-medium p
+{
+    position: relative;
+    min-height: 12px;
+}
+
+.i-medium p:first-child,
+.i-medium .i-medium-placeholder + p
+{
+    margin-top:0;
+}
+
+.i-medium p:last-child
+{
+    margin-bottom:0;
+}
+
+.i-medium-paste-hook
+{
+    position: absolute;
+    opacity:0;
+}

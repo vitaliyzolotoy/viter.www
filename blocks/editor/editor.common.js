@@ -1,9 +1,9 @@
-BEM.JSON.decl({name: 'postify'}, {
+BEM.JSON.decl({name: 'editor'}, {
     onBlock: function(ctx) {
         ctx.param('js', true);
         var creating = true,
             module = ctx.param('module') || false;
-            id = module && module[0].substring(9),
+            id = module && module[0].substring(8),
             input = 'notes/' + id;
 
         if (id) {
@@ -51,25 +51,18 @@ BEM.JSON.decl({name: 'postify'}, {
                                             }
                                         },
                                         {
-                                            block: 'input',
-                                            attrs: {
-                                                name: 'title',
-                                                type: 'text',
-                                                autofocus: 'autofocus',
-                                                placeholder: 'Я хотів би написати замітку на тему',
-                                                value: item.title
-                                            }
+                                            block: 'title',
+                                            attrs: { id: 'title', 'data-placeholder': '' },
+                                            tag: 'h2',
+                                            content: item.title
                                         },
                                         {
-                                            block: 'textarea',
-                                            attrs: {
-                                                name: 'content',
-                                                type: 'textarea',
-                                                placeholder: 'А тут, власне, можна написати повний текст замітки…',
-                                            },
+                                            block: 'text',
+                                            attrs: { id: 'text', 'data-placeholder': '' },
                                             content: item.content
                                         },
-                                        creating && {
+                                        '<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>',
+                                        {
                                             block: 'chapter-create',
                                             content: [
                                                 'Виберіть розділ ',
