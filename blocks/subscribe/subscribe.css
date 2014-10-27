@@ -1,4 +1,4 @@
-.rss-link
+.subscribe
 {
     font-size: 9px;
     line-height: 12px;
@@ -14,13 +14,13 @@
     background: #999;
 }
 
-.rss-link .link
+.subscribe .link
 {
     color: #fff;
     border-bottom: none;
 }
 
-.rss-link .link:hover
+.subscribe .link:hover
 {
     color: #d04000;
     border-bottom: none;

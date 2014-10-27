@@ -1,7 +1,10 @@
 ({
-    mustDeps: [
-    ],
     shouldDeps: [
-        { block: 'i-moment', mods: { lang: 'uk' } }
+        {
+            block: 'i-moment',
+            mods: {
+                lang: 'uk'
+            }
+        }
     ]
 })

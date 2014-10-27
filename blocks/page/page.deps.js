@@ -1,22 +1,27 @@
 ({
     mustDeps: [
-        { block: 'i-bem', elems: ['dom', 'json'], mods: {'init': 'auto'} }
+        {
+            block: 'i-bem',
+            mods: {init: 'auto'},
+            elems: ['dom', 'json']
+        }
     ],
     shouldDeps: [
-        { elems: ['css', 'js'] },
-
-        { block: 'font' },
-        { block: 'link' },
-        { block: 'title' },
-        { block: 'content' },
-        { block: 'section' },
-        { block: 'aside' },
-        { block: 'analytics' },
-        { block: 'animation' },
-        { block: 'dialog' },
-        { block: 'auth-form' },
-
-        { block: 'header' },
-        { block: 'footer' }
+        {
+            block: 'page',
+            elems: ['css', 'js']
+        },
+        {block: 'font'},
+        {block: 'link'},
+        {block: 'title'},
+        {block: 'content'},
+        {block: 'section'},
+        {block: 'aside'},
+        {block: 'analytics'},
+        {block: 'animation'},
+        {block: 'dialog'},
+        {block: 'auth-form'},
+        {block: 'header'},
+        {block: 'footer'}
     ]
 })

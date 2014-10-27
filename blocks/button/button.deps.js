@@ -1,7 +1,10 @@
 ({
-    mustDeps: [
-    ],
     shouldDeps: [
-        { block: 'button', mods: {state:['danger', 'primary', 'success', 'warning']} }
+        {
+            block: 'button',
+            mods: {
+                state: ['danger', 'primary', 'success', 'warning']
+            }
+        }
     ]
 })

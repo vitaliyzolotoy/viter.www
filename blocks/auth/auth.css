@@ -6,3 +6,9 @@
 
     margin-left: 15px;
 }
+
+.auth .link_login_yes
+{
+    color: #2B587A;
+    border-color: rgba(43, 88, 122, 0.25);
+}

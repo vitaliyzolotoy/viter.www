@@ -1,1 +1,3 @@
-block input, tag: 'input'
+block input {
+    tag: 'input'
+}

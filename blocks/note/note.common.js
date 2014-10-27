@@ -41,7 +41,7 @@ BEM.JSON.decl({name: 'note'}, {
                                     BEM.blocks['i-date'].beautify(result.note.modified)
                                 ]
                             },
-                            BEM.blocks['i-auth'].check() && result.note && {
+                            BEM.blocks['i-vk'].isAuth() && result.note && {
                                 block: 'modify',
                                 content: {
                                     block: 'link',

@@ -1,7 +1,8 @@
 ({
-    mustDeps: [
-    ],
     shouldDeps: [
-        { mods: { pseudo: 'yes' } }
+        {
+            block: 'link',
+            mods: { pseudo: 'yes' }
+        }
     ]
 })

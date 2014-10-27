@@ -1,0 +1,9 @@
+{
+    "preset": "viter",
+    "requireDotNotation": null,
+    "requireLineFeedAtFileEnd": null,
+    "disallowImplicitTypeConversion": null,
+    "disallowSpacesInFunctionDeclaration": null,
+    "disallowMultipleLineBreaks": null,
+    "excludeFiles": ["**.deps.js", "**/**.deps.js"]
+}

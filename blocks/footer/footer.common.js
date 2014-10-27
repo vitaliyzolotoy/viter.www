@@ -13,41 +13,47 @@ BEM.JSON.decl({name: 'footer'}, {
                     ', 2013–14 рр.'
                 ]
             },
-            !BEM.blocks['i-auth'].check() && {
+            !BEM.blocks['i-vk'].isAuth() && {
                 block: 'auth',
-                js: true,
-                content: {
-                    block: 'link',
-                    mods: { pseudo: 'yes', login: 'yes'  },
-                    content: 'Авторизуватися'
-                }
-            },
-            BEM.blocks['i-auth'].check() && {
-                block: 'auth',
-                js: true,
                 content: [
-                    'Ви авторизовані. Написати ',
+                    {
+                        block: 'link',
+                        mods: {login: 'yes'},
+                        url: '/login/',
+                        content: 'Увійти'
+                    }
+                ]
+            },
+            BEM.blocks['i-vk'].isAuth() && {
+                block: 'write',
+                content: [
                     {
                         block: 'link',
                         url: '/editor/',
-                        content: 'нотатку'
-                    },
-                    ' чи ',
+                        content: 'Написати'
+                    }
+                ]
+            },
+            BEM.blocks['i-vk'].isAuth() && {
+                block: 'auth',
+                content: [
                     {
                         block: 'link',
-                        mods: { pseudo: 'yes', logout: 'yes' },
-                        content: 'вийти'
-                    },
-                    '?'
+                        mods: {logout: 'yes'},
+                        url: '/logout/',
+                        content: 'Вийти'
+                    }
                 ]
             },
             {
-                block: 'rss-link',
-                content: {
-                    block: 'link',
-                    url: 'http://thefeature.com.ua/rss',
-                    content: 'РСС'
-                }
+                block: 'subscribe',
+                content: [
+                    {
+                        block: 'link',
+                        url: '/rss/',
+                        content: 'РСС'
+                    }
+                ]
             }
         ]);
     }

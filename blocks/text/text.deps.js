@@ -2,75 +2,26 @@
     shouldDeps: [
         {
             block: 'text',
-            elems: { elem: 'abbr' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'blockquote' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'code' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'em' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'figcaption' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'figure' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'h1' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'h2' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'h3' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'h4' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'img' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'li' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'ol' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'p' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'pre' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'small' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'strong' }
-        },
-        {
-            block: 'text',
-            elems: { elem: 'ul' }
+            elems: [
+                'abbr',
+                'blockquote',
+                'code',
+                'em',
+                'figcaption',
+                'figure',
+                'h1',
+                'h2',
+                'h3',
+                'h4',
+                'img',
+                'li',
+                'ol',
+                'p',
+                'pre',
+                'small',
+                'strong',
+                'ul'
+            ]
         }
     ]
 })

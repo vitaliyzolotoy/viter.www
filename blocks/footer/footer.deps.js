@@ -1,9 +1,8 @@
 ({
-    mustDeps: [
-    ],
     shouldDeps: [
-        { block: 'copyright' },
-        { block: 'auth' },
-        { block: 'rss-link' }
+        {block: 'copyright'},
+        {block: 'auth'},
+        {block: 'write'},
+        {block: 'subscribe'}
     ]
 })

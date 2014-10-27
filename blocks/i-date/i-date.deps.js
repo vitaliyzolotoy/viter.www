@@ -1,7 +1,5 @@
 ({
     mustDeps: [
-        { block: 'i-moment' }
-    ],
-    shouldDeps: [
+        {block: 'i-moment'}
     ]
 })

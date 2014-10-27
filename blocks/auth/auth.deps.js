@@ -1,5 +1,5 @@
 ({
     shouldDeps: [
-        {block: 'logo'}
+        {block: 'i-vk'}
     ]
 })
