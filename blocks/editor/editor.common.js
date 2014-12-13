@@ -1,6 +1,5 @@
 BEM.JSON.decl({name: 'editor'}, {
     onBlock: function(ctx) {
-        ctx.param('js', true);
         var creating = true,
             module = ctx.param('module') || false;
             id = module && module[0].substring(8),
@@ -9,6 +8,11 @@ BEM.JSON.decl({name: 'editor'}, {
         if (id) {
             creating = false;
         }
+
+        ctx.param('js', {
+            create: creating,
+            id: id
+        });
 
         creating
         ? BEM.blocks['i-page'].setTitle('Написати | Руїна')
@@ -32,52 +36,29 @@ BEM.JSON.decl({name: 'editor'}, {
                                     {
                                         block: 'input',
                                         attrs: {
-                                            name: 'id',
+                                            name: 'publish',
                                             type: 'hidden',
-                                            value: item._id
+                                            value: item.published
                                         }
                                     },
                                     {
                                         block: 'title',
-                                        attrs: { id: 'title', 'data-placeholder': '' },
+                                        attrs: { id: 'title' },
                                         tag: 'h2',
                                         content: item.title
                                     },
                                     {
-                                        block: 'text',
-                                        attrs: { id: 'text', 'data-placeholder': '' },
-                                        content: item.content
+                                        block: 'status',
+                                        js: {
+                                            created: item.created,
+                                            modified: item.modified,
+                                            published: item.published
+                                        }
                                     },
-                                    '<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>',
                                     {
-                                        block: 'chapter-create',
-                                        content: [
-                                            'Виберіть розділ ',
-                                            {
-                                                block: 'chapters',
-                                                mods: { view: 'select', data: 'chapter-select' },
-                                                attrs: {
-                                                    name: 'chapter-select'
-                                                }
-                                            },
-                                            ' або створіть ',
-                                            {
-                                                block: 'input',
-                                                mods: { data: 'chapter-new' },
-                                                attrs: {
-                                                    name: 'chapter-new',
-                                                    type: 'text',
-                                                    placeholder: 'новий',
-                                                }
-                                            },
-                                            {
-                                                block: 'input',
-                                                attrs: {
-                                                    name: 'chapter',
-                                                    type: 'hidden'
-                                                }
-                                            }
-                                        ]
+                                        block: 'text',
+                                        attrs: { id: 'text' },
+                                        content: item.content
                                     }
                                 ]
                             }
@@ -86,20 +67,45 @@ BEM.JSON.decl({name: 'editor'}, {
                     {
                         block: 'aside',
                         content: [
+                            {
+                                block: 'chapter-create',
+                                content: [
+                                    'Виберіть розділ ',
+                                    {
+                                        block: 'chapters',
+                                        mods: { view: 'select', data: 'chapter-select' },
+                                        attrs: {
+                                            name: 'chapter-select'
+                                        }
+                                    },
+                                    ' або створіть ',
+                                    {
+                                        block: 'input',
+                                        mods: { data: 'chapter-new' },
+                                        attrs: {
+                                            name: 'chapter-new',
+                                            type: 'text',
+                                            placeholder: 'новий',
+                                        }
+                                    },
+                                    {
+                                        block: 'input',
+                                        attrs: {
+                                            name: 'chapter',
+                                            type: 'hidden'
+                                        }
+                                    }
+                                ]
+                            },
                             !creating && {
                                 block: 'button',
                                 attrs: { name: 'confirm', value: 'Видалити' },
                                 mods: { state: 'danger', confirm: 'yes' }
                             },
-                            !creating && {
-                                block: 'button',
-                                attrs: { name: 'submit', value: 'Відредагувати' },
-                                mods: { state: 'warning', update: 'yes' }
-                            },
-                            creating && {
+                            !item.published && {
                                 block: 'button',
                                 attrs: { name: 'submit', value: 'Опублікувати' },
-                                mods: { state: 'success', create: 'yes' }
+                                mods: { state: 'success', publish: 'yes' }
                             }
                         ]
                     },

@@ -31,18 +31,16 @@ BEM.JSON.decl({name: 'note'}, {
                                 tag: 'h2',
                                 content: 'Тут порожньо'
                             },
-                            result.note && {
-                                block: 'time',
-                                attrs: { pubdate: '', datetime: result.note.modified },
-                                content: [
-                                    ' ',
-                                    (result.note.created < result.note.modified) ? 'оновлено' : 'написано',
-                                    ' ',
-                                    BEM.blocks['i-date'].beautify(result.note.modified)
-                                ]
+                            {
+                                block: 'status',
+                                js: {
+                                    created: result.note.created,
+                                    modified: result.note.modified,
+                                    published: result.note.published
+                                }
                             },
                             BEM.blocks['i-vk'].isAuth() && result.note && {
-                                block: 'modify',
+                                block: 'edit',
                                 content: {
                                     block: 'link',
                                     url: '/editor/' + result.note._id,
@@ -50,10 +48,9 @@ BEM.JSON.decl({name: 'note'}, {
                                 }
                             },
                             result.note && {
-                                elem: 'content',
-                                mix: { block: 'text' },
+                                block: 'text',
                                 content: result.note.content
-                            },
+                            }
                         ]
                     },
                     result.note && {
@@ -61,11 +58,15 @@ BEM.JSON.decl({name: 'note'}, {
                         content: [
                             {
                                 block: 'chapter',
-                                id: result.note.chapter
+                                js: {
+                                    id: result.note.chapter
+                                }
                             },
                             {
                                 block: 'nextprev',
-                                id: result.note._id
+                                js: {
+                                    id: result.note._id
+                                }
                             }
                         ]
                     },

@@ -1,6 +1,6 @@
 ({
     shouldDeps: [
         {block: 'toc'},
-        {block: 'time'}
+        {block: 'status'}
     ]
 })

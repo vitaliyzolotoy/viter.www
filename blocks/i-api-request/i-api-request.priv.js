@@ -11,6 +11,7 @@ BEM.decl('i-api-request', null, {
         'Connection': 'keep-alive'
         };
     },
+
     _dnsResolve: function (parsedUrl) {
         var promise = Vow.promise(),
         dns = require('dns');
@@ -23,5 +24,6 @@ BEM.decl('i-api-request', null, {
         });
         return promise;
     },
+
     _apiHost: 'http://localhost:4000/'
 });

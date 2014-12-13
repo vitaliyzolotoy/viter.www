@@ -1,8 +1,9 @@
 BEM.JSON.decl({name: 'nextprev'}, {
     onBlock: function(ctx) {
+        var data = ctx.param('js');
         ctx.defer(
             BEM.blocks['i-api-request']
-            .get('nextprev/' + ctx.param('id'))
+            .get('nextprev/' + data.id)
             .then(function(result) {
                 ctx.content([
                     result.nextprev && result.nextprev[0] && {

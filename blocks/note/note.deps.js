@@ -1,8 +1,8 @@
 ({
     shouldDeps: [
-        {block: 'time'},
+        {block: 'status'},
+        {block: 'edit'},
         {block: 'text'},
-        {block: 'modify'},
         {block: 'chapter'},
         {block: 'nextprev'}
     ]
