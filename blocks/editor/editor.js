@@ -4,67 +4,79 @@ BEM.DOM.decl('editor', {
         js: function () {
             var that = this;
 
-            this._mode = this.params.create;
-            this._id = this.params.id;
-            this._public = false;
+            this._data = {};
+
+            this._data.module = 'notes';
+            this._data.id = this.params.id;
+            this._data.mode = this.params.create;
+            this._data.published = false;
 
             this._timeout = {};
 
-            this._status1 = this.findBlockInside('time');
+            this._status = this.findBlockInside('status');
 
-            var publish = this.findBlockInside({ blockName : 'button', modName : 'publish', modVal : 'yes' }),
-                confirm = this.findBlockInside({ blockName : 'button', modName : 'confirm', modVal : 'yes' }),
-                del = this.findBlockInside({ blockName : 'button', modName : 'delete', modVal : 'yes' });
+            !this._data.mode && this._status.delMod('hidden');
 
-            var title = this.findBlockInside('title'),
-                text = this.findBlockInside('text');
+            // Title
+            this._title = this.findBlockInside('title'),
 
-            title && this.bindTo(title.domElem, 'mouseleave', function(e) {
+            this._title && this.bindTo(this._title.domElem, 'mouseleave', function (e) {
                 e.preventDefault();
-                data = that._getData();
-                that._autosaveNote(data);
+                that._getData();
+                that._autosaveNote();
             });
 
-            title && this.bindTo(title.domElem, 'input', function(e) {
+            this._title && this.bindTo(this._title.domElem, 'input', function (e) {
                 clearTimeout(that._timeout);
                 that._timeout = setTimeout(function () {
                     e.preventDefault();
-                    data = that._getData();
-                    that._autosaveNote(data);
-                }, 4000);
+                    that._getData();
+                    that._autosaveNote();
+                }, 2000);
             });
 
-            text && this.bindTo(text.domElem, 'mouseleave', function(e) {
+            // Text
+            this._text = this.findBlockInside('text');
+
+            this._text && this.bindTo(this._text.domElem, 'mouseleave', function (e) {
                 e.preventDefault();
-                data = this._getData();
-                this._autosaveNote(data);
+                that._getData();
+                that._autosaveNote();
             });
 
-            text && this.bindTo(text.domElem, 'input', function(e) {
+            this._text && this.bindTo(this._text.domElem, 'input', function (e) {
                 clearTimeout(that._timeout);
                 that._timeout = setTimeout(function () {
                     e.preventDefault();
-                    data = that._getData();
-                    that._autosaveNote(data);
-                }, 4000);
+                    that._getData();
+                    that._autosaveNote();
+                }, 2000);
             });
 
-            publish && this.bindTo(publish.domElem, 'click', function(e) {
+            // Publish
+            this._publish = this.findBlockInside({blockName : 'button', modName : 'publish', modVal : 'yes'}),
+            this._publish && this.bindTo(this._publish.domElem, 'click', function (e) {
                 e.preventDefault();
-                that._public = true;
-                data = this._getData();
-                this._publishNote(data);
+                this._data.published = true;
+                this._getData();
+                this._publishNote();
             });
 
-            confirm && this.bindTo(confirm.domElem, 'click', function(e) {
+            // Confirm
+            this._confirm = this.findBlockInside({blockName : 'button', modName : 'confirm', modVal : 'yes'}),
+
+            this._confirm && this.bindTo(this._confirm.domElem, 'click', function (e) {
                 e.preventDefault();
                 this.findBlockInside('dialog').setMod('visible', 'yes');
             });
 
-            del && this.bindTo(del.domElem, 'click', function(e) {
+            // Delete
+            this._del = this.findBlockInside({blockName : 'button', modName : 'delete', modVal : 'yes'});
+
+            this._del && this.bindTo(this._del.domElem, 'click', function (e) {
                 e.preventDefault();
-                data = this._getData();
-                this._deleteNote(data);
+                this._getData();
+                this._deleteNote();
             });
 
             this._initTitle();
@@ -73,18 +85,22 @@ BEM.DOM.decl('editor', {
     },
 
     _initTitle: function () {
-        var e_title = new Medium({
+        var that = this;
+
+        var iTitle = new Medium({
             element: document.getElementById('title'),
             mode: Medium.inlineMode,
-            placeholder: 'Тема'
+            placeholder: that._title.params.placeholder
         });
     },
 
     _initText: function () {
-        var e_text = new Medium({
+        var that = this;
+
+        var iText = new Medium({
             element: document.getElementById('text'),
             mode: Medium.richMode,
-            placeholder: 'А тут, власне, повний текст замітки…',
+            placeholder: that._text.params.placeholder,
             tags: {
                 'break': 'br',
                 'horizontalRule': 'hr',
@@ -94,40 +110,32 @@ BEM.DOM.decl('editor', {
             }
         });
 
-        e_text.focus();
+        iText.focus();
     },
 
     _getData: function () {
-        var data = {},
-            title = $('.form .title').html() || '',
-            content = $('.form .text').html() || '',
-            chapter = $('.editor input[name=chapter]').val() || '',
-            chapterSelect = $('.editor select[name=chapter-select]').val() || '',
-            chapterCreate = $('.editor input[name=chapter-new]').val() || '';
-        data.module = 'notes';
-        data.id = this._id;
-        data.body = {
-            publish: this._public,
-            title: title,
-            content: content,
+        this._data.body = {
+            publish: this._data.published,
+            title: this._title.domElem.html(),
+            content: this._text.domElem.html(),
             chapter: {
-                select: chapterSelect,
-                create: chapterCreate
+                select: this.findBlockInside({blockName : 'chapters', modName : 'data', modVal : 'chapter-select'}).domElem.val(),
+                create: this.findBlockInside({blockName : 'input', modName : 'data', modVal : 'chapter-new'}).domElem.val()
             }
         };
-        return data;
     },
 
-    _autosaveNote: function (data) {
+    _autosaveNote: function () {
         var that = this;
 
-        if (this._mode) {
-            BEM.blocks['i-api-request'].post(data.module, { body: data.body }).then(function (result) {
+        if (this._data.mode) {
+            BEM.blocks['i-api-request'].post(this._data.module, { body: this._data.body }).then(function (result) {
                 if (result.note) {
-                    that._mode =  false;
-                    that._id =  result.note._id;
+                    that._data.mode = false;
+                    that._data.id =  result.note._id;
+                    that._setStatus(result);
+                    BEM.blocks['i-router'].setPath('/editor/' + that._data.id);
                 };
-                that._status(result);
                 console.log(result);
                 console.log('success');
             }.bind(this)).fail(function () {
@@ -135,8 +143,10 @@ BEM.DOM.decl('editor', {
                 console.log('fail');
             }.bind(this));
         } else {
-            BEM.blocks['i-api-request'].put(data.module + '/' + that._id, { body: data.body }).then(function (result) {
-                that._status(result);
+            BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
+                if (result.note) {
+                    that._setStatus(result);
+                };
                 console.log(result);
                 console.log('success');
             }.bind(this)).fail(function () {
@@ -146,13 +156,13 @@ BEM.DOM.decl('editor', {
         };
     },
 
-    _publishNote: function (data) {
+    _publishNote: function () {
         var that = this;
 
-        BEM.blocks['i-api-request'].put(data.module + '/' + that._id, { body: data.body }).then(function (result) {
+        BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
             console.log(result);
             console.log('success');
-            BEM.blocks['i-router'].setPath('/notes/' + that._id);
+            BEM.blocks['i-router'].setPath('/notes/' + that._data.id);
             BEM.blocks['i-router'].reload();
         }.bind(this)).fail(function () {
             console.log(result);
@@ -160,10 +170,10 @@ BEM.DOM.decl('editor', {
         }.bind(this));
     },
 
-    _deleteNote: function (data) {
+    _deleteNote: function () {
         var that = this;
 
-        BEM.blocks['i-api-request'].delete(data.module + '/' + that._id).then(function (result) {
+        BEM.blocks['i-api-request'].delete(this._data.module + '/' + this._data.id).then(function (result) {
             BEM.blocks['i-router'].setPath('/toc/');
             BEM.blocks['i-router'].reload();
             console.log(result);
@@ -174,15 +184,15 @@ BEM.DOM.decl('editor', {
         }.bind(this));
     },
 
-    _status: function (result) {
+    _setStatus: function (result) {
         var that = this;
 
-        this._flash = this._status1.findBlockOn('animation');
+        !this._data.mode && this._status.delMod('hidden');
+        this._flash = this._status.findBlockInside('animation');
         this._flash.setMod('state', 'flash');
-
         this._modified = BEM.blocks['i-date'].beautify(result.note.modified);
 
-        BEM.DOM.update(this._status1.domElem, 'збережено ' + this._modified, function () {
+        BEM.DOM.update(this._flash.domElem, 'збережено ' + this._modified, function () {
             clearTimeout(that._timeout);
             that._timeout = setTimeout(function () {
                 console.log('700');

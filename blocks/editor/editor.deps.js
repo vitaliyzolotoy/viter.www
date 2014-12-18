@@ -7,7 +7,6 @@
         {block: 'i-medium'}
     ],
     shouldDeps: [
-        {block: 'form'},
         {block: 'input'},
         {block: 'textarea'},
         {block: 'select'},

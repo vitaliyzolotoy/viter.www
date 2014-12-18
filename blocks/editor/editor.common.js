@@ -31,36 +31,30 @@ BEM.JSON.decl({name: 'editor'}, {
                         block: 'section',
                         content: [
                             {
-                                block: 'form',
-                                content: [
-                                    {
-                                        block: 'input',
-                                        attrs: {
-                                            name: 'publish',
-                                            type: 'hidden',
-                                            value: item.published
-                                        }
-                                    },
-                                    {
-                                        block: 'title',
-                                        attrs: { id: 'title' },
-                                        tag: 'h2',
-                                        content: item.title
-                                    },
-                                    {
-                                        block: 'status',
-                                        js: {
-                                            created: item.created,
-                                            modified: item.modified,
-                                            published: item.published
-                                        }
-                                    },
-                                    {
-                                        block: 'text',
-                                        attrs: { id: 'text' },
-                                        content: item.content
-                                    }
-                                ]
+                                block: 'title',
+                                attrs: { id: 'title' },
+                                tag: 'h2',
+                                js: {
+                                    placeholder: 'Тема'
+                                },
+                                content: item.title
+                            },
+                            {
+                                block: 'status',
+                                mods: {hidden: 'yes'},
+                                js: {
+                                    created: item.created,
+                                    modified: item.modified,
+                                    published: item.published || false
+                                }
+                            },
+                            {
+                                block: 'text',
+                                attrs: { id: 'text' },
+                                js: {
+                                    placeholder: 'А тут, власне, повний текст замітки…'
+                                },
+                                content: item.content
                             }
                         ]
                     },
@@ -90,6 +84,7 @@ BEM.JSON.decl({name: 'editor'}, {
                                     },
                                     {
                                         block: 'input',
+                                        mods: { data: 'chapter' },
                                         attrs: {
                                             name: 'chapter',
                                             type: 'hidden'

@@ -10,9 +10,9 @@ BEM.JSON.decl({name: 'status'}, {
                     datetime: data.modified
                 },
                 content: [
-                    data.published && data.created && !data.modified && 'опубліковано',
-                    data.published && data.created && data.modified && 'оновлено',
                     !data.published && 'збережено',
+                    data.published && (data.created == data.modified) && 'опубліковано',
+                    data.published && (data.created < data.modified) && 'оновлено',
                     ' ',
                     BEM.blocks['i-date'].beautify(data.modified)
                 ]

@@ -56,12 +56,12 @@ BEM.JSON.decl({name: 'note'}, {
                     result.note && {
                         block: 'aside',
                         content: [
-                            {
-                                block: 'chapter',
-                                js: {
-                                    id: result.note.chapter
-                                }
-                            },
+                            // {
+                            //     block: 'chapter',
+                            //     js: {
+                            //         id: result.note.chapter
+                            //     }
+                            // },
                             {
                                 block: 'nextprev',
                                 js: {
