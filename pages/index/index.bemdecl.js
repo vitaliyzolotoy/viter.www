@@ -2,7 +2,7 @@ exports.blocks = [
 
     // bem-node part
     {block: 'i-console'},
-    {block: 'i-ycssjs'},
+    {block: 'i-enb'},
     {block: 'i-bem-node'},
 
     // user part

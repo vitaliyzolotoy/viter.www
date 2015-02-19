@@ -11,10 +11,8 @@
         "url": "git://github.com/zolotoy/viter.git"
     },
     "dependencies": {
-        "bem-node": "0.8.21",
+        "bem-node": "0.9.4",
         "enb": "0.13.8",
-        "enb-bemhtml": "0.2.2",
-        "enb-bem-i18n": "0.1.0",
         "enb-borschik": "1.0.4",
         "enb-xjst": "1.2.0"
     },
