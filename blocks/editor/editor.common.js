@@ -32,11 +32,12 @@ BEM.JSON.decl({name: 'editor'}, {
                         content: [
                             {
                                 block: 'title',
-                                attrs: { id: 'title' },
-                                tag: 'h2',
-                                js: {
+                                attrs: {
+                                    id: 'title',
+                                    contenteditable: 'true',
                                     placeholder: 'Тема'
                                 },
+                                tag: 'h2',
                                 content: item.title
                             },
                             {
@@ -49,19 +50,81 @@ BEM.JSON.decl({name: 'editor'}, {
                                 }
                             },
                             {
+                                block: 'toolbar',
+                                content: [
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'bold'
+                                        },
+                                        content: 'b'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'italic'
+                                        },
+                                        content: 'i'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'strikeThrough'
+                                        },
+                                        content: 's'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'h3'
+                                        },
+                                        content: 'h3'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'h4'
+                                        },
+                                        content: 'h4'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'p'
+                                        },
+                                        content: 'p'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'blockquote'
+                                        },
+                                        content: '„“'
+                                    }
+                                ]
+                            },
+                            {
                                 block: 'text',
-                                attrs: { id: 'text' },
-                                js: {
+                                attrs: {
+                                    id: 'text',
+                                    contenteditable: 'true',
                                     placeholder: 'А тут, власне, повний текст замітки…'
                                 },
                                 content: item.content
                             }
                         ]
                     },
-                    {
+                    !creating && {
                         block: 'aside',
                         content: [
-                            {
+                            !item.published && {
                                 block: 'chapter-create',
                                 content: [
                                     'Виберіть розділ ',
@@ -92,7 +155,7 @@ BEM.JSON.decl({name: 'editor'}, {
                                     }
                                 ]
                             },
-                            !creating && {
+                            !item.published && {
                                 block: 'button',
                                 attrs: { name: 'confirm', value: 'Видалити' },
                                 mods: { state: 'danger', confirm: 'yes' }

@@ -21,7 +21,7 @@ BEM.decl('i-vk', null, {
         var urlParams = [
             'client_id=4587452',
             'scope=8194',
-            'redirect_uri=http://thefeature.com.ua/toc/',
+            'redirect_uri=http://localhost:3000/toc/',
             'display=popup',
             'v=5.25',
             'response_type=token'

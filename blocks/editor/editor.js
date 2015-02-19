@@ -1,5 +1,4 @@
 BEM.DOM.decl('editor', {
-
     onSetMod: {
         js: function () {
             var that = this;
@@ -10,6 +9,7 @@ BEM.DOM.decl('editor', {
             this._data.id = this.params.id;
             this._data.mode = this.params.create;
             this._data.published = false;
+            this._data.modified = 0;
 
             this._timeout = {};
 
@@ -17,46 +17,47 @@ BEM.DOM.decl('editor', {
 
             !this._data.mode && this._status.delMod('hidden');
 
+            this._toolbar = this.findBlockInside('toolbar');
+
             // Title
             this._title = this.findBlockInside('title'),
 
-            this._title && this.bindTo(this._title.domElem, 'mouseleave', function (e) {
-                e.preventDefault();
-                that._getData();
-                that._autosaveNote();
-            });
-
-            this._title && this.bindTo(this._title.domElem, 'input', function (e) {
+            this._title && this.bindTo(this._title.domElem, 'input', function (event) {
                 clearTimeout(that._timeout);
                 that._timeout = setTimeout(function () {
-                    e.preventDefault();
+                    event.preventDefault();
                     that._getData();
                     that._autosaveNote();
-                }, 2000);
+                }, 100);
             });
 
             // Text
             this._text = this.findBlockInside('text');
 
-            this._text && this.bindTo(this._text.domElem, 'mouseleave', function (e) {
-                e.preventDefault();
-                that._getData();
-                that._autosaveNote();
-            });
-
-            this._text && this.bindTo(this._text.domElem, 'input', function (e) {
+            this._text && this.bindTo(this._text.domElem, 'selectstart focusin focusout click', function (event) {
+                if (this._text.domElem.text() === '') {
+                    this._text.domElem.html('<p> </p>');
+                };
                 clearTimeout(that._timeout);
                 that._timeout = setTimeout(function () {
-                    e.preventDefault();
+                    event.preventDefault();
+                    that._showToolbar(event);
+                }, 500);
+            });
+
+            this._text && this.bindTo(this._text.domElem, 'input', function (event) {
+                clearTimeout(that._timeout);
+                that._timeout = setTimeout(function () {
+                    event.preventDefault();
                     that._getData();
                     that._autosaveNote();
-                }, 2000);
+                }, 1000);
             });
 
             // Publish
             this._publish = this.findBlockInside({blockName : 'button', modName : 'publish', modVal : 'yes'}),
-            this._publish && this.bindTo(this._publish.domElem, 'click', function (e) {
-                e.preventDefault();
+            this._publish && this.bindTo(this._publish.domElem, 'click', function (event) {
+                event.preventDefault();
                 this._data.published = true;
                 this._getData();
                 this._publishNote();
@@ -65,62 +66,35 @@ BEM.DOM.decl('editor', {
             // Confirm
             this._confirm = this.findBlockInside({blockName : 'button', modName : 'confirm', modVal : 'yes'}),
 
-            this._confirm && this.bindTo(this._confirm.domElem, 'click', function (e) {
-                e.preventDefault();
+            this._confirm && this.bindTo(this._confirm.domElem, 'click', function (event) {
+                event.preventDefault();
                 this.findBlockInside('dialog').setMod('visible', 'yes');
             });
 
             // Delete
             this._del = this.findBlockInside({blockName : 'button', modName : 'delete', modVal : 'yes'});
 
-            this._del && this.bindTo(this._del.domElem, 'click', function (e) {
-                e.preventDefault();
+            this._del && this.bindTo(this._del.domElem, 'click', function (event) {
+                event.preventDefault();
                 this._getData();
                 this._deleteNote();
             });
-
-            this._initTitle();
-            this._initText();
         }
     },
 
-    _initTitle: function () {
-        var that = this;
-
-        var iTitle = new Medium({
-            element: document.getElementById('title'),
-            mode: Medium.inlineMode,
-            placeholder: that._title.params.placeholder
-        });
-    },
-
-    _initText: function () {
-        var that = this;
-
-        var iText = new Medium({
-            element: document.getElementById('text'),
-            mode: Medium.richMode,
-            placeholder: that._text.params.placeholder,
-            tags: {
-                'break': 'br',
-                'horizontalRule': 'hr',
-                'paragraph': 'p',
-                'outerLevel': ['pre', 'blockquote', 'figure', 'ol', 'ul'],
-                'innerLevel': ['a', 'b', 'u', 'i', 'img', 'strong', 'li', 'figcaption']
-            }
-        });
-
-        iText.focus();
-    },
-
     _getData: function () {
+        var that = this;
+
+        this._chapters = this.findBlockInside({blockName : 'chapters', modName : 'data', modVal : 'chapter-select'});
+        this._chapter = this.findBlockInside({blockName : 'input', modName : 'data', modVal : 'chapter-new'});
+
         this._data.body = {
             publish: this._data.published,
             title: this._title.domElem.html(),
             content: this._text.domElem.html(),
             chapter: {
-                select: this.findBlockInside({blockName : 'chapters', modName : 'data', modVal : 'chapter-select'}).domElem.val(),
-                create: this.findBlockInside({blockName : 'input', modName : 'data', modVal : 'chapter-new'}).domElem.val()
+                select: this._chapters && this._chapters.domElem.val(),
+                create: this._chapter && this._chapter.domElem.val()
             }
         };
     },
@@ -133,11 +107,10 @@ BEM.DOM.decl('editor', {
                 if (result.note) {
                     that._data.mode = false;
                     that._data.id =  result.note._id;
-                    that._setStatus(result);
+                    that._data.modified = result.note.modified;
+                    that._setStatus();
                     BEM.blocks['i-router'].setPath('/editor/' + that._data.id);
                 };
-                console.log(result);
-                console.log('success');
             }.bind(this)).fail(function () {
                 console.log(result);
                 console.log('fail');
@@ -145,10 +118,9 @@ BEM.DOM.decl('editor', {
         } else {
             BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
                 if (result.note) {
-                    that._setStatus(result);
+                    that._data.modified = result.note.modified;
+                    that._setStatus();
                 };
-                console.log(result);
-                console.log('success');
             }.bind(this)).fail(function () {
                 console.log(result);
                 console.log('fail');
@@ -160,8 +132,6 @@ BEM.DOM.decl('editor', {
         var that = this;
 
         BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
-            console.log(result);
-            console.log('success');
             BEM.blocks['i-router'].setPath('/notes/' + that._data.id);
             BEM.blocks['i-router'].reload();
         }.bind(this)).fail(function () {
@@ -176,29 +146,44 @@ BEM.DOM.decl('editor', {
         BEM.blocks['i-api-request'].delete(this._data.module + '/' + this._data.id).then(function (result) {
             BEM.blocks['i-router'].setPath('/toc/');
             BEM.blocks['i-router'].reload();
-            console.log(result);
-            console.log('success');
         }.bind(this)).fail(function () {
             console.log(result);
             console.log('fail');
         }.bind(this));
     },
 
-    _setStatus: function (result) {
+    _setStatus: function () {
         var that = this;
 
         !this._data.mode && this._status.delMod('hidden');
         this._flash = this._status.findBlockInside('animation');
         this._flash.setMod('state', 'flash');
-        this._modified = BEM.blocks['i-date'].beautify(result.note.modified);
 
-        BEM.DOM.update(this._flash.domElem, 'збережено ' + this._modified, function () {
+        BEM.DOM.update(this._flash.domElem, 'збережено ' + BEM.blocks['i-global'].timeAgo(this._data.modified), function () {
             clearTimeout(that._timeout);
             that._timeout = setTimeout(function () {
-                console.log('700');
                 that._flash.delMod('state');
             }, 700);
         });
+    },
+
+    _showToolbar: function (event) {
+        var that = this;
+
+        this._selection = window.getSelection().toString();
+        this._position = {
+            top: event.clientY,
+            left: event.clientX,
+        }
+
+        if (this._selection != '') {
+            $(this._toolbar.domElem).css('top', this._position.top + 'px')
+            $(this._toolbar.domElem).css('left', this._position.top + 'px')
+            this._toolbar.setMod('visible', 'yes');
+        } else {
+            this._toolbar.delMod('visible');
+        };
+
     }
 
 });

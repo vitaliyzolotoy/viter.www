@@ -3,10 +3,10 @@ BEM.JSON.decl({name: 'chapter'}, {
         var data = ctx.param('js');
         ctx.defer(
             BEM.blocks['i-api-request']
-            .get('chapters/' + data.id)
+            .get('chapters/' + (data.id || ''))
             .then(function(result) {
                 ctx.content([
-                    {
+                    result.chapter && {
                         block: 'title',
                         tag: 'h3',
                         content: result.chapter

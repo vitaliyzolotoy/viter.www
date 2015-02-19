@@ -1,6 +1,8 @@
 ({
+    mustDeps: [
+        {block: 'i-global'}
+    ],
     shouldDeps: [
-        {block: 'page'},
-        {block: 'i-date'}
+        {block: 'page'}
     ]
 })

@@ -1,0 +1,65 @@
+.toolbar
+{
+    visibility: hidden;
+
+    position: absolute;
+    top: 200px;
+    left: -200px;
+
+    margin-top: -55px;
+
+    color: #313233;
+    border: 3px double #313233;
+    background: #fff8e5;
+
+    -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+}
+
+.toolbar_visible_yes
+{
+    visibility: visible;
+}
+
+.toolbar,
+.toolbar .link
+{
+    display: inline-block;
+}
+
+.toolbar .link
+{
+    margin: 0 1px;
+    padding: 0 3px;
+
+    cursor: pointer;
+
+    color: #000;
+    border-bottom: none;
+}
+
+.toolbar .link[data-role=bold]
+{
+    font-weight: bold;
+}
+
+.toolbar .link[data-role=italic]
+{
+    font-style: italic;
+}
+
+.toolbar .link[data-role=strikeThrough]
+{
+    text-decoration: line-through;
+}
+
+.toolbar .link[data-role=h3]
+{
+    font-size: 17px;
+}
+
+.toolbar .link[data-role=h4]
+{
+    font-size: 14px;
+}

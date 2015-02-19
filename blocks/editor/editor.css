@@ -2,3 +2,16 @@
 {
     padding: 0 0 70px 0;
 }
+
+.editor .status
+{
+    display: block;
+}
+
+.editor .title[contenteditable=true]:empty:not(:focus):before,
+.editor .text[contenteditable=true]:empty:not(:focus):before
+{
+    content: attr(placeholder);
+    
+    color: #a9a9a9;
+}

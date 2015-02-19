@@ -30,7 +30,7 @@ BEM.JSON.decl({name: 'rss'}, {
                             },
                             result.notes.map(function(item) {
                                 var date = new Date(item.created).toUTCString();
-                                return {
+                                return item.published && {
                                     elem: 'item',
                                     content: [
                                         {

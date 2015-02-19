@@ -1,6 +1,5 @@
 ({
     shouldDeps: [
-        {block: 'time'},
-        {block: 'i-date'}
+        {block: 'time'}
     ]
 })

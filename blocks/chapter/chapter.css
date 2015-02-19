@@ -3,8 +3,9 @@
     position: relative;
 }
 
-.chapter::before
+.chapter .title::before
 {
+    font-size: 15px;
     font-family: 'oranienbaum';
     font-weight: normal;
 
