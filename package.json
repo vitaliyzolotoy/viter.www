@@ -13,6 +13,7 @@
     "dependencies": {
         "bem-node": "0.9.4",
         "enb": "0.15.0",
+        "enb-bemhtml": "0.2.2",
         "enb-borschik": "1.5.0",
         "enb-xjst": "1.2.0"
     },
