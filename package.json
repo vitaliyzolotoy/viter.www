@@ -12,8 +12,8 @@
     },
     "dependencies": {
         "bem-node": "0.9.4",
-        "enb": "0.13.8",
-        "enb-borschik": "1.0.4",
+        "enb": "0.15.0",
+        "enb-borschik": "1.5.0",
         "enb-xjst": "1.2.0"
     },
     "engines": {

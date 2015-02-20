@@ -25,5 +25,5 @@ BEM.decl('i-api-request', null, {
         return promise;
     },
 
-    _apiHost: 'http://localhost:4000/'
+    _apiHost: BEM.blocks['i-config'].apiHost
 });
