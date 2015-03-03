@@ -1,8 +1,5 @@
 exports.blocks = [
 
-    // config
-    {block: 'i-config'},
-
     // bem-node part
     {block: 'i-console'},
     {block: 'i-enb'},

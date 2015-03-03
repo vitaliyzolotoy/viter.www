@@ -5,3 +5,4 @@ sftp-config.json
 pages/*/*.*
 !pages/*/*.bemdecl.js
 !pages/.bem/*
+freeze
