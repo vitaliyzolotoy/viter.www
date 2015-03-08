@@ -3,6 +3,6 @@ module.exports = require('../node_modules/bem-node/enb-make')
     .freeze()
     .pages('pages/*')
     .levels([
-        'configs/' + process.env['YENV'] + '/blocks',
+        'configs/' + (process.env['YENV'] || 'development') + '/blocks',
         'blocks'
     ]);

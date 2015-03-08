@@ -4,9 +4,12 @@
 (function () {
     var cwd = process.cwd(),
         prefix = process.argv[1].replace(/(\.\w+)+$/, '')
-            .replace(cwd, '')
-            .replace(/(\w+)$/, '_$1'),
+            .replace(cwd, ''),
         push = [].push;
+
+        if (process.env['YENV'] == 'production') {
+            prefix = prefix.replace(/(\w+)$/, '_$1');
+        };
 
     /**
      * Includes <head/> static files on page
