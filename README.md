@@ -15,7 +15,7 @@ Install npm dependencies
 
 Build project
 ``` YENV=development node ./node_modules/.bin/enb make -n ```
-``` YENV=production nodejs ./node_modules/.bin/enb make -n ```
+``` sudo YENV=production nodejs ./node_modules/.bin/enb make -n ```
 
 Run
 ``` node pages/index/index.server.js --socket 3000 ```

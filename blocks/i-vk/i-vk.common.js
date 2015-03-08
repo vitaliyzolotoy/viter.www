@@ -21,7 +21,7 @@ BEM.decl('i-vk', null, {
         var urlParams = [
             'client_id=4587452',
             'scope=8194',
-            'redirect_uri=' + BEM.blocks['i-config'].host,
+            'redirect_uri=' + BEM.blocks['i-config'].redirectUri,
             'display=popup',
             'v=5.25',
             'response_type=token'
