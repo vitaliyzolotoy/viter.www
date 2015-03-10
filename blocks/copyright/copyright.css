@@ -2,5 +2,15 @@
 {
     font-size: 12px;
 
-    display: inline-block;
+    display: block;
+}
+
+.copyright__sign
+{
+    position: absolute;
+    left: -0.75em;
+
+    width: 7.29%;
+
+    text-align: right;
 }

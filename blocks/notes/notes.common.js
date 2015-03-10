@@ -5,6 +5,7 @@ BEM.JSON.decl({name: 'notes'}, {
             BEM.blocks['i-api-request']
             .get('notes')
             .then(function(result) {
+                var notes = result.notes;
                 ctx.content([
                     BEM.blocks['i-page'].setTitle('Зміст | Руїна'),
                     {
@@ -24,7 +25,15 @@ BEM.JSON.decl({name: 'notes'}, {
                             {
                                 block: 'toc',
                                 content: result.notes && [
-                                    result.notes.map(function(item) {
+                                    {
+                                        elem: 'item',
+                                        content: {
+                                            block: 'link',
+                                            url: '/',
+                                            content: 'Чільна'
+                                        }
+                                    },
+                                    notes.map(function(item) {
                                         return {
                                             elem: 'item',
                                             content: [
@@ -47,15 +56,7 @@ BEM.JSON.decl({name: 'notes'}, {
                                                 }
                                             ]
                                         };
-                                    }),
-                                    {
-                                        elem: 'item',
-                                        content: {
-                                            block: 'link',
-                                            url: '/',
-                                            content: 'Чільна'
-                                        }
-                                    }
+                                    })
                                 ]
                             }
                         ]

@@ -4,13 +4,16 @@ BEM.JSON.decl({name: 'footer'}, {
             {
                 block: 'copyright',
                 content: [
-                    '© ',
+                    {
+                        elem: 'sign',
+                        content: '©'
+                    },
                     {
                         block: 'link',
                         url: '/',
                         content: 'Руїна'
                     },
-                    ', 2013–14 рр.'
+                    ' – записки українського самашедшого, 2013–14 рр.'
                 ]
             },
             !BEM.blocks['i-vk'].isAuth() && {
@@ -51,7 +54,7 @@ BEM.JSON.decl({name: 'footer'}, {
                     {
                         block: 'link',
                         url: '/rss/',
-                        content: 'РСС'
+                        content: 'Підписатися'
                     }
                 ]
             }
