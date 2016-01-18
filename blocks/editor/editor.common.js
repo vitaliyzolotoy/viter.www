@@ -107,6 +107,14 @@ BEM.JSON.decl({name: 'editor'}, {
                                             'data-role': 'blockquote'
                                         },
                                         content: '„“'
+                                    },
+                                    {
+                                        block: 'link',
+                                        url: '#',
+                                        attrs: {
+                                            'data-role': 'CreateLink'
+                                        },
+                                        content: 'лінк'
                                     }
                                 ]
                             },
@@ -155,7 +163,7 @@ BEM.JSON.decl({name: 'editor'}, {
                                     }
                                 ]
                             },
-                            !item.published && {
+                            {
                                 block: 'button',
                                 attrs: { name: 'confirm', value: 'Видалити' },
                                 mods: { state: 'danger', confirm: 'yes' }

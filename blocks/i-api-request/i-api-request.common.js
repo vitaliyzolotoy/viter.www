@@ -1,5 +1,4 @@
 BEM.decl('i-api-request', null, {
-
     post: function (resource, data) {
         return this._request('post', resource, data);
     },
@@ -11,5 +10,4 @@ BEM.decl('i-api-request', null, {
     put: function (resource, data) {
         return this._request('put', resource, data);
     }
-
 });

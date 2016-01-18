@@ -1,7 +1,7 @@
 BEM.DOM.decl('editor', {
     onSetMod: {
         js: function () {
-            var that = this;
+            var _this = this;
 
             this._data = {};
 
@@ -23,11 +23,11 @@ BEM.DOM.decl('editor', {
             this._title = this.findBlockInside('title'),
 
             this._title && this.bindTo(this._title.domElem, 'input', function (event) {
-                clearTimeout(that._timeout);
-                that._timeout = setTimeout(function () {
+                clearTimeout(_this._timeout);
+                _this._timeout = setTimeout(function () {
                     event.preventDefault();
-                    that._getData();
-                    that._autosaveNote();
+                    _this._getData();
+                    _this._autosaveNote();
                 }, 100);
             });
 
@@ -38,19 +38,19 @@ BEM.DOM.decl('editor', {
                 if (this._text.domElem.text() === '') {
                     this._text.domElem.html('<p> </p>');
                 };
-                clearTimeout(that._timeout);
-                that._timeout = setTimeout(function () {
+                clearTimeout(_this._timeout);
+                _this._timeout = setTimeout(function () {
                     event.preventDefault();
-                    that._showToolbar(event);
+                    _this._showToolbar(event);
                 }, 500);
             });
 
             this._text && this.bindTo(this._text.domElem, 'input', function (event) {
-                clearTimeout(that._timeout);
-                that._timeout = setTimeout(function () {
+                clearTimeout(_this._timeout);
+                _this._timeout = setTimeout(function () {
                     event.preventDefault();
-                    that._getData();
-                    that._autosaveNote();
+                    _this._getData();
+                    _this._autosaveNote();
                 }, 1000);
             });
 
@@ -79,11 +79,14 @@ BEM.DOM.decl('editor', {
                 this._getData();
                 this._deleteNote();
             });
+
+            // Upload
+            this._upload();
         }
     },
 
     _getData: function () {
-        var that = this;
+        var _this = this;
 
         this._chapters = this.findBlockInside({blockName : 'chapters', modName : 'data', modVal : 'chapter-select'});
         this._chapter = this.findBlockInside({blockName : 'input', modName : 'data', modVal : 'chapter-new'});
@@ -100,16 +103,16 @@ BEM.DOM.decl('editor', {
     },
 
     _autosaveNote: function () {
-        var that = this;
+        var _this = this;
 
         if (this._data.mode) {
             BEM.blocks['i-api-request'].post(this._data.module, { body: this._data.body }).then(function (result) {
                 if (result.note) {
-                    that._data.mode = false;
-                    that._data.id =  result.note._id;
-                    that._data.modified = result.note.modified;
-                    that._setStatus();
-                    BEM.blocks['i-router'].setPath('/editor/' + that._data.id);
+                    _this._data.mode = false;
+                    _this._data.id =  result.note._id;
+                    _this._data.modified = result.note.modified;
+                    _this._setStatus();
+                    BEM.blocks['i-router'].setPath('/editor/' + _this._data.id);
                 };
             }.bind(this)).fail(function () {
                 console.log(result);
@@ -118,8 +121,8 @@ BEM.DOM.decl('editor', {
         } else {
             BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
                 if (result.note) {
-                    that._data.modified = result.note.modified;
-                    that._setStatus();
+                    _this._data.modified = result.note.modified;
+                    _this._setStatus();
                 };
             }.bind(this)).fail(function () {
                 console.log(result);
@@ -129,10 +132,10 @@ BEM.DOM.decl('editor', {
     },
 
     _publishNote: function () {
-        var that = this;
+        var _this = this;
 
         BEM.blocks['i-api-request'].put(this._data.module + '/' + this._data.id, { body: this._data.body }).then(function (result) {
-            BEM.blocks['i-router'].setPath('/notes/' + that._data.id);
+            BEM.blocks['i-router'].setPath('/notes/' + _this._data.id);
             BEM.blocks['i-router'].reload();
         }.bind(this)).fail(function () {
             console.log(result);
@@ -141,7 +144,7 @@ BEM.DOM.decl('editor', {
     },
 
     _deleteNote: function () {
-        var that = this;
+        var _this = this;
 
         BEM.blocks['i-api-request'].delete(this._data.module + '/' + this._data.id).then(function (result) {
             BEM.blocks['i-router'].setPath('/toc/');
@@ -153,22 +156,22 @@ BEM.DOM.decl('editor', {
     },
 
     _setStatus: function () {
-        var that = this;
+        var _this = this;
 
         !this._data.mode && this._status.delMod('hidden');
         this._flash = this._status.findBlockInside('animation');
         this._flash.setMod('state', 'flash');
 
         BEM.DOM.update(this._flash.domElem, 'збережено ' + BEM.blocks['i-global'].timeAgo(this._data.modified), function () {
-            clearTimeout(that._timeout);
-            that._timeout = setTimeout(function () {
-                that._flash.delMod('state');
+            clearTimeout(_this._timeout);
+            _this._timeout = setTimeout(function () {
+                _this._flash.delMod('state');
             }, 700);
         });
     },
 
     _showToolbar: function (event) {
-        var that = this;
+        var _this = this;
 
         this._selection = window.getSelection().toString();
         this._position = {
@@ -178,12 +181,61 @@ BEM.DOM.decl('editor', {
 
         if (this._selection != '') {
             $(this._toolbar.domElem).css('top', this._position.top + 'px')
-            $(this._toolbar.domElem).css('left', this._position.top + 'px')
+            $(this._toolbar.domElem).css('left', this._position.left + 'px')
             this._toolbar.setMod('visible', 'yes');
         } else {
             this._toolbar.delMod('visible');
         };
 
-    }
+    },
 
+    _upload: function (argument) {
+        var _this = this;
+
+        var holder = document.getElementById('text'),
+            acceptedTypes = {
+              'image/png': true,
+              'image/jpeg': true,
+              'image/gif': true
+            };
+
+        holder.ondrop = function (e) {
+            e.preventDefault();
+            readfiles(e.dataTransfer.files);
+        }
+
+        function readfiles(files) {
+            var formData = new FormData();
+
+            for (var i = 0; i < files.length; i++) {
+                formData.append('file', files[i]);
+                previewfile(files[i]);
+            };
+        }
+
+        function previewfile(file) {
+            if (acceptedTypes[file.type] === true) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    var image = new Image();
+                    image.src = event.target.result;
+                    image.onload = function() {
+                        image.width = this.width;
+                        image.height = this.height;
+                    };
+                    holder.appendChild(image);
+                    BEM.blocks['i-api-request'].post('upload', { body: { file: event.target.result, type: file.type}}).then(function (result) {
+                        image.src = result.url;
+                        _this._getData();
+                        _this._autosaveNote();
+                        console.log('success');
+                    }.bind(this)).fail(function () {
+                        console.log('fail');
+                    }.bind(this));
+                    };
+                reader.readAsDataURL(file);
+            };
+        }
+
+    }
 });
